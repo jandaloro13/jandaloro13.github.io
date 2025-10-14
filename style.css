@@ -26,18 +26,17 @@
 
 body {
     font-family: 'Pixel', monospace;
-    font-size: 1.25rem; /* increased for readability */
+    font-size: 1.45rem; /* raised for better legibility */
     color: #111;
-    line-height: 1.8;
+    line-height: 1.9;
     background-color: #f9f9f9;
-    background-image: url('images/background.jpg'); /* Upload your background image to /images */
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-/* Overlay to improve text readability */
 body::before {
     content: "";
     position: fixed;
@@ -61,15 +60,15 @@ header {
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 2.2rem; /* lowered slightly for a cleaner look */
-    letter-spacing: 1.5px;
+    font-size: 1.8rem; /* lowered for subtlety */
+    letter-spacing: 1px;
     margin-bottom: 0.4rem;
     text-transform: uppercase;
 }
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: #333;
 }
 
@@ -87,7 +86,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Pixel', monospace;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: #111;
     transition: all 0.3s ease;
@@ -113,7 +112,7 @@ section {
 
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.9rem; /* slightly smaller for balance */
+    font-size: 1.6rem; /* lowered */
     margin-bottom: 1rem;
     text-align: center;
     text-transform: uppercase;
@@ -121,7 +120,7 @@ section h2 {
 
 section h3 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.25rem; /* lowered */
     margin-top: 1.5rem;
     margin-bottom: 0.6rem;
 }
@@ -129,7 +128,7 @@ section h3 {
 section p,
 section li {
     font-family: 'Pixel', monospace;
-    font-size: 1.25rem; /* larger for body text */
+    font-size: 1.45rem; /* raised for readability */
     margin-bottom: 1rem;
 }
 
@@ -161,7 +160,7 @@ footer a {
     font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
     transition: 0.3s;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
 }
 
 footer a:hover {
@@ -173,7 +172,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 
     nav {
@@ -187,5 +186,9 @@ footer a:hover {
 
     section {
         margin: 2rem 1rem;
+    }
+
+    body {
+        font-size: 1.3rem; /* scale down slightly for mobile */
     }
 }
