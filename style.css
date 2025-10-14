@@ -3,21 +3,14 @@
 -------------------- */
 @font-face {
     font-family: 'SonyCam';
-    src: url('fonts/sonycam-original.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CarrolDemo';
-    src: url('fonts/Carrol DEMO.woff2') format('woff2');
+    src: url('fonts/sonycam-original.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pixel';
-    src: url('fonts/advanced_pixel-7.woff2') format('woff2');
+    src: url('fonts/advanced_pixel-7.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,15 +28,16 @@ body {
     font-family: 'Pixel', monospace;
     background-color: #f9f9f9;
     color: #111;
-    line-height: 1.6;
-    background-image: url('images/background.jpg'); /* <-- Upload your background image to /images */
+    line-height: 1.7;
+    font-size: 1.15rem; /* increased for better readability */
+    background-image: url('images/background.jpg'); /* Upload your background image to /images */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-/* Overlay to improve text readability over background */
+/* Overlay to improve text readability */
 body::before {
     content: "";
     position: fixed;
@@ -51,7 +45,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     z-index: -1;
 }
 
@@ -73,9 +67,9 @@ header h1 {
 }
 
 header p.subtitle {
-    font-family: 'CarrolDemo', serif;
-    font-size: 1.1rem;
-    color: #444;
+    font-family: 'Pixel', monospace;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 /* --------------------
@@ -92,7 +86,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Pixel', monospace;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #111;
     transition: all 0.3s ease;
@@ -110,31 +104,31 @@ nav a:hover {
 section {
     max-width: 900px;
     margin: 3rem auto;
-    padding: 0 1rem;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 section h3 {
-    font-family: 'CarrolDemo', serif;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    font-family: 'SonyCam', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
 }
 
 section p,
 section li {
     font-family: 'Pixel', monospace;
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
 }
 
 /* --------------------
@@ -144,7 +138,7 @@ img,
 video {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 8px;
     margin: 1rem 0;
 }
 
@@ -165,6 +159,7 @@ footer a {
     font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
     transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 footer a:hover {
@@ -176,7 +171,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 
     nav {
