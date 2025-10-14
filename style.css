@@ -77,6 +77,17 @@ header p.subtitle {
     color: #333;
     margin-top: 0.25rem;
 }
+/* Larger company name in header */
+header p.company-name {
+    font-family: 'Pixel', monospace; /* keeps consistent with other subtitle text */
+    font-size: 2rem; /* increase size */
+    font-weight: bold;
+    color: #111; /* optional: adjust if you want a different color */
+    letter-spacing: 0.05em; /* small spacing for readability */
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
 
 /* --------------------
    NAVIGATION
