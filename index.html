@@ -1,42 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Joseph Andaloro | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joseph Andaloro — Media Producer</title>
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Joseph Andaloro</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="audio.html">Audio</a>
-      <a href="video.html">Video</a>
-      <a href="writing.html">Writing</a>
-      <a href="marketing.html">Marketing</a>
+  <header class="site-header container">
+    <div>
+      <div class="site-title">Joseph Andaloro</div>
+      <div class="site-sub">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</div>
+    </div>
+    <nav class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/audio.html">Audio</a>
+      <a href="/video.html">Video</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/art.html">Art</a>
+      <a href="/marketing.html">Marketing</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>I’m a music producer, audio engineer, filmmaker, and creative strategist. Explore each section to view my work.</p>
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Joseph Andaloro</h1>
+        <p class="header-meta">Media producer, audio engineer, and director. Available for production, audio, and creative work. Portfolio below.</p>
+        <p class="meta-list">Resume: <a class="download" href="/assets/docs/resume.pdf" target="_blank">Download PDF</a>
+         · LinkedIn: <a class="download" href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">Profile</a></p>
+        <p style="margin-top:16px">
+          <a class="big-btn" href="/video.html">Watch Reel</a>
+          <a class="big-btn" href="/audio.html" style="margin-left:10px">Listen</a>
+        </p>
+      </div>
+      <div class="right card" style="width:320px">
+        <img src="/assets/images/profile.jpg" alt="Joe headshot" style="width:100%;border-radius:8px;margin-bottom:10px"/>
+        <div class="section-note">Quick contacts</div>
+        <div class="meta-list">Email: <a href="mailto:joe@email.com">joe@email.com</a></div>
+        <div class="meta-list">Location: Worcester, MA</div>
+      </div>
+    </section>
 
-    <h3>Quick Links</h3>
-    <ul>
-      <li><a href="resume.pdf" target="_blank">View Resume (PDF)</a></li>
-      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn Profile</a></li>
-    </ul>
+    <section>
+      <h2 class="section-title">Highlights</h2>
+      <div class="grid">
+        <div class="item">
+          <strong>Video</strong>
+          <div class="section-note">Short films, music videos, editing reel. Tools: DaVinci Resolve, Premiere.</div>
+        </div>
+        <div class="item">
+          <strong>Audio</strong>
+          <div class="section-note">Mixing, production, sound design. Tools: Pro Tools, Logic, FL Studio.</div>
+        </div>
+        <div class="item">
+          <strong>Writing</strong>
+          <div class="section-note">Screenplays, script coverage, story editing.</div>
+        </div>
+        <div class="item">
+          <strong>Marketing</strong>
+          <div class="section-note">Social campaigns and analytics case studies.</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:24px">
+      <h2 class="section-title">Recent Work</h2>
+      <div class="grid">
+        <div class="card">
+          <div><strong>Featured Reel</strong></div>
+          <div class="responsive-video" style="margin-top:10px">
+            <!-- replace VIDEO_ID with your Vimeo or YouTube id -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <div><strong>Featured Track</strong></div>
+          <div style="margin-top:10px">
+            <!-- point to an audio file you upload to assets -->
+            <audio class="embed-audio" controls src="/assets/audio/featured_track.wav"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>Connect:</p>
-    <p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank">Instagram</a> |
-      <a href="https://www.youtube.com/@YOUR-YOUTUBE" target="_blank">YouTube</a> |
-      <a href="https://www.twitter.com/YOUR-TWITTER" target="_blank">Twitter</a>
-    </p>
-    <p>&copy; 2025 Joseph Andaloro</p>
+  <footer class="container footer">
+    <div>
+      <a href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a>
+    </div>
+    <div style="margin-top:8px;color:var(--muted)">© Joseph Andaloro</div>
   </footer>
 </body>
 </html>
