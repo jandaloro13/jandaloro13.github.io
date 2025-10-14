@@ -248,3 +248,34 @@ footer a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* --------------------
+   VIDEO GRID
+-------------------- */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* space between videos */
+    margin-top: 2rem;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+}
+
+.video-item h3 {
+    font-family: 'Pixel', monospace;
+    font-weight: bold;
+    font-size: 1.5rem; /* bold and readable */
+    text-align: center;
+    margin-top: 0.75rem;
+}
+
