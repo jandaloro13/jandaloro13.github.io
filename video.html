@@ -1,41 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Video | Joseph Andaloro</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video — Joseph Andaloro</title>
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Video Direction and Editing</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="audio.html">Audio</a>
-      <a href="video.html">Video</a>
-      <a href="writing.html">Writing</a>
-      <a href="marketing.html">Marketing</a>
+  <header class="site-header container">
+    <div>
+      <div class="site-title">Joseph Andaloro</div>
+      <div class="site-sub">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</div>
+    </div>
+    <nav class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/audio.html">Audio</a>
+      <a href="/video.html">Video</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/art.html">Art</a>
+      <a href="/marketing.html">Marketing</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Selected Works</h2>
-    <p>Music videos and short films I’ve directed, shot, and edited.</p>
+  <main class="container">
+    <h2 class="section-title">Video — Music Videos & Short Films</h2>
+    <p class="section-note">Embed YouTube links directly or upload MP4s to /assets/videos/ and use the <video> tag.</p>
 
-    <h3>Featured Videos</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    <div class="grid">
+      <div class="card">
+        <strong>Music Video — Title</strong>
+        <div class="responsive-video" style="margin-top:10px">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="section-note">Role: Director / Editor. Tools: Blackmagic, DaVinci Resolve.</div>
+      </div>
+
+      <div class="card">
+        <strong>Short Film — Title</strong>
+        <div class="responsive-video" style="margin-top:10px">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="section-note">Role: Director / Writer. Festival notes or runtime here.</div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>Connect:</p>
-    <p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank">Instagram</a> |
-      <a href="https://www.youtube.com/@YOUR-YOUTUBE" target="_blank">YouTube</a> |
-      <a href="https://www.twitter.com/YOUR-TWITTER" target="_blank">Twitter</a>
-    </p>
-    <p>&copy; 2025 Joseph Andaloro</p>
+  <footer class="container footer">
+    <div>
+      <a href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a>
+    </div>
   </footer>
 </body>
 </html>
