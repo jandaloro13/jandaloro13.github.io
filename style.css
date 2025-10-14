@@ -26,10 +26,10 @@
 
 body {
     font-family: 'Pixel', monospace;
-    background-color: #f9f9f9;
+    font-size: 1.25rem; /* increased for readability */
     color: #111;
-    line-height: 1.7;
-    font-size: 1.15rem; /* increased for better readability */
+    line-height: 1.8;
+    background-color: #f9f9f9;
     background-image: url('images/background.jpg'); /* Upload your background image to /images */
     background-size: cover;
     background-position: center;
@@ -61,14 +61,15 @@ header {
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin-bottom: 0.3rem;
+    font-size: 2.2rem; /* lowered slightly for a cleaner look */
+    letter-spacing: 1.5px;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
 }
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #333;
 }
 
@@ -79,14 +80,14 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin-top: 1rem;
 }
 
 nav a {
     text-decoration: none;
     font-family: 'Pixel', monospace;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: bold;
     color: #111;
     transition: all 0.3s ease;
@@ -112,22 +113,23 @@ section {
 
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 2.3rem;
+    font-size: 1.9rem; /* slightly smaller for balance */
     margin-bottom: 1rem;
     text-align: center;
+    text-transform: uppercase;
 }
 
 section h3 {
     font-family: 'SonyCam', sans-serif;
     font-size: 1.4rem;
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.6rem;
 }
 
 section p,
 section li {
     font-family: 'Pixel', monospace;
-    font-size: 1.15rem;
+    font-size: 1.25rem; /* larger for body text */
     margin-bottom: 1rem;
 }
 
@@ -159,7 +161,7 @@ footer a {
     font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
     transition: 0.3s;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 footer a:hover {
@@ -171,7 +173,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.3rem;
+        font-size: 1.9rem;
     }
 
     nav {
