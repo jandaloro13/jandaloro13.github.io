@@ -36,6 +36,10 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+body, section p, section li {
+    font-weight: bold;
+}
+
 
 /* Overlay for readability */
 body::before {
