@@ -88,6 +88,28 @@ header p.company-name {
     margin-bottom: 0.4rem;
 }
 
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid #333; /* optional: darker border */
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+}
+
+header h1,
+header p.subtitle {
+    color: #fff; /* ensures all header text is white */
+}
+
+nav a {
+    color: #fff; /* white nav links */
+}
+
+nav a:hover {
+    color: #00aced; /* optional: bright hover color */
+    border-bottom: 2px solid #00aced; /* optional hover effect */
+}
+
 
 /* --------------------
    NAVIGATION
@@ -184,6 +206,24 @@ footer a {
 }
 
 footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333; /* optional: darker border */
+    margin-top: 3rem;
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+}
+
+footer a {
+    color: #fff; /* white links */
+}
+
+footer a:hover {
+    color: #00aced; /* optional: bright hover color */
     text-decoration: underline;
 }
 
