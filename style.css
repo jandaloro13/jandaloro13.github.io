@@ -26,9 +26,9 @@
 
 body {
     font-family: 'Pixel', monospace;
-    font-size: 1.45rem; /* raised for better legibility */
+    font-size: 1.65rem; /* Increased for readability */
     color: #111;
-    line-height: 1.9;
+    line-height: 1.8;
     background-color: #f9f9f9;
     background-image: url('images/background.jpg');
     background-size: cover;
@@ -37,6 +37,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Overlay for readability */
 body::before {
     content: "";
     position: fixed;
@@ -60,16 +61,17 @@ header {
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.8rem; /* lowered for subtlety */
-    letter-spacing: 1px;
-    margin-bottom: 0.4rem;
+    font-size: 1.4rem; /* Reduced title size */
+    letter-spacing: 0.18em; /* Even spacing */
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
 }
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     color: #333;
+    margin-top: 0.25rem;
 }
 
 /* --------------------
@@ -80,13 +82,13 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 nav a {
     text-decoration: none;
     font-family: 'Pixel', monospace;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #111;
     transition: all 0.3s ease;
@@ -112,23 +114,25 @@ section {
 
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.6rem; /* lowered */
-    margin-bottom: 1rem;
-    text-align: center;
+    font-size: 1.2rem; /* Reduced slightly for balance */
     text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.2rem;
+    text-align: center;
 }
 
 section h3 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.25rem; /* lowered */
-    margin-top: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    margin-top: 1rem;
     margin-bottom: 0.6rem;
 }
 
 section p,
 section li {
     font-family: 'Pixel', monospace;
-    font-size: 1.45rem; /* raised for readability */
+    font-size: 1.65rem; /* Large and legible */
     margin-bottom: 1rem;
 }
 
@@ -139,7 +143,7 @@ img,
 video {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     margin: 1rem 0;
 }
 
@@ -160,7 +164,7 @@ footer a {
     font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
     transition: 0.3s;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 
 footer a:hover {
@@ -171,8 +175,12 @@ footer a:hover {
    RESPONSIVE
 -------------------- */
 @media (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     nav {
@@ -180,15 +188,7 @@ footer a:hover {
         align-items: center;
     }
 
-    nav a {
-        padding: 0.5rem 0;
-    }
-
     section {
         margin: 2rem 1rem;
-    }
-
-    body {
-        font-size: 1.3rem; /* scale down slightly for mobile */
     }
 }
