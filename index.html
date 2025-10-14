@@ -1,98 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Joseph Andaloro — Media Producer</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Andaloro | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #555;
+      margin: 8px 0 0;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin: 0 15px;
+      font-size: 16px;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-bottom: 1px solid #000;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #222;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header container">
-    <div>
-      <div class="site-title">Joseph Andaloro</div>
-      <div class="site-sub">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</div>
-    </div>
-    <nav class="nav">
-      <a href="/index.html">Home</a>
-      <a href="/audio.html">Audio</a>
-      <a href="/video.html">Video</a>
-      <a href="/writing.html">Writing</a>
-      <a href="/art.html">Art</a>
-      <a href="/marketing.html">Marketing</a>
-    </nav>
+
+  <header>
+    <h1>Joseph Andaloro</h1>
+    <p>Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</p>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="left">
-        <h1>Joseph Andaloro</h1>
-        <p class="header-meta">Media producer, audio engineer, and director. Available for production, audio, and creative work. Portfolio below.</p>
-        <p class="meta-list">Resume: <a class="download" href="/assets/docs/resume.pdf" target="_blank">Download PDF</a>
-         · LinkedIn: <a class="download" href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">Profile</a></p>
-        <p style="margin-top:16px">
-          <a class="big-btn" href="/video.html">Watch Reel</a>
-          <a class="big-btn" href="/audio.html" style="margin-left:10px">Listen</a>
-        </p>
-      </div>
-      <div class="right card" style="width:320px">
-        <img src="/assets/images/profile.jpg" alt="Joe headshot" style="width:100%;border-radius:8px;margin-bottom:10px"/>
-        <div class="section-note">Quick contacts</div>
-        <div class="meta-list">Email: <a href="mailto:joe@email.com">joe@email.com</a></div>
-        <div class="meta-list">Location: Worcester, MA</div>
-      </div>
-    </section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="audio.html">Audio</a>
+    <a href="video.html">Video</a>
+    <a href="writing.html">Writing</a>
+    <a href="art.html">Art</a>
+    <a href="marketing.html">Marketing</a>
+  </nav>
 
-    <section>
-      <h2 class="section-title">Highlights</h2>
-      <div class="grid">
-        <div class="item">
-          <strong>Video</strong>
-          <div class="section-note">Short films, music videos, editing reel. Tools: DaVinci Resolve, Premiere.</div>
-        </div>
-        <div class="item">
-          <strong>Audio</strong>
-          <div class="section-note">Mixing, production, sound design. Tools: Pro Tools, Logic, FL Studio.</div>
-        </div>
-        <div class="item">
-          <strong>Writing</strong>
-          <div class="section-note">Screenplays, script coverage, story editing.</div>
-        </div>
-        <div class="item">
-          <strong>Marketing</strong>
-          <div class="section-note">Social campaigns and analytics case studies.</div>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Welcome</h2>
+    <p>I'm a media producer and creative working under <strong>Pure Tech Productions</strong>. This portfolio showcases my work across sound, film, writing, art, and marketing.</p>
+    <p>Explore each section to see selected projects. My full resume and professional links are below.</p>
+    <p><a href="Joseph_Andaloro_Resume.pdf" download>Download My Resume (PDF)</a></p>
+    <p><a href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">Visit My LinkedIn</a></p>
+  </section>
 
-    <section style="margin-top:24px">
-      <h2 class="section-title">Recent Work</h2>
-      <div class="grid">
-        <div class="card">
-          <div><strong>Featured Reel</strong></div>
-          <div class="responsive-video" style="margin-top:10px">
-            <!-- replace VIDEO_ID with your Vimeo or YouTube id -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="card">
-          <div><strong>Featured Track</strong></div>
-          <div style="margin-top:10px">
-            <!-- point to an audio file you upload to assets -->
-            <audio class="embed-audio" controls src="/assets/audio/featured_track.wav"></audio>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <div>
-      <a href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a>
+  <footer>
+    <p>Contact: <a href="mailto:JAndaloro1313@gmail.com">JAndaloro1313@gmail.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/joseph-andaloro/" target="_blank">LinkedIn</a> |
+      <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
+      <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
       <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a>
-    </div>
-    <div style="margin-top:8px;color:var(--muted)">© Joseph Andaloro</div>
+    </p>
+    <p>&copy; 2025 Pure Tech Productions</p>
   </footer>
+
 </body>
 </html>
