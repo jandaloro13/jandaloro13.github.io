@@ -26,7 +26,7 @@
 
 body {
     font-family: 'Pixel', monospace;
-    font-size: 1.65rem; /* Increased for readability */
+    font-size: 1.65rem; /* Large and legible */
     color: #111;
     line-height: 1.8;
     background-color: #f9f9f9;
@@ -36,10 +36,6 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-body, section p, section li {
-    font-weight: bold;
-}
-
 
 /* Overlay for readability */
 body::before {
@@ -59,57 +55,37 @@ body::before {
 header {
     text-align: center;
     padding: 2.5rem 1rem;
-    border-bottom: 1px solid #ccc;
-    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #333;
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
 }
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.4rem; /* Reduced title size */
-    letter-spacing: 0.18em; /* Even spacing */
+    font-size: 1.4rem;
+    letter-spacing: 0.18em; /* evenly spaced letters */
     text-transform: uppercase;
     margin-bottom: 0.4rem;
+    font-weight: normal;
 }
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
     font-size: 1.4rem;
-    color: #333;
+    color: #fff;
     margin-top: 0.25rem;
+    font-weight: normal; /* Pixel text not bold */
 }
-/* Larger company name in header */
+
 header p.company-name {
-    font-family: 'Pixel', monospace; /* keeps consistent with other subtitle text */
-    font-size: 2rem; /* increase size */
-    font-weight: bold;
-    color: #111; /* optional: adjust if you want a different color */
-    letter-spacing: 0.05em; /* small spacing for readability */
+    font-family: 'Pixel', monospace;
+    font-size: 2rem;
+    font-weight: normal; /* Pixel text not bold */
+    color: #fff;
+    letter-spacing: 0.05em;
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
 }
-
-header {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    border-bottom: 1px solid #333; /* optional: darker border */
-    background-color: #000; /* black background */
-    color: #fff; /* white text */
-}
-
-header h1,
-header p.subtitle {
-    color: #fff; /* ensures all header text is white */
-}
-
-nav a {
-    color: #fff; /* white nav links */
-}
-
-nav a:hover {
-    color: #00aced; /* optional: bright hover color */
-    border-bottom: 2px solid #00aced; /* optional hover effect */
-}
-
 
 /* --------------------
    NAVIGATION
@@ -118,24 +94,24 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem; /* Increased space between links */
+    gap: 2.5rem;
     margin-top: 1.5rem;
-    padding: 1rem 0; /* Adds vertical height to the nav bar */
+    padding: 1rem 0;
 }
 
 nav a {
     text-decoration: none;
     font-family: 'SonyCam', monospace;
-    font-size: .7rem; /* Larger link text */
+    font-size: 0.7rem;
     font-weight: bold;
-    color: #111;
+    color: #fff; /* white links */
     transition: all 0.3s ease;
-    padding: 0.75rem 0.5rem; /* Adds clickable space around text */
+    padding: 0.75rem 0.5rem;
 }
 
 nav a:hover {
-    color: #0077cc;
-    border-bottom: 2px solid #0077cc;
+    color: #00aced;
+    border-bottom: 2px solid #00aced;
 }
 
 /* --------------------
@@ -152,7 +128,7 @@ section {
 
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.2rem; /* Reduced slightly for balance */
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
@@ -170,8 +146,9 @@ section h3 {
 section p,
 section li {
     font-family: 'Pixel', monospace;
-    font-size: 1.65rem; /* Large and legible */
+    font-size: 1.65rem;
     margin-bottom: 1rem;
+    font-weight: bold; /* body text remains bold in sections */
 }
 
 /* --------------------
@@ -191,14 +168,20 @@ video {
 footer {
     text-align: center;
     padding: 2rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #333;
     margin-top: 3rem;
-    background: rgba(255, 255, 255, 0.9);
+    background-color: #000; /* black footer */
+    color: #fff; /* white text */
+}
+
+footer p, footer span {
+    font-family: 'Pixel', monospace;
+    font-weight: normal; /* Pixel text not bold */
 }
 
 footer a {
     text-decoration: none;
-    color: #0077cc;
+    color: #fff; /* white links */
     font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
     transition: 0.3s;
@@ -206,24 +189,7 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #333; /* optional: darker border */
-    margin-top: 3rem;
-    background-color: #000; /* black background */
-    color: #fff; /* white text */
-}
-
-footer a {
-    color: #fff; /* white links */
-}
-
-footer a:hover {
-    color: #00aced; /* optional: bright hover color */
+    color: #00aced;
     text-decoration: underline;
 }
 
@@ -249,9 +215,10 @@ footer a:hover {
     }
 }
 
+/* Video Embed */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     margin: 2rem 0;
 }
@@ -262,7 +229,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 6px; /* optional */
+    border-radius: 6px;
 }
 
 /* About Page Images */
@@ -270,15 +237,14 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* space between images */
-    flex-wrap: wrap; /* ensures stacking on smaller screens */
+    gap: 2rem;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
 .about-images img {
-    width: 250px; /* same width for both images */
-    height: auto; /* maintain aspect ratio */
-    border-radius: 10px; /* optional rounded corners */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
