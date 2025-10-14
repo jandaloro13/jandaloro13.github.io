@@ -1,23 +1,23 @@
 /* --------------------
-   FONTS
+   FONT IMPORTS
 -------------------- */
 @font-face {
-    font-family: 'TitleFont';
-    src: url('fonts/sonycam-original.otf') format('otf');
-    font-weight: bold;
+    font-family: 'SonyCam';
+    src: url('fonts/sonycam-original.otf') format('opentype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SubtitleFont';
-    src: url('fonts/Carrol DEMO.otf') format('otf');
+    font-family: 'CarrolDemo';
+    src: url('fonts/Carrol DEMO.otf') format('opentype');
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'BodyFont';
-    src: url('fonts/advanced-pixel-7.ttf') format('ttf');
+    font-family: 'Pixel';
+    src: url('fonts/advanced_pixel-7.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,31 +32,50 @@
 }
 
 body {
-    font-family: 'BodyFont', advanced-pixel-7;
-    background-color: #ffffff;
-    color: #111111;
+    font-family: 'Pixel', monospace;
+    background-color: #f9f9f9;
+    color: #111;
     line-height: 1.6;
+    background-image: url('images/background.jpg'); /* <-- Upload your background image to /images */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Overlay to improve text readability over background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: -1;
 }
 
 /* --------------------
    HEADER
 -------------------- */
 header {
-    padding: 2rem;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 header h1 {
-    font-family: 'TitleFont', sonycam-original;
-    font-size: 2.5rem;
-    margin-bottom: 0.2rem;
+    font-family: 'SonyCam', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
 }
 
 header p.subtitle {
-    font-family: 'SubtitleFont', Carrol DEMO;
-    font-size: 1rem;
-    color: #555;
+    font-family: 'CarrolDemo', serif;
+    font-size: 1.1rem;
+    color: #444;
 }
 
 /* --------------------
@@ -66,17 +85,18 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
 nav a {
     text-decoration: none;
-    font-family: 'BodyFont', sans-serif;
+    font-family: 'Pixel', monospace;
+    font-size: 1rem;
     font-weight: bold;
     color: #111;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease;
+    padding-bottom: 0.3rem;
 }
 
 nav a:hover {
@@ -89,27 +109,43 @@ nav a:hover {
 -------------------- */
 section {
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 3rem auto;
     padding: 0 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
-    font-family: 'TitleFont', sans-serif;
+    font-family: 'SonyCam', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 section h3 {
-    font-family: 'SubtitleFont', sans-serif;
+    font-family: 'CarrolDemo', serif;
     font-size: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-section p, section li {
-    font-family: 'BodyFont', sans-serif;
+section p,
+section li {
+    font-family: 'Pixel', monospace;
     font-size: 1rem;
     margin-bottom: 0.8rem;
+}
+
+/* --------------------
+   IMAGES & MEDIA
+-------------------- */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
 }
 
 /* --------------------
@@ -118,40 +154,20 @@ section p, section li {
 footer {
     text-align: center;
     padding: 2rem;
-    border-top: 1px solid #ddd;
-    margin-top: 4rem;
-    font-family: 'BodyFont', sans-serif;
-    font-size: 0.9rem;
-    color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 footer a {
     text-decoration: none;
     color: #0077cc;
+    font-family: 'Pixel', monospace;
     margin: 0 0.5rem;
+    transition: 0.3s;
 }
 
 footer a:hover {
-    text-decoration: underline;
-}
-
-/* --------------------
-   IMAGES & MEDIA
--------------------- */
-img, video {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem 0;
-}
-
-/* --------------------
-   LINKS
--------------------- */
-a {
-    color: #0077cc;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
@@ -160,14 +176,19 @@ a:hover {
 -------------------- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     nav {
         flex-direction: column;
+        align-items: center;
     }
 
     nav a {
         padding: 0.5rem 0;
+    }
+
+    section {
+        margin: 2rem 1rem;
     }
 }
