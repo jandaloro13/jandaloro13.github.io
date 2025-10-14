@@ -32,7 +32,7 @@
 }
 
 body {
-    font-family: 'BodyFont', Arial, sans-serif;
+    font-family: 'BodyFont', advanced_pixel-7.ttf;
     background-color: #ffffff;
     color: #111111;
     line-height: 1.6;
@@ -48,13 +48,13 @@ header {
 }
 
 header h1 {
-    font-family: 'TitleFont', sans-serif;
+    font-family: 'TitleFont', sonycam-original.otf;
     font-size: 2.5rem;
     margin-bottom: 0.2rem;
 }
 
 header p.subtitle {
-    font-family: 'SubtitleFont', sans-serif;
+    font-family: 'SubtitleFont', carrol demo.otf;
     font-size: 1rem;
     color: #555;
 }
