@@ -43,3 +43,38 @@ header.site-header{display:flex;align-items:center;justify-content:space-between
   .hero{flex-direction:column;align-items:flex-start}
   .nav{flex-wrap:wrap}
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joseph Andaloro | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Joseph Andaloro</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="audio.html">Audio</a>
+      <a href="video.html">Video</a>
+      <a href="writing.html">Writing</a>
+      <a href="marketing.html">Marketing</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome</h2>
+    <p>I’m a music producer, audio engineer, filmmaker, and creative strategist. Explore each page to see my work in audio, video, writing, and marketing.</p>
+
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="resume.pdf" target="_blank">View Resume (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn Profile</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Joseph Andaloro</p>
+  </footer>
+</body>
+</html>
