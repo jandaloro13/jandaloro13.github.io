@@ -3,21 +3,21 @@
 -------------------- */
 @font-face {
     font-family: 'TitleFont';
-    src: url('sonycam-original.otf/sonycam-original.otf') format('otf');
+    src: url('fonts/sonycam-original.otf') format('otf');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SubtitleFont';
-    src: url('carrol/carrol demo.otf') format('otf');
+    src: url('fonts/Carrol DEMO.otf') format('otf');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'BodyFont';
-    src: url('/advanced_pixel-7/advanced_pixel-7.ttf') format('ttf');
+    src: url('fonts/advanced-pixel-7.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,7 @@
 }
 
 body {
-    font-family: 'BodyFont', advanced_pixel-7.ttf;
+    font-family: 'BodyFont', Arial, sans-serif;
     background-color: #ffffff;
     color: #111111;
     line-height: 1.6;
@@ -48,13 +48,13 @@ header {
 }
 
 header h1 {
-    font-family: 'TitleFont', sonycam-original.otf;
+    font-family: 'TitleFont', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 0.2rem;
 }
 
 header p.subtitle {
-    font-family: 'SubtitleFont', carrol demo.otf;
+    font-family: 'SubtitleFont', sans-serif;
     font-size: 1rem;
     color: #555;
 }
