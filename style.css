@@ -213,3 +213,21 @@ footer a:hover {
     height: 100%;
     border-radius: 6px; /* optional */
 }
+
+/* About Page Images */
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* space between images */
+    flex-wrap: wrap; /* ensures stacking on smaller screens */
+    margin-bottom: 2rem;
+}
+
+.about-images img {
+    width: 250px; /* same width for both images */
+    height: auto; /* maintain aspect ratio */
+    border-radius: 10px; /* optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
