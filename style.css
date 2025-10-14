@@ -1,80 +1,115 @@
-/* css/styles.css - basic clean responsive layout */
-:root{
-  --accent:#0b6efd;
-  --bg:#0f1113;
-  --card:#0f1720;
-  --text:#e6eef8;
-  --muted:#9fb0c8;
-  --maxw:1100px;
-  --gap:18px;
-  font-family: "SiteSans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* Reset default browser margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);line-height:1.45}
-.container{max-width:var(--maxw);margin:0 auto;padding:28px}
-header.site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.site-title{font-size:20px;font-weight:700;letter-spacing:0.4px}
-.site-sub{font-size:12px;color:var(--muted);margin-top:4px}
-.nav{display:flex;gap:12px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:6px}
-.nav a:hover{background:rgba(255,255,255,0.03)}
-.hero{display:flex;gap:20px;align-items:center;padding:36px 0}
-.hero .left{flex:1}
-.hero h1{margin:0;font-size:32px}
-.header-meta{font-size:14px;color:var(--muted);margin-top:6px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap);margin-top:18px}
-.section-title{font-size:18px;margin:0 0 8px}
-.item{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)}
-.section-note{color:var(--muted);font-size:13px;margin-top:8px}
-.footer{padding:26px 0;border-top:1px solid rgba(255,255,255,0.04);margin-top:36px;color:var(--muted);font-size:14px}
-.footer a{color:var(--muted);text-decoration:none;margin-right:12px}
-.embed-video, .embed-audio{width:100%;max-width:100%}
-.big-btn{display:inline-block;background:var(--accent);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
-.download{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none}
-.meta-list{font-size:13px;color:var(--muted);margin-top:8px}
-.responsive-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-.responsive-video iframe, .responsive-video video{position:absolute;top:0;left:0;width:100%;height:100%}
-.file-list{list-style:none;padding-left:0;margin:0}
-.file-list li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
-/* fonts loaded from assets */
-@font-face{font-family:SiteSans;font-display:swap;src:url('/assets/fonts/SiteSans.woff2') format('woff2');}
-@media(max-width:720px){
-  .hero{flex-direction:column;align-items:flex-start}
-  .nav{flex-wrap:wrap}
+
+/* Body and global font settings */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Joseph Andaloro | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Joseph Andaloro</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="audio.html">Audio</a>
-      <a href="video.html">Video</a>
-      <a href="writing.html">Writing</a>
-      <a href="marketing.html">Marketing</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>I’m a music producer, audio engineer, filmmaker, and creative strategist. Explore each page to see my work in audio, video, writing, and marketing.</p>
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
 
-    <h3>Quick Links</h3>
-    <ul>
-      <li><a href="resume.pdf" target="_blank">View Resume (PDF)</a></li>
-      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn Profile</a></li>
-    </ul>
-  </main>
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
-  <footer>
-    <p>&copy; 2025 Joseph Andaloro</p>
-  </footer>
-</body>
-</html>
+header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0073e6;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section p, section ul {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+section ul {
+  list-style: disc inside;
+}
+
+/* Image grid for art section */
+section img {
+  max-width: 100%;
+  margin: 10px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #eee;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: #0073e6;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive media */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  section img {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
