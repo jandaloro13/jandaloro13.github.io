@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio | Joseph S. Andaloro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio | Joe Andaloro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-<header>
-    <h1>Joseph S. Andaloro</h1>
-    <p class="subtitle company-name">Pure Tech Productions</p>
-    <p class="subtitle">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</p>
-    <nav>
-        <a href="index.html">About</a>
-        <a href="audio.html">Audio</a>
-        <a href="video.html">Video</a>
-        <a href="writing.html">Writing</a>
-        <a href="art.html">Art</a>
-        <a href="marketing.html">Marketing</a>
-    </nav>
-</header>
+  <header>
+    <h1>Audio</h1>
+    <p>Production, composition, and sound design.</p>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <section id="audio">
-        <h2>Audio</h2>
-        <p>Here are examples of my music production and audio work under Pure Tech Productions:</p>
+  <main>
+    <section class="playlist-section">
+      <div class="playlist">
+        <h2>Apple Music Playlist</h2>
+        <iframe allow="autoplay *; encrypted-media *;"
+          frameborder="0"
+          height="450"
+          style="width:100%;max-width:600px;overflow:hidden;background:transparent;"
+          src="YOUR_APPLE_MUSIC_EMBED_URL"></iframe>
+      </div>
 
-        <!-- Streaming Links -->
-        <h3>Streaming</h3>
-        <ul>
-            <li><a href="https://open.spotify.com/artist/PLACEHOLDER" target="_blank">Spotify</a></li>
-            <li><a href="https://music.apple.com/artist/PLACEHOLDER" target="_blank">Apple Music</a></li>
-            <li><a href="https://soundcloud.com/PLACEHOLDER" target="_blank">SoundCloud</a></li>
-        </ul>
-
-        <!-- Unreleased Music (.wav files) -->
-        <h3>Unreleased Tracks</h3>
-        <p>Click play to listen to unreleased tracks:</p>
-
-        <div>
-            <p>Track 1: "Untitled Beat"</p>
-            <audio controls>
-                <source src="audio/UntitledBeat.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div>
-            <p>Track 2: "Demo Mix"</p>
-            <audio controls>
-                <source src="audio/DemoMix.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <p>You can add more `.wav` files in the `audio/` folder and copy the block above for each track.</p>
+      <div class="playlist">
+        <h2>YouTube Playlist</h2>
+        <iframe width="600"
+          height="450"
+          src="YOUR_YOUTUBE_PLAYLIST_URL"
+          title="YouTube playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Connect with me:</p>
-        <p>
-            <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
-            <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
-            <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
-            <a href="mailto:JAndaloro1313@gmail.com">Email</a>
-        </p>
-    </footer>
+    <section class="unreleased">
+      <h2>Unreleased Tracks</h2>
+
+      <div class="track">
+        <img src="images/album-art-1.jpg" alt="Album art for Track 1" class="album-art">
+        <div class="track-info">
+          <h3>Track Title 1</h3>
+          <p>Producer, Mix Engineer — 2025</p>
+          <audio controls>
+            <source src="audio/track1.mp3" type="audio/mpeg">
+          </audio>
+          <div class="waveform"></div>
+        </div>
+      </div>
+
+      <div class="track">
+        <img src="images/album-art-2.jpg" alt="Album art for Track 2" class="album-art">
+        <div class="track-info">
+          <h3>Track Title 2</h3>
+          <p>Composer, Sound Designer — 2025</p>
+          <audio controls>
+            <source src="audio/track2.mp3" type="audio/mpeg">
+          </audio>
+          <div class="waveform"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="credits">
+      <h2>Credits & Collaborations</h2>
+      <ul>
+        <li>Artist Name – Single Title (Mix Engineer, 2024)</li>
+        <li>Short Film – Title (Sound Designer, 2023)</li>
+        <li>Commercial – Brand Campaign (Composer, 2022)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact for production, mixing, or film sound inquiries: 
+      <a href="mailto:JAndaloro1313@gmail.com">JAndaloro1313@gmail.com</a>
+    </p>
+    <p>
+      <a href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn</a> | 
+      <a href="YOUR_INSTAGRAM_URL" target="_blank">Instagram</a> | 
+      <a href="YOUR_YOUTUBE_URL" target="_blank">YouTube</a>
+    </p>
+  </footer>
+
+  <script>
+    // Simple fade-in animation for new tracks
+    document.querySelectorAll('.track').forEach((track, i) => {
+      track.style.opacity = 0;
+      track.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        track.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        track.style.opacity = 1;
+        track.style.transform = 'translateY(0)';
+      }, 200 * i);
+    });
+  </script>
 
 </body>
 </html>
