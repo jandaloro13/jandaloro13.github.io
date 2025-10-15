@@ -35,6 +35,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 /* --------------------
@@ -42,15 +43,15 @@ body {
 -------------------- */
 header {
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 4rem 1rem 2rem 1rem;
     border-bottom: 1px solid #333;
-    background-color: #000;
-    color: #fff;
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.25rem !important; /* Reduced Joseph S. Andaloro */
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
@@ -59,18 +60,17 @@ header h1 {
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.4rem;
-    color: #fff;
+    font-size: 1.8rem !important; /* Pure Tech Productions */
+    color: #fff !important;
     margin-top: 0.25rem;
     font-weight: normal;
 }
 
-header p.company-name {
+header p.production-title {
     font-family: 'Pixel', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem !important; /* Role titles */
     font-weight: normal;
-    color: #fff;
-    letter-spacing: 0.05em;
+    color: #fff !important;
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
 }
@@ -109,8 +109,7 @@ section {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem 1.5rem;
-    background: #ffffff; /* full white background */
-    opacity: 1; /* ensure no transparency */
+    background: #ffffff !important;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -141,67 +140,93 @@ section li {
 }
 
 /* --------------------
-   IMAGES & MEDIA
+   MAIN
 -------------------- */
-img,
-video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 1rem 0;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
 }
 
 /* --------------------
-   FOOTER
+   AUDIO PAGE STYLING
 -------------------- */
-footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #333;
-    margin-top: 3rem;
-    background-color: #000;
-    color: #fff;
+.playlist-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
-footer p, footer span {
-    font-family: 'Pixel', monospace;
-    font-weight: normal;
+.playlist {
+    flex: 1 1 45%;
+    min-width: 300px;
 }
 
-footer a {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Pixel', monospace;
-    margin: 0 0.5rem;
-    transition: 0.3s;
-    font-size: 1.4rem;
+.unreleased h2 {
+    margin-bottom: 2rem;
 }
 
-footer a:hover {
-    color: #00aced;
-    text-decoration: underline;
+.track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* --------------------
-   RESPONSIVE
--------------------- */
-@media (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
+.album-art {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    header h1 {
-        font-size: 1.2rem;
-    }
+.track-info {
+    max-width: 600px;
+    text-align: left;
+}
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+audio {
+    width: 100%;
+    outline: none;
+    margin-top: 0.5rem;
+}
 
-    section {
-        margin: 2rem 1rem;
-    }
+/* Waveform animation */
+.waveform {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.waveform::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: wave 1s infinite linear;
+    background: repeating-linear-gradient(
+        to right,
+        #000,
+        #000 2px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+@keyframes wave {
+    0% {transform: scaleY(0.3);}
+    50% {transform: scaleY(1);}
+    100% {transform: scaleY(0.3);}
 }
 
 /* --------------------
@@ -214,7 +239,8 @@ footer a:hover {
     margin: 2rem 0;
 }
 
-.video-container iframe {
+.video-container iframe,
+.video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -224,377 +250,60 @@ footer a:hover {
 }
 
 /* --------------------
-   ABOUT PAGE IMAGES
+   FOOTER
 -------------------- */
-.about-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-}
-
-.about-images img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* --------------------
-   VIDEO GRID
--------------------- */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2rem;
-}
-
-.video-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-item iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 6px;
-}
-
-.video-item h3 {
-    font-family: 'Pixel', monospace;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 0.75rem;
-}
-
-/* --------------------
-   BODY BACKGROUND IMAGE
--------------------- */
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('images/2. Apocalypse 6.25.23.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: 'Pixel';
-}
-
-/* --------------------
-   WHITE CONTENT BOX
--------------------- */
-.content-wrapper {
-    background-color: #ffffff; /* pure white */
-    opacity: 1; /* no fade or transparency */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-height: calc(100vh - 160px);
-    font-family: 'Pixel';
-    position: relative;
-    z-index: 1;
-}
-
-/* --------------------
-   HEADINGS & SUBTITLES
--------------------- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'SonyCam';
-}
-
-h2, h3 {
-    font-family: 'Pixel';
-}
-
-#about p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 1.5em auto;
-    line-height: 1.6;
-}
-
-/* --------------------
-   VIDEO GRID (DUPLICATE CLEANUP)
--------------------- */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    justify-items: center;
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 200px;
-}
-
-.video-item p {
-    text-align: center;
-    line-height: 1.2;
-    margin-top: 8px;
-}
-
-/* --------------------
-   SCRIPT DROPDOWN
--------------------- */
-summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 0.8rem 1rem;
-    background-color: #f0f0f0;
-    border-radius: 6px;
-    margin-bottom: 0.6rem;
-    font-family: 'SonyCam';
-    font-size: 1rem;
-    font-weight: normal;
-    display: flex;
-    flex-direction: column;
-}
-
-summary .title-year {
-    font-family: 'SonyCam';
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    font-weight: normal;
-    text-align: center;
-}
-
-summary .logline-genre {
-    font-family: 'Pixel';
-    font-size: 0.85rem;
-    font-weight: normal;
-    color: #333;
-    margin-top: 2px;
-    line-height: 1.3;
-}
-
-details[open] .script-info {
-    display: block;
-    font-family: 'Pixel';
-    font-size: 1.2rem;
-    white-space: pre-wrap;
-    margin-top: 0.5rem;
-    line-height: 1.3;
-}
-
-/* --------------------
-   ENFORCE PURE WHITE TEXT BLOCKS
--------------------- */
-section, .content-wrapper {
-    background-color: #ffffff !important;
-    opacity: 1 !important;
-}
-
-/* GLOBAL */
-body {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-header {
-  padding: 4rem 1rem 2rem 1rem;
-  background-color: #fff;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #444;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  background-color: #fff;
-}
-
-/* PLAYLIST SECTION */
-.playlist-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.playlist {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.playlist h2 {
-  margin-bottom: 1rem;
-}
-
-/* UNRELEASED TRACKS */
-.unreleased h2 {
-  margin-bottom: 2rem;
-}
-
-.track {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.album-art {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.track-info {
-  max-width: 600px;
-  text-align: left;
-}
-
-audio {
-  width: 100%;
-  outline: none;
-  margin-top: 0.5rem;
-}
-
-/* Waveform animation */
-.waveform {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 2px;
-  height: 40px;
-  margin-top: 8px;
-}
-
-.waveform::before,
-.waveform::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.waveform::before {
-  animation: wave 1s infinite linear;
-  background: repeating-linear-gradient(
-    to right,
-    #000,
-    #000 2px,
-    transparent 3px,
-    transparent 6px
-  );
-  height: 100%;
-}
-
-@keyframes wave {
-  0% {transform: scaleY(0.3);}
-  50% {transform: scaleY(1);}
-  100% {transform: scaleY(0.3);}
-}
-
-/* CREDITS */
-.credits {
-  margin-top: 4rem;
-}
-
-.credits ul {
-  list-style: none;
-  padding: 0;
-}
-
-.credits li {
-  margin-bottom: 0.5rem;
-}
-
-/* FOOTER */
 footer {
-  background-color: #fff;
-  padding: 2rem 1rem;
-  border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: #000 !important;
+    color: #fff !important;
+    border-top: 1px solid #333;
 }
 
 footer a {
-  color: #000;
-  text-decoration: none;
+    color: #fff !important;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    color: #00aced !important;
+    text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* --------------------
+   RESPONSIVE
+-------------------- */
 @media (max-width: 900px) {
-  .playlist-section {
-    flex-direction: column;
-    align-items: center;
-  }
+    .playlist-section {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .track {
-    flex-direction: column;
-    text-align: center;
-  }
+    .track {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .track-info {
-    text-align: center;
-  }
+    .track-info {
+        text-align: center;
+    }
 }
 
-/* Force black header and footer */
-header {
-  background-color: #000 !important;
-  color: #fff !important;
-}
+@media (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
 
-header h1,
-header p {
-  color: #fff !important;
-}
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-footer {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-footer a {
-  color: #fff !important;
-}
-
-footer a:hover {
-  color: #00aced !important;
-  text-decoration: underline;
-}
-
-/* Reduce size of "Joseph S. Andaloro" in header */
-header p.company-name {
-  font-size: 1rem !important; /* half of previous 2rem */
-}
-
-/* Header typography adjustments */
-header p.company-name {
-    font-size: 1rem !important; /* Joseph S. Andaloro */
-}
-
-header p.subtitle {
-    font-size: 1.8rem !important; /* Pure Tech Productions */
-}
-
-header p.production-title {
-    font-size: 1.5rem !important; /* Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝 */
+    section {
+        margin: 2rem 1rem;
+    }
 }
