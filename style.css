@@ -585,3 +585,16 @@ footer a:hover {
 header p.company-name {
   font-size: 1rem !important; /* half of previous 2rem */
 }
+
+/* Header typography adjustments */
+header p.company-name {
+    font-size: 1rem !important; /* Joseph S. Andaloro */
+}
+
+header p.subtitle {
+    font-size: 1.8rem !important; /* Pure Tech Productions */
+}
+
+header p.production-title {
+    font-size: 1.5rem !important; /* Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝 */
+}
