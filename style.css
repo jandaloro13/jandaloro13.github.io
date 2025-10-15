@@ -369,3 +369,13 @@ summary .title-year {
     font-size: 1.2rem; /* increased size significantly */
     line-height: 1.8; /* optional, keeps readability */
 }
+
+/* Reduce line spacing in dropdown body */
+.script-info {
+    line-height: 1.3; /* adjust this number to desired spacing */
+}
+
+/* Reduce line spacing for logline/genre text in summary */
+summary .logline-genre {
+    line-height: 1.3; /* adjust as needed */
+}
