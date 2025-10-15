@@ -5,10 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writing | Joseph S. Andaloro</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dropdown styling */
+        details {
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            list-style: none;
+        }
+        details[open] {
+            background-color: #f0f0f0;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::after {
+            content: " ▼";
+            font-size: 1rem;
+            transition: transform 0.2s ease;
+        }
+        details[open] summary::after {
+            content: " ▲";
+        }
+        .script-content {
+            margin-top: 1rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
 <header>
     <h1>Joseph S. Andaloro</h1>
     <p class="subtitle company-name">Pure Tech Productions</p>
@@ -23,59 +59,64 @@
     </nav>
 </header>
 
-    <!-- MAIN CONTENT -->
-    <section id="writing">
-        <h2>Writing</h2>
-        <p>Here are some examples of scripts and script breakdowns I have created under Pure Tech Productions:</p>
+<section id="writing">
+    <h2>Writing</h2>
+    <p>Below are detailed breakdowns of selected scripts developed under Pure Tech Productions.</p>
 
-        <!-- Script Example 1 -->
-        <div class="script-example">
-            <h3>Short Film: "Mystery at Dusk"</h3>
-            <p><strong>Genre:</strong> Mystery / Drama</p>
-            <p><strong>Summary:</strong> A small-town detective races against time to solve a local disappearance while confronting personal demons.</p>
-            <p><strong>Script Breakdown:</strong> 
-                Act 1 sets the scene and introduces main characters.  
-                Act 2 develops tension and red herrings, including multiple suspects.  
-                Act 3 resolves the mystery with a surprising twist and character growth.  
-            </p>
+    <!-- No Smoking -->
+    <details>
+        <summary>No Smoking</summary>
+        <div class="script-content">
+By Joe Andaloro
+
+Logline  
+A desperate man's attempt at a fresh start ignites into violent and surreal encounters, forcing him to confront his past as his choices lead him down a path of fiery consequences and eternal damnation.
+
+Summary  
+The story centers on Creed Isaacs, a man in his fifties attempting to rebuild his life after homelessness and addiction... [trimmed for brevity — insert full text here if desired]
         </div>
+    </details>
 
-        <!-- Script Example 2 -->
-        <div class="script-example">
-            <h3>TV Pilot: "City Lights"</h3>
-            <p><strong>Genre:</strong> Coming-of-Age / Comedy</p>
-            <p><strong>Summary:</strong> A group of young adults navigate relationships, career ambitions, and unexpected adventures in a bustling urban environment.</p>
-            <p><strong>Script Breakdown:</strong> 
-                Episode 1 introduces core cast and central conflicts.  
-                Narrative focuses on intertwining storylines while highlighting comedic timing and character arcs.  
-            </p>
+    <!-- The Rocket -->
+    <details>
+        <summary>The Rocket</summary>
+        <div class="script-content">
+By Joe Andaloro
+
+Logline  
+An arrogant champion racehorse suffers a catastrophic injury and, facing certain death, must escape into the wilderness where she confronts her false identity and struggles through a brutal journey toward self-acceptance and belonging.
+
+Summary  
+The story centers on Rosie, initially a skinny two-year-old pony... [trimmed for brevity — insert full text here if desired]
         </div>
+    </details>
 
-        <!-- Script Example 3 -->
-        <div class="script-example">
-            <h3>Animated Short: "The Little Inventor"</h3>
-            <p><strong>Genre:</strong> Children’s Animation</p>
-            <p><strong>Summary:</strong> A young inventor creates whimsical gadgets to solve everyday problems, learning valuable life lessons along the way.</p>
-            <p><strong>Script Breakdown:</strong> 
-                Story emphasizes visual storytelling and playful dialogue.  
-                Scenes designed to highlight animation potential and pacing suitable for children.  
-            </p>
+    <!-- Cycological -->
+    <details>
+        <summary>Cycological</summary>
+        <div class="script-content">
+By Joe Andaloro
+
+Logline  
+A student escapes a terrifying assault only to step into a surreal environment where they confront their doppelgänger, initiating a violent and inescapable cycle of fear and pursuit.
+
+Summary  
+The narrative opens with Student A, bleeding from the forehead... [trimmed for brevity — insert full text here if desired]
         </div>
+    </details>
 
-        <p>You can continue adding more scripts by duplicating the `<div class="script-example">` blocks and updating content accordingly.</p>
-    </section>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Connect with me:</p>
-        <p>
-            <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
-            <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
-            <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
-            <a href="mailto:JAndaloro1313@gmail.com">Email</a>
-        </p>
-    </footer>
+<footer>
+    <p>Connect with me:</p>
+    <p>
+        <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
+        <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
+        <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
+        <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
+        <a href="mailto:JAndaloro1313@gmail.com">Email</a>
+    </p>
+</footer>
 
 </body>
 </html>
