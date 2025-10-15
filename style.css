@@ -556,3 +556,27 @@ footer a:hover {
   }
 }
 
+/* Force black header and footer */
+header {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+header h1,
+header p {
+  color: #fff !important;
+}
+
+footer {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+footer a {
+  color: #fff !important;
+}
+
+footer a:hover {
+  color: #00aced !important;
+  text-decoration: underline;
+}
