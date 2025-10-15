@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video | Joseph S. Andaloro</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <style>
+        .video-section {
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+        }
 
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .video-item p {
+            text-align: center;
+            line-height: 1.2;
+            margin: 8px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
     <!-- HEADER -->
     <header>
         <h1>Joseph S. Andaloro</h1>
@@ -24,76 +51,63 @@
     </header>
 
     <!-- MAIN CONTENT -->
-<section id="video">
-    <h2>Video</h2>
+    <section id="video">
+        <h2>Video</h2>
 
-    <!-- Music Videos -->
-    <h3>Music Videos</h3>
-    <div class="video-grid">
+        <!-- MUSIC VIDEOS -->
+        <div class="video-section">
+            <h3>Music Videos</h3>
+            <div class="video-grid">
 
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/uvqtuwkh8og" title="Lydiahadie – Hand In Hand" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Lydiahadie – Hand In Hand (Official Music Video)</strong><br>
-            Director & Editor<br>
-            2025</p>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/uvqtuwkh8og" title="Lydiahadie – Hand In Hand" allowfullscreen></iframe>
+                    <p><strong>Lydiahadie – Hand In Hand (Official Music Video)</strong><br>Director & Editor<br>2025</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/q1YU5PZQ0gU" title="Sludge – Live at the Cantab Lounge" allowfullscreen></iframe>
+                    <p><strong>Sludge – Live at the Cantab Lounge</strong><br>Director & Editor<br>2025</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/np63KZ1Zugs" title="Holly – Croak" allowfullscreen></iframe>
+                    <p><strong>Holly – Croak (Official Music Video)</strong><br>Director & Editor<br>2025</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/soFZesLR95U" title="Glowmanny – Lost Boy" allowfullscreen></iframe>
+                    <p><strong>Glowmanny – Lost Boy (Official Music Video)</strong><br>Director & Editor<br>2025</p>
+                </div>
+            </div>
         </div>
 
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/q1YU5PZQ0gU" title="Sludge – Live at the Cantab Lounge" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Sludge – Live at the Cantab Lounge</strong><br>
-            Director & Editor<br>
-            2025</p>
+        <!-- STUDENT FILMS -->
+        <div class="video-section">
+            <h3>Student Films</h3>
+            <div class="video-grid">
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/XhPITyg8L8I" title="Cycological" allowfullscreen></iframe>
+                    <p><strong>Cycological</strong><br>Writer & Actor<br>2023</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/hXyh1qoN_Ps" title="Revenge of the Roommate" allowfullscreen></iframe>
+                    <p><strong>Revenge of the Roommate</strong><br>Director, Writer & Editor<br>2023</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/b1D_4QFIQcE" title="The Long and Winding Run" allowfullscreen></iframe>
+                    <p><strong>The Long and Winding Run</strong><br>Director, Writer & Editor<br>2023</p>
+                </div>
+
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/3I6aiBPPx0o" title="A Walk in the Park" allowfullscreen></iframe>
+                    <p><strong>A Walk in the Park</strong><br>Director, Writer & Editor<br>2023</p>
+                </div>
+            </div>
         </div>
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/np63KZ1Zugs" title="Holly – Croak" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Holly – Croak (Official Music Video)</strong><br>
-            Director & Editor<br>
-            2025</p>
-        </div>
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/soFZesLR95U" title="Glowmanny – Lost Boy" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Glowmanny – Lost Boy (Official Music Video)</strong><br>
-            Director & Editor<br>
-            2025</p>
-        </div>
-    </div>
-
-    <!-- Student Films -->
-    <h3>Student Films</h3>
-    <div class="video-grid">
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/XhPITyg8L8I" title="Cycological" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Cycological</strong><br>
-            Writer & Actor<br>
-            2023</p>
-        </div>
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/hXyh1qoN_Ps" title="Revenge of the Roommate" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Revenge of the Roommate</strong><br>
-            Director, Writer & Editor<br>
-            2023</p>
-        </div>
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/b1D_4QFIQcE" title="The Long and Winding Run" frameborder="0" allowfullscreen></iframe>
-            <p><strong>The Long and Winding Run</strong><br>
-            Director, Writer & Editor<br>
-            2023</p>
-        </div>
-
-        <div class="video-item">
-            <iframe src="https://www.youtube.com/embed/3I6aiBPPx0o" title="A Walk in the Park" frameborder="0" allowfullscreen></iframe>
-            <p><strong>A Walk in the Park</strong><br>
-            Director, Writer & Editor<br>
-            2023</p>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -106,6 +120,5 @@
             <a href="mailto:JAndaloro1313@gmail.com">Email</a>
         </p>
     </footer>
-
 </body>
 </html>
