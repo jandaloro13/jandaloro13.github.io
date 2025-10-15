@@ -279,3 +279,32 @@ footer a:hover {
     margin-top: 0.75rem;
 }
 
+/* Body background image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); /* replace with your actual path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pixel'; /* replace with your defined body font */
+}
+
+/* White content box */
+.content-wrapper {
+    background-color: white;
+    max-width: 1200px; /* adjust as desired */
+    margin: 0 auto; /* centers the box */
+    padding: 40px; /* inner spacing for content */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional subtle shadow */
+    min-height: calc(100vh - 160px); /* full height minus header/footer */
+    font-family: 'Pixel'; /* body font inside box */
+}
+
+/* Headings and subtitles with your fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'SonyCam' /* replace with your title font */
+}
+
+h2, h3 {
+    font-family: 'Pixel',; /* replace with subtitle font */
+}
