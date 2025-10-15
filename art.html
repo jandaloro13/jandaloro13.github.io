@@ -5,10 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art | Joseph S. Andaloro</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Art grid styling */
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .art-piece {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9; /* uniform box size */
+            background: #000;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .art-title {
+            text-align: center;
+            font-family: 'Pixel', monospace;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .video-container.paused video {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- HEADER -->
 <header>
     <h1>Joseph S. Andaloro</h1>
     <p class="subtitle company-name">Pure Tech Productions</p>
@@ -23,58 +62,70 @@
     </nav>
 </header>
 
+<section id="art">
+    <h2>Art</h2>
+    <p>Here are examples of my visual art, including videos and images:</p>
 
-    <!-- MAIN CONTENT -->
-    <section id="art">
-        <h2>Art</h2>
-        <p>Here are examples of my visual art, including videos and images:</p>
-
+    <div class="art-grid">
         <!-- Video Example 1 -->
         <div class="art-piece">
-            <video width="560" height="315" autoplay loop muted>
-                <source src="videos/art-video1.mp4" type="video/mp4">
-                <source src="videos/art-video1.mov" type="video/quicktime">
-                Your browser does not support the video tag.
-            </video>
-            <p class="art-title">"Liminal Space Study" (2023)</p>
+            <div class="video-container paused" onclick="togglePlay(this)">
+                <video muted>
+                    <source src="videos/art-video1.mov" type="video/quicktime">
+                    <source src="videos/art-video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="art-title">[TITLE] ([YEAR])</p>
         </div>
 
         <!-- Video Example 2 -->
         <div class="art-piece">
-            <video width="560" height="315" autoplay loop muted>
-                <source src="videos/art-video2.mp4" type="video/mp4">
-                <source src="videos/art-video2.mov" type="video/quicktime">
-                Your browser does not support the video tag.
-            </video>
-            <p class="art-title">"Glitch Composition" (2024)</p>
+            <div class="video-container paused" onclick="togglePlay(this)">
+                <video muted>
+                    <source src="videos/art-video2.mov" type="video/quicktime">
+                    <source src="videos/art-video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="art-title">[TITLE] ([YEAR])</p>
         </div>
 
-        <!-- Image Example 1 -->
+        <!-- Image Example -->
         <div class="art-piece">
-            <img src="images/art1.jpg" alt="Abstract Photography 1" width="560">
-            <p class="art-title">"Abstract Patterns" (2023)</p>
+            <div class="video-container">
+                <img src="images/art1.jpg" alt="[IMAGE TITLE]" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <p class="art-title">[TITLE] ([YEAR])</p>
         </div>
 
-        <!-- Image Example 2 -->
-        <div class="art-piece">
-            <img src="images/art2.jpg" alt="Photography 2" width="560">
-            <p class="art-title">"Urban Shadows" (2024)</p>
-        </div>
+        <!-- Repeat placeholders for additional art pieces -->
+    </div>
+</section>
 
-        <p>Duplicate `<div class="art-piece">` blocks to add more videos or images. Update the `src` attribute for your media files and update titles/years as needed.</p>
-    </section>
+<footer>
+    <p>Connect with me:</p>
+    <p>
+        <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
+        <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
+        <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
+        <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
+        <a href="mailto:JAndaloro1313@gmail.com">Email</a>
+    </p>
+</footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Connect with me:</p>
-        <p>
-            <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
-            <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
-            <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
-            <a href="mailto:JAndaloro1313@gmail.com">Email</a>
-        </p>
-    </footer>
+<script>
+    function togglePlay(container) {
+        const video = container.querySelector('video');
+        if (video.paused) {
+            video.play();
+            container.classList.remove('paused');
+        } else {
+            video.pause();
+            container.classList.add('paused');
+        }
+    }
+</script>
 
 </body>
 </html>
