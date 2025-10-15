@@ -358,3 +358,14 @@ details[open] .script-info {
     white-space: pre-wrap;
     margin-top: 0.5rem;
 }
+
+/* Make dropdown titles (SonyCam) smaller */
+summary .title-year {
+    font-size: 0.75rem; /* reduced size significantly */
+}
+
+/* Make body text inside dropdowns (Pixel) larger */
+.script-info {
+    font-size: 1.2rem; /* increased size significantly */
+    line-height: 1.8; /* optional, keeps readability */
+}
