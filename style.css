@@ -379,3 +379,13 @@ summary .title-year {
 summary .logline-genre {
     line-height: 1.3; /* adjust as needed */
 }
+/* Center script title and year */
+summary .title-year {
+    display: block;
+    text-align: center;
+}
+summary .year {
+    display: inline-block; /* keeps year next to title */
+    margin-left: 0.25em;
+}
+
