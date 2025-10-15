@@ -27,15 +27,11 @@
 body {
     font-family: 'Pixel', monospace;
     font-size: 1.65rem;
-    color: #111;
     line-height: 1.8;
+    color: #111;
     background-color: #f9f9f9;
-    background-image: url('images/2. Apocalypse 6.25.23.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     text-align: center;
+    margin: 0;
 }
 
 /* --------------------
@@ -44,14 +40,14 @@ body {
 header {
     text-align: center;
     padding: 4rem 1rem 2rem 1rem;
+    background-color: #000;
+    color: #fff;
     border-bottom: 1px solid #333;
-    background-color: #000 !important;
-    color: #fff !important;
 }
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.25rem !important; /* Reduced Joseph S. Andaloro */
+    font-size: 2rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
@@ -60,19 +56,15 @@ header h1 {
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.8rem !important; /* Pure Tech Productions */
-    color: #fff !important;
+    font-size: 1.8rem;
     margin-top: 0.25rem;
     font-weight: normal;
 }
 
 header p.production-title {
     font-family: 'Pixel', monospace;
-    font-size: 1.5rem !important; /* Role titles */
-    font-weight: normal;
-    color: #fff !important;
+    font-size: 1.5rem;
     margin-top: 0.2rem;
-    margin-bottom: 0.4rem;
 }
 
 /* --------------------
@@ -82,9 +74,8 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-top: 1.5rem;
-    padding: 1rem 0;
 }
 
 nav a {
@@ -93,8 +84,8 @@ nav a {
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
+    padding: 0.5rem 0.75rem;
     transition: all 0.3s ease;
-    padding: 0.75rem 0.5rem;
 }
 
 nav a:hover {
@@ -103,54 +94,83 @@ nav a:hover {
 }
 
 /* --------------------
-   SECTIONS
+   MAIN CONTENT WRAPPER
 -------------------- */
-section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem 1.5rem;
-    background: #ffffff !important;
+.content-wrapper {
+    background-color: #ffffff;
+    opacity: 1;
+    max-width: 1200px;
+    margin: 2rem auto 4rem auto;
+    padding: 2.5rem 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* --------------------
+   SECTIONS
+-------------------- */
+section {
+    margin-bottom: 3rem;
+}
+
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: 1.2rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 section h3 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
 }
 
-section p,
-section li {
+section p, section li {
     font-family: 'Pixel', monospace;
     font-size: 1.65rem;
     margin-bottom: 1rem;
-    font-weight: bold;
 }
 
 /* --------------------
-   MAIN
+   IMAGES & MEDIA
 -------------------- */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    background-color: #fff;
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+/* About page images */
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.about-images img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Video grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
 }
 
 /* --------------------
-   AUDIO PAGE STYLING
+   AUDIO / PLAYLIST / TRACKS
 -------------------- */
 .playlist-section {
     display: flex;
@@ -165,10 +185,6 @@ main {
     min-width: 300px;
 }
 
-.unreleased h2 {
-    margin-bottom: 2rem;
-}
-
 .track {
     display: flex;
     align-items: center;
@@ -176,15 +192,6 @@ main {
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.album-art {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .track-info {
@@ -192,13 +199,12 @@ main {
     text-align: left;
 }
 
-audio {
+.audio, audio {
     width: 100%;
-    outline: none;
     margin-top: 0.5rem;
 }
 
-/* Waveform animation */
+/* Waveform */
 .waveform {
     display: flex;
     justify-content: flex-start;
@@ -208,21 +214,6 @@ audio {
     margin-top: 8px;
 }
 
-.waveform::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    animation: wave 1s infinite linear;
-    background: repeating-linear-gradient(
-        to right,
-        #000,
-        #000 2px,
-        transparent 3px,
-        transparent 6px
-    );
-}
-
 @keyframes wave {
     0% {transform: scaleY(0.3);}
     50% {transform: scaleY(1);}
@@ -230,48 +221,26 @@ audio {
 }
 
 /* --------------------
-   VIDEO EMBED
--------------------- */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin: 2rem 0;
-}
-
-.video-container iframe,
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-}
-
-/* --------------------
    FOOTER
 -------------------- */
 footer {
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    background-color: #000 !important;
-    color: #fff !important;
+    padding: 2rem 1rem;
+    background-color: #000;
+    color: #fff;
     border-top: 1px solid #333;
 }
 
 footer a {
-    color: #fff !important;
+    text-decoration: none;
+    color: #fff;
     margin: 0 0.5rem;
     font-size: 1.4rem;
-    text-decoration: none;
     transition: 0.3s;
 }
 
 footer a:hover {
-    color: #00aced !important;
-    text-decoration: underline;
+    color: #00aced;
 }
 
 /* --------------------
@@ -291,19 +260,21 @@ footer a:hover {
     .track-info {
         text-align: center;
     }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
 
     nav {
         flex-direction: column;
-        align-items: center;
+        gap: 1rem;
     }
 
-    section {
-        margin: 2rem 1rem;
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p.subtitle {
+        font-size: 1.5rem;
+    }
+
+    header p.production-title {
+        font-size: 1.3rem;
     }
 }
