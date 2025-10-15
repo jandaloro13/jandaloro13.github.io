@@ -319,16 +319,4 @@ h2, h3 {
     line-height: 1.2;
     margin-top: 8px;
 }
-/* Force solid white background */
-body, html {
-    background-color: #ffffff !important;
-    background-image: none !important;
-}
 
-section#writing {
-    background-color: #ffffff;
-}
-
-details {
-    background-color: #ffffff !important;
-}
