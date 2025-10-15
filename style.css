@@ -296,3 +296,9 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3 {
     font-family: 'Pixel',; /* replace with subtitle font */
 }
+#about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1.5em auto;
+    line-height: 1.6;
+}
