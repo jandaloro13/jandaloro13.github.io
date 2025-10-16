@@ -278,6 +278,10 @@ section {
     padding-top: 0;
 }
 
+.section-body {
+    font-weight: bold;
+    display: block;
+
 /* --------------------
    VIDEO CONTAINERS
 -------------------- */
@@ -289,14 +293,18 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;              /* added */
+    justify-content: center;    /* centers 16:9 videos */
+    align-items: center;        /* vertically centers 16:9 videos */
 }
 
 /* Default: 16:9 videos */
 .video-container video {
     width: 100%;
     height: auto;
+    max-height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;       /* prevents cropping */
     aspect-ratio: 16 / 9;
 }
 
@@ -308,7 +316,3 @@ section {
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
-
-.section-body {
-    font-weight: bold;
-    display: block;
