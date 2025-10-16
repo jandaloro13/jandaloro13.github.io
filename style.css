@@ -341,16 +341,24 @@ section {
     text-align: center;
 }
 
-/* Fix 16:9 videos black bars */
+/* 16:9 videos centered and cropped, no black bars */
 .video-container:not(.square) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .video-container:not(.square) video {
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
     height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
-    display: block;
 }
+
