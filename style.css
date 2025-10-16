@@ -261,3 +261,19 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Remove unwanted top spacing on About page */
+#about h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Standardize spacing for all page sections */
+section {
+    margin-top: 40px;
+}
+
+/* Remove extra padding from main wrapper if present */
+.content-wrapper {
+    padding-top: 0;
+}
