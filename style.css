@@ -292,11 +292,12 @@ section {
     object-fit: cover;
 }
 
+/* 16:9 videos fixed */
 .video-container:not(.square) {
     position: relative;
     width: 100%;
-    padding-top: 0; /* remove padding */
-    aspect-ratio: 16 / 9;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 ratio */
     overflow: hidden;
     border-radius: 10px;
     background: #000;
@@ -306,13 +307,12 @@ section {
 .video-container:not(.square) video,
 .video-container:not(.square) iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    width: auto;
     height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
-}
-
 }
 
 /* Grid alignment */
