@@ -284,10 +284,7 @@ section {
 }
 
 /* --------------------
-   VIDEO CONTAINERS
--------------------- */
-/* --------------------
-   VIDEO CONTAINERS
+   VIDEO CONTAINERS FIXED
 -------------------- */
 .video-container,
 .video-container.square {
@@ -299,7 +296,7 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    align-items: center; /* centers video inside container */
+    align-items: center; /* center video inside container */
 }
 
 /* Square videos: 1:1 */
@@ -318,10 +315,12 @@ section {
     object-fit: cover;
 }
 
-/* 16:9 videos inside container */
+/* 16:9 videos inside container: center vertically */
 .video-container:not(.square) video {
     width: auto;
-    height: 100%; /* fill container height */
+    height: 100%;
+    max-height: 100%;
+    align-self: center; /* centers 16:9 videos vertically */
 }
 
 /* 1:1 videos inside container */
@@ -337,14 +336,13 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 20px;
-    align-items: center; /* vertically center videos in row */
+    align-items: center; /* vertically center items in row */
 }
 
 .art-piece {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centers container and text vertically */
+    justify-content: center;
     text-align: center;
 }
-
 
