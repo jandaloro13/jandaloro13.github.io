@@ -304,3 +304,11 @@ section {
 #art .video-container {
     aspect-ratio: 1 / 1 !important;
 }
+/* --- FIX: Remove top black bar on 1:1 videos --- */
+#art .video-container video {
+    object-fit: cover;
+    object-position: center center; /* centers video perfectly */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
