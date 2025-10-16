@@ -320,3 +320,34 @@ section {
     margin-top: 20px;
     align-items: center; /* centers shorter videos vertically in each row */
 }
+
+.art-piece {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers content vertically */
+}
+
+.video-container {
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centers video inside container */
+}
+
+/* 16:9 videos */
+.video-container:not(.square) video {
+    width: auto;
+    height: 100%; /* fills container height */
+    object-fit: cover;
+}
+
+/* 1:1 videos */
+.video-container.square video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
