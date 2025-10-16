@@ -286,41 +286,65 @@ section {
 /* --------------------
    VIDEO CONTAINERS
 -------------------- */
+/* --------------------
+   VIDEO CONTAINERS
+-------------------- */
+.video-container,
+.video-container.square {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centers video inside container */
+}
+
+/* Square videos: 1:1 */
+.video-container.square {
+    aspect-ratio: 1 / 1;
+}
+
+/* 16:9 videos */
+.video-container:not(.square) {
+    aspect-ratio: 16 / 9;
+}
+
+/* Video elements */
+.video-container video {
+    display: block;
+    object-fit: cover;
+}
+
+/* 16:9 videos inside container */
+.video-container:not(.square) video {
+    width: auto;
+    height: 100%; /* fill container height */
+}
+
+/* 1:1 videos inside container */
+.video-container.square video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Grid alignment for art pieces */
 .art-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 20px;
+    align-items: center; /* vertically center videos in row */
 }
 
 .art-piece {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers container and text vertically */
     text-align: center;
 }
 
-.video-container,
-.video-container.square {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centers video inside container */
-    overflow: hidden;
-}
-
-.video-container.square {
-    aspect-ratio: 1 / 1;
-}
-
-.video-container:not(.square) {
-    aspect-ratio: 16 / 9;
-}
-
-.video-container video {
-    display: block;
-    object-fit: cover;
-    height: 100%;
-    width: auto; /* maintain 16:9 ratio, center horizontally */
-}
 
