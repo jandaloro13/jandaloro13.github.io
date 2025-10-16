@@ -30,8 +30,12 @@ body {
     line-height: 1.8;
     color: #111;
     background-color: #f9f9f9;
+    background-image: url('images/2. Apocalypse 6.25.23.jpg'); /* custom background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     text-align: center;
-    margin: 0;
 }
 
 /* --------------------
@@ -39,15 +43,15 @@ body {
 -------------------- */
 header {
     text-align: center;
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid #333;
     background-color: #000;
     color: #fff;
-    border-bottom: 1px solid #333;
 }
 
 header h1 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
@@ -56,26 +60,27 @@ header h1 {
 
 header p.subtitle {
     font-family: 'Pixel', monospace;
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Pure Tech Productions larger */
+    color: #fff;
     margin-top: 0.25rem;
     font-weight: normal;
 }
 
 header p.production-title {
     font-family: 'Pixel', monospace;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* job titles bigger */
+    color: #fff;
     margin-top: 0.2rem;
+    font-weight: normal;
 }
 
-/* --------------------
-   NAVIGATION
--------------------- */
 nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 1.5rem;
+    padding: 1rem 0;
 }
 
 nav a {
@@ -84,8 +89,8 @@ nav a {
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
-    padding: 0.5rem 0.75rem;
     transition: all 0.3s ease;
+    padding: 0.75rem 0.5rem;
 }
 
 nav a:hover {
@@ -94,36 +99,31 @@ nav a:hover {
 }
 
 /* --------------------
-   MAIN CONTENT WRAPPER
+   MAIN CONTENT BOX
 -------------------- */
-.content-wrapper {
-    background-color: #ffffff;
-    opacity: 1;
-    max-width: 1200px;
-    margin: 2rem auto 4rem auto;
-    padding: 2.5rem 1.5rem;
+.content-wrapper, section {
+    background-color: #ffffff !important; /* white content box */
     border-radius: 10px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* --------------------
-   SECTIONS
+   SECTION HEADINGS
 -------------------- */
-section {
-    margin-bottom: 3rem;
-}
-
 section h2 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 section h3 {
     font-family: 'SonyCam', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
@@ -133,19 +133,22 @@ section p, section li {
     font-family: 'Pixel', monospace;
     font-size: 1.65rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 /* --------------------
    IMAGES & MEDIA
 -------------------- */
-img, video {
+img, video, iframe {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
     margin: 1rem 0;
 }
 
-/* About page images */
+/* --------------------
+   ABOUT PAGE IMAGES
+-------------------- */
 .about-images {
     display: flex;
     justify-content: center;
@@ -157,67 +160,9 @@ img, video {
 
 .about-images img {
     width: 250px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Video grid */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    justify-items: center;
-}
-
-/* --------------------
-   AUDIO / PLAYLIST / TRACKS
--------------------- */
-.playlist-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.playlist {
-    flex: 1 1 45%;
-    min-width: 300px;
-}
-
-.track {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.track-info {
-    max-width: 600px;
-    text-align: left;
-}
-
-.audio, audio {
-    width: 100%;
-    margin-top: 0.5rem;
-}
-
-/* Waveform */
-.waveform {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    gap: 2px;
-    height: 40px;
-    margin-top: 8px;
-}
-
-@keyframes wave {
-    0% {transform: scaleY(0.3);}
-    50% {transform: scaleY(1);}
-    100% {transform: scaleY(0.3);}
 }
 
 /* --------------------
@@ -225,56 +170,41 @@ img, video {
 -------------------- */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
+    border-top: 1px solid #333;
     background-color: #000;
     color: #fff;
-    border-top: 1px solid #333;
 }
 
 footer a {
     text-decoration: none;
     color: #fff;
     margin: 0 0.5rem;
-    font-size: 1.4rem;
+    font-family: 'Pixel', monospace;
     transition: 0.3s;
 }
 
 footer a:hover {
     color: #00aced;
+    text-decoration: underline;
 }
 
 /* --------------------
    RESPONSIVE
 -------------------- */
 @media (max-width: 900px) {
-    .playlist-section {
+    body {
+        font-size: 1.4rem;
+    }
+    nav {
         flex-direction: column;
         align-items: center;
     }
-
-    .track {
+    .about-images {
         flex-direction: column;
-        text-align: center;
     }
-
-    .track-info {
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p.subtitle {
-        font-size: 1.5rem;
-    }
-
-    header p.production-title {
-        font-size: 1.3rem;
+    .content-wrapper, section {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
     }
 }
