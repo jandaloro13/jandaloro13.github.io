@@ -312,3 +312,11 @@ section {
     object-fit: cover; /* fills container without cropping */
     display: block;
 }
+   
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center; /* centers shorter videos vertically in each row */
+}
