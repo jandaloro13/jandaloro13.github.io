@@ -208,3 +208,12 @@ footer a:hover {
         padding: 1.5rem;
     }
 }
+
+.script-info span.section-body {
+    font-size: 1.65rem;
+    font-weight: bold;
+    display: block;
+    margin-left: 1em;
+    margin-top: 0.25em;
+    text-align: left;
+}
