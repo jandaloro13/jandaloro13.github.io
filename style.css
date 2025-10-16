@@ -317,3 +317,25 @@ section {
     font-weight: bold;
     display: block;
 }
+
+/* --- Adaptive video sizing for mixed ratios --- */
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+/* Default: 16:9 ratio */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  aspect-ratio: 16 / 9;
+}
+
+/* Square videos (1:1) */
+.video-container.square video {
+  aspect-ratio: 1 / 1;
+}
