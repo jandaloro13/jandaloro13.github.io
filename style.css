@@ -286,40 +286,41 @@ section {
 /* --------------------
    VIDEO CONTAINERS
 -------------------- */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.art-piece {
+    text-align: center;
+}
+
 .video-container,
 .video-container.square {
-    position: relative;
     width: 100%;
-    overflow: hidden;
     border-radius: 10px;
-    background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #000;
     display: flex;
-    justify-content: center;
-    align-items: center; /* centers video inside container */
+    align-items: center;
+    justify-content: center; /* centers video inside container */
+    overflow: hidden;
 }
 
 .video-container.square {
-    aspect-ratio: 1 / 1; /* keeps square shape */
+    aspect-ratio: 1 / 1;
 }
 
 .video-container:not(.square) {
-    aspect-ratio: 16 / 9; /* keeps 16:9 shape */
+    aspect-ratio: 16 / 9;
 }
 
 .video-container video {
     display: block;
     object-fit: cover;
-}
-
-/* 1:1 videos */
-.video-container.square video {
-    width: 100%;
     height: 100%;
+    width: auto; /* maintain 16:9 ratio, center horizontally */
 }
 
-/* 16:9 videos */
-.video-container:not(.square) video {
-    width: auto;
-    height: 100%; /* fills container height */
-}
