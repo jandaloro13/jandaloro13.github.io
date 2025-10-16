@@ -250,3 +250,14 @@ footer a:hover {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+@media (max-width: 900px) {
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+}
