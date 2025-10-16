@@ -293,26 +293,22 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    display: flex;              /* added */
-    justify-content: center;    /* centers 16:9 videos */
-    align-items: center;        /* vertically centers 16:9 videos */
 }
 
-/* Default: 16:9 videos */
+/* 1:1 videos */
+.video-container.square {
+    aspect-ratio: 1 / 1; /* keeps square shape */
+}
+
+/* 16:9 videos */
+.video-container:not(.square) {
+    aspect-ratio: 16 / 9; /* keeps 16:9 shape */
+}
+
+/* All videos */
 .video-container video {
     width: 100%;
-    height: auto;
-    max-height: 100%;
-    display: block;
-    object-fit: contain;       /* prevents cropping */
-    aspect-ratio: 16 / 9;
-}
-
-/* Square videos: 1:1 */
-.video-container.square video {
-    width: 100%;
     height: 100%;
+    object-fit: cover; /* fills container without cropping */
     display: block;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
 }
