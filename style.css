@@ -294,9 +294,6 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center; /* center video inside container */
 }
 
 /* Square videos: 1:1 */
@@ -309,28 +306,26 @@ section {
     aspect-ratio: 16 / 9;
 }
 
-/* Video elements */
+/* All videos inside container */
 .video-container video {
-    display: block;
-    object-fit: cover;
-}
-
-/* 16:9 videos inside container: center vertically */
-.video-container:not(.square) video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: auto;
     height: 100%;
-    max-height: 100%;
-    align-self: center; /* centers 16:9 videos vertically */
-}
-
-/* 1:1 videos inside container */
-.video-container.square video {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-/* Grid alignment for art pieces */
+/* 1:1 videos override absolute centering */
+.video-container.square video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: none;
+}
+
+/* Grid alignment */
 .art-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -345,4 +340,3 @@ section {
     justify-content: center;
     text-align: center;
 }
-
