@@ -312,3 +312,8 @@ section {
     margin: 0;
     padding: 0;
 }
+
+.section-body {
+    font-weight: bold;
+    display: block;
+}
