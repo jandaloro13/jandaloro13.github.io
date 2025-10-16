@@ -299,3 +299,8 @@ section {
     object-fit: cover; /* fills the square evenly */
     display: block;
 }
+
+/* --- FIX: Force 1:1 aspect ratio for art videos only --- */
+#art .video-container {
+    aspect-ratio: 1 / 1 !important;
+}
