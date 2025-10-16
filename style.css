@@ -277,3 +277,25 @@ section {
 .content-wrapper {
     padding-top: 0;
 }
+
+/* Force 1:1 ratio for art videos */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.art-piece .video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* ensures square shape */
+    overflow: hidden;
+    background: #000;
+}
+
+.art-piece .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the square evenly */
+    display: block;
+}
