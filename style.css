@@ -308,3 +308,7 @@ section {
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
+
+.section-body {
+    font-weight: bold;
+    display: block;
