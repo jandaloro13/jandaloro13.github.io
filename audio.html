@@ -78,6 +78,16 @@ iframe[src*="youtube-nocookie.com/embed/"]:not([src*="videoseries"]) {
   border-radius: 12px;
 }
 
+/* Fix Apple Music playlist height */
+iframe[src*="embed.music.apple.com/us/playlist"],
+iframe[src*="music.apple.com/us/playlist"],
+iframe[src*="embed.music.apple.com/playlist"],
+iframe[src*="music.apple.com/playlist"] {
+  height: 352px !important;
+  min-height: 352px !important;
+  max-height: 352px !important;
+}
+    
 /* Apple Music */
 iframe[src*="music.apple.com"],
 iframe[src*="embed.music.apple.com"] {
