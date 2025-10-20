@@ -1,194 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joseph S. Andaloro | Pure Tech Productions</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    main {
-      width: 90%;
-      margin: auto;
-      padding: 2rem 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph S. Andaloro | Pure Tech Productions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .audio-section {
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+        }
 
-    section {
-      margin-bottom: 4rem;
-    }
+        .audio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            margin-top: 20px;
+        }
 
-    h2 {
-      font-family: var(--font-header);
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      justify-items: center;
-    }
-
-    .release, .playlist, .unreleased-track {
-      text-align: center;
-      font-family: var(--font-body);
-    }
-
-    .album-art {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 8px;
-      margin-bottom: 0.8rem;
-    }
-
-    .links a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: inherit;
-      font-weight: 500;
-    }
-
-    audio {
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-
-    iframe {
-      border-radius: 8px;
-      width: 100%;
-      height: 380px;
-    }
-  </style>
+        .audio-item p {
+            text-align: center;
+            line-height: 1.2;
+            margin: 8px 0 0 0;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Joseph S. Andaloro</h1>
-    <p class="subtitle">Pure Tech Productions</p>
-    <p class="subtitle">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</p>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="audio.html">Audio</a>
-      <a href="video.html">Video</a>
-      <a href="writing.html">Writing</a>
-      <a href="art.html">Art</a>
-      <a href="marketing.html">Marketing</a>
-    </nav>
-  </header>
+    <!-- HEADER -->
+    <header>
+        <h1>Joseph S. Andaloro</h1>
+        <p class="subtitle">Pure Tech Productions</p>
+        <p class="subtitle">Producer 🎧 Engineer 🖥️ Photographer 📸 Videographer 📹 Director 🎥 Writer 📝</p>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="audio.html">Audio</a>
+            <a href="video.html">Video</a>
+            <a href="writing.html">Writing</a>
+            <a href="art.html">Art</a>
+            <a href="marketing.html">Marketing</a>
+        </nav>
+    </header>
 
-  <main>
-
-        <!-- MUSIC VIDEOS -->
-        <div class="video-section">
+    <!-- MAIN CONTENT -->
+    <section id="audio">
         <h2>Audio</h2>
 
-    <!-- RELEASED MUSIC -->
-    <section id="released-music">
-      <h3>Released Music</h3>
-      <div class="grid">
+        <!-- RELEASED MUSIC -->
+        <div class="audio-section">
+            <h3>Released Music</h3>
+            <div class="audio-grid">
 
-        <div class="release">
-          <img src="images/album1.jpg" alt="Album Art 1" class="album-art">
-          <h3>Album Title 1</h3>
-          <p>Artist — 2025</p>
-          <div class="links">
-            <a href="SPOTIFY_LINK" target="_blank">Spotify</a> |
-            <a href="APPLE_MUSIC_LINK" target="_blank">Apple Music</a> |
-            <a href="YOUTUBE_LINK" target="_blank">YouTube</a>
-          </div>
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/track/1uIPrflWnDpsCU93O6sHM5" title="Glowmanny – Lost Boy" allowfullscreen></iframe>
+                    <p><strong>Glowmanny – Lost Boy</strong><br>Producer, Mixing & Mastering Engineer<br>2025</p>
+                </div>
+
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/track/3hz4T0yn6j4fH6ZKxCAGvL" title="Holly – Croak" allowfullscreen></iframe>
+                    <p><strong>Holly – Croak</strong><br>Producer, Mixing & Mastering Engineer<br>2024</p>
+                </div>
+
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/track/6PdbSTazmP6RfDEySa77vA" title="Sludge – Live at the Cantab Lounge" allowfullscreen></iframe>
+                    <p><strong>Sludge – Live at the Cantab Lounge</strong><br>Live Recording & Mix Engineer<br>2024</p>
+                </div>
+
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/track/2Z4zZ4VfAnYhUwHXGZBxyt" title="Lydiahadie – Hand In Hand" allowfullscreen></iframe>
+                    <p><strong>Lydiahadie – Hand In Hand</strong><br>Producer, Recording & Mixing Engineer<br>2025</p>
+                </div>
+
+                <!-- PLAYLISTS (included at end of Released Music) -->
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd" title="Pure Tech Productions – Recent Work" allowfullscreen></iframe>
+                    <p><strong>Pure Tech Productions – Recent Work</strong><br>Compilation Playlist<br>2025</p>
+                </div>
+
+                <div class="audio-item">
+                    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" title="Pure Tech Productions – Highlights" allowfullscreen></iframe>
+                    <p><strong>Pure Tech Productions – Highlights</strong><br>Selected Works Playlist<br>2025</p>
+                </div>
+            </div>
         </div>
 
-        <div class="release">
-          <img src="images/album2.jpg" alt="Album Art 2" class="album-art">
-          <h3>Album Title 2</h3>
-          <p>Artist — 2024</p>
-          <div class="links">
-            <a href="SPOTIFY_LINK" target="_blank">Spotify</a> |
-            <a href="APPLE_MUSIC_LINK" target="_blank">Apple Music</a> |
-            <a href="YOUTUBE_LINK" target="_blank">YouTube</a>
-          </div>
+        <!-- UNRELEASED & CLIENT PROJECTS -->
+        <div class="audio-section">
+            <h3>Unreleased & Client Projects</h3>
+            <div class="audio-grid">
+
+                <div class="audio-item">
+                    <iframe src="https://soundcloud.com/yourusername/demo-track" title="Client Demo 1" allowfullscreen></iframe>
+                    <p><strong>Client Demo 1</strong><br>Mixing & Mastering Engineer<br>2025</p>
+                </div>
+
+                <div class="audio-item">
+                    <iframe src="https://soundcloud.com/yourusername/film-score" title="Film Score – Experimental Piece" allowfullscreen></iframe>
+                    <p><strong>Film Score – Experimental Piece</strong><br>Composer & Sound Designer<br>2024</p>
+                </div>
+            </div>
         </div>
-
-        <div class="release">
-          <img src="images/album3.jpg" alt="Album Art 3" class="album-art">
-          <h3>Album Title 3</h3>
-          <p>Artist — 2023</p>
-          <div class="links">
-            <a href="SPOTIFY_LINK" target="_blank">Spotify</a> |
-            <a href="APPLE_MUSIC_LINK" target="_blank">Apple Music</a> |
-            <a href="YOUTUBE_LINK" target="_blank">YouTube</a>
-          </div>
-        </div>
-
-    <!-- PLAYLISTS -->
-    <section id="playlists">
-      <h2>Credits</h2>
-      <div class="grid">
-
-        <div class="playlist">
-          <h3>Spotify</h3>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3KllSaNytJKgathwH4zBKV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        <div class="playlist">
-          <h3>Apple Music</h3>
-          <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/credits/pl.u-MvDGsRdMPAB"></iframe>
-        </div>
-
-        <div class="playlist">
-          <h3>YouTube</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=Cs20DoF9YODsHEnB&amp;list=PLqgIR8e4vYTmrMtbQjoYcFtCEB8We4fqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-    <!-- UNRELEASED MUSIC -->
-    <section id="unreleased">
-      <h2>Unreleased Music</h2>
-      <div class="grid">
-
-        <div class="unreleased-track">
-          <img src="images/unreleased1.jpg" alt="Unreleased Track 1" class="album-art">
-          <h3>Unreleased Track 1</h3>
-          <p>Producer, Mix Engineer — 2025</p>
-          <audio controls>
-            <source src="audio/unreleased1.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="unreleased-track">
-          <img src="images/unreleased2.jpg" alt="Unreleased Track 2" class="album-art">
-          <h3>Unreleased Track 2</h3>
-          <p>Composer, Sound Designer — 2025</p>
-          <audio controls>
-            <source src="audio/unreleased2.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="unreleased-track">
-          <img src="images/unreleased3.jpg" alt="Unreleased Track 3" class="album-art">
-          <h3>Unreleased Track 3</h3>
-          <p>Artist, Engineer — 2025</p>
-          <audio controls>
-            <source src="audio/unreleased3.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-      </div>
     </section>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Connect with Me:</p>
-    <p>
-      <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
-      <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
-      <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
-      <a href="mailto:JAndaloro1313@gmail.com">Email</a>
-    </p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>Connect with Me:</p>
+        <p>
+            <a href="https://www.linkedin.com/in/joseph-andaloro-1700ba24a/" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com/ptprods/" target="_blank">Instagram</a> |
+            <a href="https://www.youtube.com/@ptprods13" target="_blank">YouTube</a> |
+            <a href="https://www.tiktok.com/@ptprods" target="_blank">TikTok</a> |
+            <a href="mailto:JAndaloro1313@gmail.com">Email</a>
+        </p>
+    </footer>
 
 </body>
 </html>
