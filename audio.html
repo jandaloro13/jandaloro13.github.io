@@ -44,8 +44,13 @@ audio {
   line-height: 1.3;
 }
 
-    iframe[src*="spotify.com"] {
+iframe[src*="spotify.com"],
+iframe[src*="youtube.com"],
+iframe[src*="apple.com"] {
+  width: 100%;
   height: 352px !important;
+  border: none;
+  border-radius: 12px;
 }
 
 </style>
