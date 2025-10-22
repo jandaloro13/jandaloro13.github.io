@@ -362,6 +362,16 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+.video-container iframe {
+    position: absolute;
+    top: -2px; /* lift the embed slightly */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 4px); /* offset top shift */
+    border: none;
+    display: block;
+    object-fit: cover;
+}
 
 /* --------------------
    ART GRID - 2 PER ROW
