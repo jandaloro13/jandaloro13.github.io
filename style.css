@@ -324,3 +324,29 @@ section {
     justify-content: center;
     text-align: center;
 }
+
+/* --------------------
+   ART GRID - 2 PER ROW
+-------------------- */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+    gap: 40px; /* spacing between videos */
+    margin-top: 20px;
+}
+
+/* Ensure art-piece layout is centered */
+.art-piece {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .art-grid {
+        grid-template-columns: 1fr; /* 1 per row on smaller screens */
+        gap: 30px;
+    }
+}
