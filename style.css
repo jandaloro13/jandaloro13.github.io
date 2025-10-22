@@ -373,6 +373,11 @@ section {
     object-fit: cover;
 }
 
+.video-container.soundcloud-fix iframe {
+    top: -2px;
+    height: calc(100% + 4px);
+}
+
 /* --------------------
    ART GRID - 2 PER ROW
 -------------------- */
