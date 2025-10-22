@@ -374,7 +374,7 @@ section {
 }
 
 .video-container soundcloud-fix iframe {
-    top: -2px;
+    top: -10px;
     height: calc(100% + 4px);
      position: absolute;
 }
