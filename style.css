@@ -139,14 +139,24 @@ nav a {
     transition: all 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: #111;
-    color: #00aced;
+/* Dropdown content (hidden by default with slide effect) */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+    border-radius: 6px;
+    transition: max-height 0.3s ease;
 }
 
-/* Show dropdown on hover */
+/* Show dropdown on hover with slide */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* fallback for older browsers */
+    max-height: 500px; /* adjust to fit all links */
 }
 
 nav a:hover {
