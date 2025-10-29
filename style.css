@@ -160,6 +160,23 @@ nav a {
     max-height: 500px; /* adjust to fit all links */
 }
 
+/* Prevent dropdown from closing when moving slowly between button and menu */
+.dropdown-content {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
 nav a:hover {
     color: #00aced;
     border-bottom: 2px solid #00aced;
