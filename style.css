@@ -96,20 +96,26 @@ nav a {
 /* Dropdown container */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;       /* fill nav height */
+    align-items: center; /* vertical center */
 }
 
-/* Dropdown button styling */
+/* Dropdown button */
 .dropbtn {
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center;
+    height: 100%;        /* match nav height */
+    padding: 0 0.5rem;   /* horizontal padding only */
     text-decoration: none;
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
-    padding: 0.75rem 0.5rem;
-    transition: all 0.3s ease;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 
 .dropbtn:hover {
     color: #00aced;
