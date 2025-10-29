@@ -578,3 +578,11 @@ section {
     text-overflow: ellipsis;
 }
 
+/* Ensure cursor only appears over video container */
+.art-piece {
+    cursor: default; /* normal arrow over title/years */
+}
+
+.video-container {
+    cursor: pointer; /* hand only over video */
+}
