@@ -96,73 +96,51 @@ nav a {
 /* Dropdown container */
 .dropdown {
     position: relative;
-    display: flex;       /* fill nav height */
-
+    display: inline-block; /* aligns with nav links */
 }
 
 /* Dropdown button */
 .dropbtn {
-    display: flex;
-    align-items: center; /* vertical center */
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    height: 100%;        /* match nav height */
-    padding: 0 0.5rem;   /* horizontal padding only */
-    text-decoration: none;
+    height: 100%;
+    padding: 0 0.5rem;
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-
-.dropbtn:hover {
-    color: #00aced;
-    border-bottom: 2px solid #00aced;
-}
-
-/* ---------- FIXED DROPDOWN SECTION ---------- */
-
-/* Dropdown content (hidden by default) */
+/* Dropdown content */
 .dropdown-content {
-    display: none;
     position: absolute;
-    top: 100%
+    top: 100%;       /* directly below button */
+    left: 0;
     background-color: #000;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    text-align: left;
     border-radius: 6px;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-5px);
-    pointer-events: none;
-    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    display: none;   /* hidden by default */
+    z-index: 10;
 }
 
 /* Dropdown links */
 .dropdown-content a {
-    color: #fff;
-    padding: 1rem 1rem;
-    text-decoration: none;
     display: block;
+    color: #fff;
+    text-decoration: none;
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
-    transition: all 0.3s ease;
-    top: 110%;
+    padding: 0.75rem 1rem;
 }
 
-/* Show dropdown on hover with fade-slide */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    transition-delay: 0s;
 }
 
 /* Keep open briefly after hover out */
