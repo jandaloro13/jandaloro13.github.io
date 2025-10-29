@@ -137,6 +137,7 @@ nav a {
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     transition: all 0.3s ease;
+    top: 105%
 }
 
 /* Dropdown content (hidden by default with slide effect) */
