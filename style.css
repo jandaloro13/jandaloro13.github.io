@@ -584,3 +584,9 @@ section {
 .video-container iframe {
     cursor: pointer !important;
 }
+
+/* Ensure pointer cursor on all video containers and children */
+.video-container,
+.video-container * {
+    cursor: pointer !important;
+}
