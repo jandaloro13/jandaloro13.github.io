@@ -344,11 +344,13 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       cursor: pointer;
 }
 
 /* Square videos: 1:1 */
 .video-container.square {
     aspect-ratio: 1 / 1;
+       cursor: pointer;
 }
 
 .video-container.square video {
@@ -356,6 +358,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+       cursor: pointer;
 }
 
 /* 16:9 videos fixed */
@@ -368,6 +371,7 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       cursor: pointer;
 }
 
 .video-container:not(.square) video,
@@ -380,7 +384,7 @@ section {
     transform: translate(-50%, -55%);
     object-fit: cover;
     min-width: 100%;
-   
+       cursor: pointer;
 }
 
 /* Grid alignment */
@@ -389,7 +393,6 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    cursor: pointer;
 }
 
 /* --------------------
@@ -403,6 +406,7 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       cursor: pointer;
 }
 
 /* Add this block below */
@@ -415,6 +419,7 @@ section {
     border: none;
     display: block;
     object-fit: cover;
+       cursor: pointer;
 }
 
 /* Confirm this is present and unchanged */
@@ -427,6 +432,7 @@ section {
     border-radius: 10px;
     background: #000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       cursor: pointer;
 }
 
 .video-container iframe {
@@ -438,6 +444,7 @@ section {
     border: none;
     display: block;
     object-fit: cover;
+       cursor: pointer;
 }
 
 .video-container.soundcloud-fix iframe {
@@ -463,7 +470,6 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    cursor: pointer;
 }
 
 /* Responsive adjustments */
