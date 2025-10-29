@@ -116,6 +116,8 @@ nav a {
     border-bottom: 2px solid #00aced;
 }
 
+/* ---------- FIXED DROPDOWN SECTION ---------- */
+
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
@@ -161,23 +163,7 @@ nav a {
     transition-delay: 0.25s;
 }
 
-
-/* Prevent dropdown from closing when moving slowly between button and menu */
-.dropdown-content {
-    pointer-events: none;
-    opacity: 0;
-    transform: translateY(-5px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
+/* ------------------------------------------- */
 
 nav a:hover {
     color: #00aced;
@@ -185,10 +171,10 @@ nav a:hover {
 }
 
 nav a, .dropbtn {
-    display: inline-flex;        /* aligns vertically like other links */
-    align-items: center;         /* vertical center */
-    height: 100%;                /* matches nav height */
-    padding: 0.75rem 0.5rem;     /* same as other links */
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.75rem 0.5rem;
     box-sizing: border-box;
 }
 
