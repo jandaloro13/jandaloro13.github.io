@@ -585,6 +585,7 @@ section {
 
    .video-container,
 .video-container.square,
+.video-container.square video,
 .video-container iframe {
-    cursor: pointer; /* hand only over video */
+    cursor: pointer !important;
 }
