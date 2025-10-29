@@ -136,6 +136,7 @@ nav a {
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     padding: 0.75rem 1rem;
+   text-align: left;
 }
 
 /* Show dropdown on hover */
