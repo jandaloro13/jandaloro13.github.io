@@ -165,6 +165,14 @@ nav a:hover {
     border-bottom: 2px solid #00aced;
 }
 
+nav a, .dropbtn {
+    display: inline-flex;        /* aligns vertically like other links */
+    align-items: center;         /* vertical center */
+    height: 100%;                /* matches nav height */
+    padding: 0.75rem 0.5rem;     /* same as other links */
+    box-sizing: border-box;
+}
+
 /* --------------------
    MAIN CONTENT BOX
 -------------------- */
