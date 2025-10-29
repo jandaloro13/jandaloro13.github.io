@@ -97,7 +97,7 @@ nav a {
 .dropdown {
     position: relative;
     display: flex;       /* fill nav height */
-    align-items: middle; /* vertical center */
+    align-items: center; /* vertical center */
 }
 
 /* Dropdown button */
