@@ -590,3 +590,12 @@ section {
 .video-container * {
     cursor: pointer !important;
 }
+
+.art-piece video,
+.art-piece iframe {
+    cursor: pointer !important;
+}
+
+.art-piece {
+    cursor: default; /* keeps arrow over title/year */
+}
