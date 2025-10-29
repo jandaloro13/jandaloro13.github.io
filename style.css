@@ -126,6 +126,12 @@ nav a {
     z-index: 1;
     text-align: left;
     border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* Dropdown links */
@@ -137,28 +143,24 @@ nav a {
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     transition: all 0.3s ease;
-    top: 100%
+    top: 85%;
 }
 
-/* Dropdown content (hidden by default with slide effect) */
-.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    background-color: #000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    text-align: left;
-    border-radius: 6px;
-    transition: max-height 0.3s ease;
-}
-
-/* Show dropdown on hover with slide */
+/* Show dropdown on hover with fade-slide */
 .dropdown:hover .dropdown-content {
-    display: block; /* fallback for older browsers */
-    max-height: 500px; /* adjust to fit all links */
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0s;
 }
+
+/* Keep open briefly after hover out */
+.dropdown:not(:hover) .dropdown-content {
+    transition-delay: 0.25s;
+}
+
 
 /* Prevent dropdown from closing when moving slowly between button and menu */
 .dropdown-content {
