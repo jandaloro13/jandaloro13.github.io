@@ -139,13 +139,13 @@ nav a {
 /* Dropdown links */
 .dropdown-content a {
     color: #fff;
-    padding: 0.75rem 1rem;
+    padding: 1rem 1rem;
     text-decoration: none;
     display: block;
     font-family: 'SonyCam', monospace;
     font-size: 0.7rem;
     transition: all 0.3s ease;
-    top: 85%;
+    top: 110%;
 }
 
 /* Show dropdown on hover with fade-slide */
