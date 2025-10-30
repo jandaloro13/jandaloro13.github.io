@@ -619,4 +619,5 @@ section {
 footer, footer p, footer a {
     font-family: 'Carrol';
        font-size: 2rem;
+          margin-top: 1.5rem;
 }
