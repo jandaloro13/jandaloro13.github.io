@@ -2,8 +2,8 @@
    FONT IMPORTS
 -------------------- */
 @font-face {
-    font-family: 'SonyCam';
-    src: url('fonts/sonycam-original.woff2') format('woff2');
+    font-family: 'Carrol';
+    src: url('fonts/Carrol DEMO.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,7 +50,7 @@ header {
 }
 
 header h1 {
-    font-family: 'SonyCam', sans-serif;
+    font-family: 'Carrol', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -85,7 +85,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-family: 'SonyCam', monospace;
+    font-family: 'Carrol', monospace;
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
@@ -106,7 +106,7 @@ nav a {
     justify-content: center;
     height: 100%;
     padding: 0 0.5rem;
-    font-family: 'SonyCam', monospace;
+    font-family: 'Carrol', monospace;
     font-size: 0.7rem;
     font-weight: bold;
     color: #fff;
@@ -133,7 +133,7 @@ nav a {
     display: block;
     color: #fff;
     text-decoration: none;
-    font-family: 'SonyCam', monospace;
+    font-family: 'Carrol', monospace;
     font-size: 0.7rem;
     padding: 0.75rem 1rem;
    text-align: left;
@@ -180,7 +180,7 @@ nav a, .dropbtn {
    SECTION HEADINGS
 -------------------- */
 section h2 {
-    font-family: 'SonyCam', sans-serif;
+    font-family: 'Carrol', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -188,7 +188,7 @@ section h2 {
 }
 
 section h3 {
-    font-family: 'SonyCam', sans-serif;
+    font-family: 'Carrol', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
