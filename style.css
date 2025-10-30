@@ -9,8 +9,8 @@
 }
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url('fonts/Satoshi-Light.woff2') format('woff2');
+    font-family: 'Roboto';
+    src: url('fonts/RobotoMono-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
 }
 
 body {
-    font-family: 'Satoshi', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.65rem;
     line-height: 1.8;
     color: #111;
@@ -59,7 +59,7 @@ header h1 {
 }
 
 header p.subtitle {
-    font-family: 'Satoshi', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.8rem;
     color: #fff;
     margin-top: 0.25rem;
@@ -67,7 +67,7 @@ header p.subtitle {
 }
 
 header p.production-title {
-    font-family: 'Satoshi', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.5rem;
     color: #fff;
     margin-top: 0.2rem;
@@ -194,7 +194,7 @@ section h3 {
 }
 
 section p, section li {
-    font-family: 'Satoshi', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.65rem;
     margin-bottom: 1rem;
 }
@@ -243,7 +243,7 @@ footer a {
     text-decoration: none;
     color: #fff;
     margin: 0 0.5rem;
-    font-family: 'Satoshi', monospace;
+    font-family: 'Roboto', monospace;
     transition: 0.3s;
 }
 
