@@ -26,7 +26,7 @@
 
 body {
     font-family: 'Roboto', monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1;
     color: #111;
     background-color: #f9f9f9;
@@ -69,7 +69,7 @@ header p.subtitle {
 
 header p.production-title {
     font-family: 'Roboto', monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #fff;
     margin-top: 0.2rem;
     font-weight: normal;
@@ -196,7 +196,7 @@ section h3 {
 
 section p, section li {
     font-family: 'Roboto', monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
@@ -258,7 +258,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 900px) {
     body {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     nav {
         flex-direction: column;
@@ -274,7 +274,7 @@ footer a:hover {
 }
 
 .script-info span.section-body {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     display: block;
     margin-left: 1em;
     margin-top: 0.25em;
@@ -294,7 +294,7 @@ footer a:hover {
 
 .art-title {
     margin-top: 8px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 @media (max-width: 900px) {
@@ -535,7 +535,7 @@ section {
 }
 
 .video-container.soundcloud-fix .soundcloud-caption {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -556,14 +556,14 @@ section {
 
 .soundcloud-caption {
     margin-top: 8px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #ccc;
     text-align: left;
 }
 
 
 .video-container.soundcloud-square .soundcloud-caption {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -606,7 +606,7 @@ section {
 
 .art-piece .soundcloud-caption {
     margin-top: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #ccc;
     text-align: left;
 }
