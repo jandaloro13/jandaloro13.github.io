@@ -87,7 +87,6 @@ nav a {
     text-decoration: none;
     font-family: 'Carrol', monospace;
     font-size: 0.7rem;
-    font-weight: bold;
     color: #fff;
     transition: all 0.3s ease;
     padding: 0.75rem 0.5rem;
@@ -108,7 +107,6 @@ nav a {
     padding: 0 0.5rem;
     font-family: 'Carrol', monospace;
     font-size: 0.7rem;
-    font-weight: bold;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -199,7 +197,6 @@ section p, section li {
     font-family: 'Inter', monospace;
     font-size: 1.65rem;
     margin-bottom: 1rem;
-    font-weight: bold;
 }
 
 /* --------------------
@@ -277,7 +274,6 @@ footer a:hover {
 
 .script-info span.section-body {
     font-size: 1.65rem;
-    font-weight: bold;
     display: block;
     margin-left: 1em;
     margin-top: 0.25em;
@@ -297,7 +293,6 @@ footer a:hover {
 
 .art-title {
     margin-top: 8px;
-    font-weight: bold;
     font-size: 1.1rem;
 }
 
@@ -329,7 +324,6 @@ section {
 }
 
 .section-body {
-    font-weight: bold;
     display: block;
 }
 
