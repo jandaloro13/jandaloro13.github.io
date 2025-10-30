@@ -555,14 +555,14 @@ section {
 
 .soundcloud-caption {
     margin-top: 8px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ccc;
     text-align: left;
 }
 
 
 .video-container.soundcloud-square .soundcloud-caption {
-    font-size: 10rem;
+    font-size: 1rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -605,7 +605,7 @@ section {
 
 .art-piece .soundcloud-caption {
     margin-top: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ccc;
     text-align: left;
 }
