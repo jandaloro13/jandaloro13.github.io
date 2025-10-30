@@ -593,3 +593,7 @@ section {
 .art-piece {
     cursor: default; /* keeps arrow over title/year */
 }
+
+footer, footer p, footer a {
+    font-family: 'Carrol';
+}
