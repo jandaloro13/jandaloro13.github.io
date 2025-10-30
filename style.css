@@ -26,8 +26,8 @@
 
 body {
     font-family: 'Roboto', monospace;
-    font-size: 1.65rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1;
     color: #111;
     background-color: #f9f9f9;
     background-image: url('images/2. Apocalypse 6.25.23.jpg'); 
@@ -43,7 +43,7 @@ body {
 -------------------- */
 header {
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     border-bottom: 1px solid #333;
     background-color: #000;
     color: #fff;
@@ -51,7 +51,7 @@ header {
 
 header h1 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1.4rem;
+    font-size: 2rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 0.4rem;
@@ -60,7 +60,7 @@ header h1 {
 
 header p.subtitle {
     font-family: 'Carrol', monospace;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #fff;
     margin-top: 0.25rem;
     font-weight: normal;
@@ -86,7 +86,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Carrol', monospace;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     color: #fff;
     transition: all 0.3s ease;
     padding: 0.75rem 0.5rem;
@@ -106,7 +106,7 @@ nav a {
     height: 100%;
     padding: 0 0.5rem;
     font-family: 'Carrol', monospace;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -132,7 +132,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-family: 'Carrol', monospace;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     padding: 0.75rem 1rem;
    text-align: left;
 }
@@ -179,7 +179,7 @@ nav a, .dropbtn {
 -------------------- */
 section h2 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
@@ -187,7 +187,7 @@ section h2 {
 
 section h3 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1rem;
+    font-size: 1.4rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
@@ -195,7 +195,7 @@ section h3 {
 
 section p, section li {
     font-family: 'Roboto', monospace;
-    font-size: 1.65rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -257,7 +257,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 900px) {
     body {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     nav {
         flex-direction: column;
@@ -273,7 +273,7 @@ footer a:hover {
 }
 
 .script-info span.section-body {
-    font-size: 1.65rem;
+    font-size: 1rem;
     display: block;
     margin-left: 1em;
     margin-top: 0.25em;
@@ -293,7 +293,7 @@ footer a:hover {
 
 .art-title {
     margin-top: 8px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -534,7 +534,7 @@ section {
 }
 
 .video-container.soundcloud-fix .soundcloud-caption {
-    font-size: 10px;
+    font-size: 1rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -563,7 +563,7 @@ section {
 }
 
 .video-container.soundcloud-square .soundcloud-caption {
-    font-size: 10px;
+    font-size: 10rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
