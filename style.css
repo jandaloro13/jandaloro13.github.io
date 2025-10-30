@@ -26,7 +26,7 @@
 
 body {
     font-family: 'Roboto', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
     color: #111;
     background-color: #f9f9f9;
@@ -60,7 +60,7 @@ header h1 {
 
 header p.subtitle {
     font-family: 'Carrol', monospace;
-    font-size: 1.6rem;
+    font-size: 2rem;
        gap: 1.5rem;
     color: #fff;
     margin-top: 0.5rem;
@@ -87,7 +87,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Carrol', monospace;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #fff;
     transition: all 0.3s ease;
     padding: 0.75rem 0.5rem;
@@ -107,7 +107,7 @@ nav a {
     height: 100%;
     padding: 0 0.5rem;
     font-family: 'Carrol', monospace;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -133,7 +133,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-family: 'Carrol', monospace;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.75rem 1rem;
    text-align: left;
 }
@@ -188,7 +188,7 @@ section h2 {
 
 section h3 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
@@ -196,7 +196,7 @@ section h3 {
 
 section p, section li {
     font-family: 'Roboto', monospace;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -258,7 +258,7 @@ footer a:hover {
 -------------------- */
 @media (max-width: 900px) {
     body {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     nav {
         flex-direction: column;
@@ -274,7 +274,7 @@ footer a:hover {
 }
 
 .script-info span.section-body {
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: block;
     margin-left: 1em;
     margin-top: 0.25em;
@@ -294,7 +294,7 @@ footer a:hover {
 
 .art-title {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 900px) {
@@ -535,7 +535,7 @@ section {
 }
 
 .video-container.soundcloud-fix .soundcloud-caption {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -556,14 +556,14 @@ section {
 
 .soundcloud-caption {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #ccc;
     text-align: left;
 }
 
 
 .video-container.soundcloud-square .soundcloud-caption {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #cccccc;
     text-align: center;
     margin-top: 0.25em;
@@ -606,7 +606,7 @@ section {
 
 .art-piece .soundcloud-caption {
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #ccc;
     text-align: left;
 }
@@ -617,5 +617,5 @@ section {
 
 footer, footer p, footer a {
     font-family: 'Carrol';
-       font-size: 1rem;
+       font-size: 2rem;
 }
