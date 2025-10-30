@@ -61,8 +61,9 @@ header h1 {
 header p.subtitle {
     font-family: 'Carrol', monospace;
     font-size: 1.6rem;
+       gap: 1.5rem;
     color: #fff;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     font-weight: normal;
 }
 
@@ -78,7 +79,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-top: 1.5rem;
     padding: 1rem 0;
 }
@@ -86,7 +87,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Carrol', monospace;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #fff;
     transition: all 0.3s ease;
     padding: 0.75rem 0.5rem;
@@ -179,7 +180,7 @@ nav a, .dropbtn {
 -------------------- */
 section h2 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
@@ -187,7 +188,7 @@ section h2 {
 
 section h3 {
     font-family: 'Carrol', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     letter-spacing: 0.12em;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
@@ -616,4 +617,5 @@ section {
 
 footer, footer p, footer a {
     font-family: 'Carrol';
+       font-size: 1rem;
 }
