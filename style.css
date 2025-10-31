@@ -626,7 +626,7 @@ footer, footer p, footer a {
    CONTACT PAGE FIX
 -------------------- */
 #contact-form {
-    min-height: 100vh;
+    min-height: 200vh;
     width: 100%;
     background: rgba(255, 255, 255, 0.85);
     padding: 2rem 0;
@@ -644,10 +644,9 @@ footer, footer p, footer a {
 }
 
 #contact-form iframe {
-    width: 90%;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     border: none;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;
 }
