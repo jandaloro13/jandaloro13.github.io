@@ -693,3 +693,37 @@ nav.toc a {
 nav.toc a:hover {
   color: #ff5500;
 }
+
+.toc {
+    position: fixed;
+    top: 100px; /* distance from top */
+    right: 10px; /* distance from right edge */
+    width: 200px; /* adjust size */
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+.toc h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+.toc li {
+    margin-bottom: 0.5rem;
+}
+.toc a {
+    text-decoration: none;
+    color: #111;
+    transition: color 0.2s;
+}
+.toc a:hover {
+    color: #00aced;
+}
