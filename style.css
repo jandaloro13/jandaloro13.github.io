@@ -81,8 +81,8 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: .2rem;
-    padding: .2rem 0;
+    margin-top: .15rem;
+    padding: .15rem 0;
 }
 
 nav a {
@@ -91,7 +91,7 @@ nav a {
     font-size: 2rem;
     color: #fff;
     transition: all 0.3s ease;
-    padding: 0.2rem 0.2rem;
+    padding: 0.15rem 0.15rem;
 }
 
 /* Dropdown container */
