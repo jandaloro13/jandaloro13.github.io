@@ -626,10 +626,6 @@ footer, footer p, footer a {
    CONTACT PAGE FIX
 -------------------- */
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     width: 100%;
     background: rgba(255, 255, 255, 0.85);
