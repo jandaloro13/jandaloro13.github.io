@@ -317,7 +317,7 @@ footer a:hover {
 
 /* Standardize spacing for all page sections */
 section {
-    margin-top: 40px;
+    margin-top: 40px; !important;
 }
 
 /* Remove extra padding from main wrapper if present */
