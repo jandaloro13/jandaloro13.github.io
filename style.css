@@ -703,7 +703,7 @@ nav.toc a:hover {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     z-index: 1000;
     overflow-y: auto;
     max-height: 80vh;
