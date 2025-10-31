@@ -713,7 +713,7 @@ nav.toc a:hover {
 
 }
 .toc h2 {
-    font-size: 1rem;
+    font-size: .5rem;
     margin-bottom: 0.5rem;
 }
 .toc ul {
