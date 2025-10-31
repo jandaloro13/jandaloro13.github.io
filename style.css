@@ -698,7 +698,7 @@ nav.toc a:hover {
     position: fixed;
     top: 100px; /* distance from top */
     right: 10px; /* distance from right edge */
-    width: 200px; /* adjust size */
+    width: 175px; /* adjust size */
     background-color: rgba(255,255,255,0.9);
     padding: 1rem;
     border-radius: 8px;
@@ -723,7 +723,7 @@ nav.toc a:hover {
     text-decoration: none;
     color: #111;
     transition: color 0.2s;
-   font-size: 0.8rem;
+   font-size: 2rem;
 }
 .toc a:hover {
     color: #00aced;
