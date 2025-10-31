@@ -723,6 +723,7 @@ nav.toc a:hover {
     text-decoration: none;
     color: #111;
     transition: color 0.2s;
+   font-size: 0.8rem;
 }
 .toc a:hover {
     color: #00aced;
