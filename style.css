@@ -185,14 +185,14 @@ section h2 {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
-       margin-top: 1rem !important;
+       margin-top: .6rem !important;
 }
 
 section h3 {
     font-family: 'Carrol', sans-serif;
     font-size: 2rem;
     letter-spacing: 0.12em;
-    margin-top: 1rem;
+    margin-top: 1.2rem !important;
     margin-bottom: 0.6rem;
 }
 
