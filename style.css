@@ -696,6 +696,7 @@ nav.toc a:hover {
 
 .toc {
     position: fixed;
+       font-size: 1rem;
     top: 50%; /* center vertically */
     right: 0px; /* stay on right edge */
     transform: translateY(-50%); /* keep centered regardless of height */
