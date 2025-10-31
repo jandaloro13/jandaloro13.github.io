@@ -696,7 +696,7 @@ nav.toc a:hover {
 
 .toc {
     position: fixed;
-    top: 100px; /* distance from top */
+    top: 50%; /* distance from top */
     right: 10px; /* distance from right edge */
     width: 150px; /* adjust size */
     background-color: rgba(255,255,255,0.9);
