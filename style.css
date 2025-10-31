@@ -698,12 +698,12 @@ nav.toc a:hover {
     position: fixed;
     top: 100px; /* distance from top */
     right: 10px; /* distance from right edge */
-    width: 175px; /* adjust size */
+    width: 150px; /* adjust size */
     background-color: rgba(255,255,255,0.9);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     z-index: 1000;
     overflow-y: auto;
     max-height: 80vh;
