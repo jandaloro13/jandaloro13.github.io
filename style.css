@@ -656,3 +656,40 @@ footer, footer p, footer a {
     display: block;
     margin: 0 auto;
 }
+
+.intro {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.summary {
+  flex: 1;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+nav.toc {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+nav.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav.toc li {
+  margin-bottom: 5px;
+}
+
+nav.toc a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav.toc a:hover {
+  color: #ff5500;
+}
