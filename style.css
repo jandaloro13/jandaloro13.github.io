@@ -696,17 +696,20 @@ nav.toc a:hover {
 
 .toc {
     position: fixed;
-    top: 50%; /* distance from top */
-    right: 0px; /* distance from right edge */
-    width: 160px; /* adjust size */
+    top: 50%; /* center vertically */
+    right: 0px; /* stay on right edge */
+    transform: translateY(-50%); /* keep centered regardless of height */
+    width: 160px; /* optional wider layout */
+    max-height: 80vh; /* prevent overflow beyond viewport */
+    overflow-y: auto; /* enable scrolling inside the box */
     background-color: rgba(255,255,255,0.9);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     font-size: 0.5rem;
     z-index: 1000;
-    overflow-y: auto;
-    max-height: 80vh;
+}
+
 }
 .toc h2 {
     font-size: 1rem;
