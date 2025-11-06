@@ -696,7 +696,7 @@ nav.toc a:hover {
 
 .toc {
     position: fixed;
-       font-size: 1rem;
+       font-size: .95rem;
     top: 50%; /* center vertically */
     right: 0px; /* stay on right edge */
     transform: translateY(-50%); /* keep centered regardless of height */
@@ -712,7 +712,7 @@ nav.toc a:hover {
 }
 
 .toc h2 {
-    font-size: 1rem;
+    font-size: .95rem;
     margin-bottom: 0.5rem;
 }
 .toc ul {
@@ -726,7 +726,7 @@ nav.toc a:hover {
     text-decoration: none;
     color: #111;
     transition: color 0.2s;
-   font-size: 1rem;
+   font-size: .95rem;
 }
 .toc a:hover {
     color: #00aced;
