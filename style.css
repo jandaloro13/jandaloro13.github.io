@@ -273,7 +273,7 @@ img, video, iframe {
    }
 
 .work-images-side img {
-    width: 500px;
+    width: 1000px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
