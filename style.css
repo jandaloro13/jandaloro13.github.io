@@ -752,7 +752,7 @@ nav.toc a:hover {
     max-height: 100vh; /* prevent overflow beyond viewport */
     overflow-y: auto; /* enable scrolling inside the box */
     background-color: rgba(255,255,255,0.9);
-    padding: 1rem;
+    padding: .75rem;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     font-size: 0.5rem;
