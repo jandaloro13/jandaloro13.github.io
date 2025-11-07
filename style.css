@@ -791,8 +791,8 @@ nav.toc a:hover {
   border: 1px solid #ccc;
   padding: 0.5rem;
   font-family: 'Roboto', monospace;
-  font-size: 0.95rem;
-  text-align: left;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .social-metrics th {
