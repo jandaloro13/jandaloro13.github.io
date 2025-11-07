@@ -231,6 +231,54 @@ img, video, iframe {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.work-images-sq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+   }
+
+.work-images-sq img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   }
+
+.work-images-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+   }
+
+.work-images-up img {
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   }
+
+.work-images-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+   }
+
+.work-images-side img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   }
+
 /* --------------------
    FOOTER
 -------------------- */
