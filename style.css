@@ -749,7 +749,7 @@ nav.toc a:hover {
     right: 0px; /* stay on right edge */
     transform: translateY(-50%); /* keep centered regardless of height */
     width: 160px; /* optional wider layout */
-    max-height: 85vh; /* prevent overflow beyond viewport */
+    max-height: 100vh; /* prevent overflow beyond viewport */
     overflow-y: auto; /* enable scrolling inside the box */
     background-color: rgba(255,255,255,0.9);
     padding: 1rem;
