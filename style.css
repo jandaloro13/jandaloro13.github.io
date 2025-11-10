@@ -803,3 +803,16 @@ nav.toc a:hover {
 .social-metrics tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
+
+.linkedin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* space between iframes */
+    margin-top: 20px;
+}
+
+.linkedin-grid iframe {
+    width: 100%;
+    min-height: 500px; /* adjust based on content */
+    border: none;
+}
