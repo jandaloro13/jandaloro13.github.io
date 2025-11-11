@@ -13,23 +13,6 @@ The site was built using **HTML** and **CSS**, with a focus on clean design, acc
 The website is hosted via **GitHub Pages** and optimized for desktop and mobile viewing. No installation or local setup is required.
 
 ## Structure
-/
-├── about.html
-├── art.html
-├── audio.html
-├── communications.html
-├── contact.html
-├── index.html
-├── video.html
-├── work.html
-├── writing.html
-├── style.css
-├── /art
-├── /documents
-├── /fonts
-└── /images
-
-
 Each HTML page corresponds to a distinct area of focus within the portfolio:
 - **About:** Biographical and professional background.  
 - **Art:** Visual and experimental projects.  
