@@ -869,14 +869,15 @@ nav.toc a:hover {
   border: 1px solid #ccc;
 }
 
-/* Global text inversion */
-* {
-    color: white;
+/* Invert text only */
+body * {
     mix-blend-mode: difference;
+    color: white;
 }
 
-/* Stabilize stacking so inversion behaves consistently */
-html, body {
-    position: relative;
-    z-index: 0;
+/* Prevent containers/images from inverting */
+img, video, canvas, iframe, svg, .no-blend {
+    mix-blend-mode: normal;
+    color: inherit;
 }
+
