@@ -880,3 +880,23 @@ img, video, canvas, iframe, svg, .no-blend {
     color: inherit;
 }
 
+/* Text inversion without affecting images */
+h1, h2, h3, h4, h5, h6,
+p, li, a,
+nav, footer, header {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+/* Keep images and media unaffected */
+img, video, iframe, canvas, svg {
+    mix-blend-mode: normal !important;
+    isolation: isolate;
+}
+
+/* Optional wrapper for cases where media still blends */
+.media-wrap {
+    mix-blend-mode: normal;
+    isolation: isolate;
+    background: none;
+}
