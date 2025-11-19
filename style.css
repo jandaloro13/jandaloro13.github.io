@@ -25,7 +25,7 @@ header {
     position: sticky;             /* keeps header visible while scrolling */
     top: 0;
     z-index: 100;
-    border-bottom: 0px solid;
+    border-bottom: 0px;
 }
 
 header h1 {
