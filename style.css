@@ -900,3 +900,52 @@ img, video, iframe, canvas, svg {
     isolation: isolate;
     background: none;
 }
+
+/* --------------------
+   GLOBAL TEXT INVERSION
+   (safe for all pages)
+-------------------- */
+
+/* Text gets difference inversion */
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, strong, em,
+nav, header, footer,
+button, label, input, textarea, summary {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+/* Media and graphics stay normal */
+img, video, iframe, canvas, svg {
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+    z-index: 1;
+    position: relative;
+}
+
+/* --------------------
+   OPT OUT FOR SPECIFIC
+   ELEMENTS YOU LISTED
+-------------------- */
+
+.about-images,
+.video-container,
+.audio-item,
+.social-metrics,
+.doc-viewer,
+.linkedin-grid,
+#contact-form,
+.video-item,
+.work-images-sq,
+.work-images-side,
+details {
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+    color: inherit !important;
+}
+
+/* Fix for variants like .video-container.square */
+.video-container * {
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+}
