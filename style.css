@@ -962,3 +962,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* End of text inversion fix */
+
+/* FIX 1: restore header anchoring */
+header {
+    position: sticky !important;
+    top: 0;
+    z-index: 999;
+    background: none;
+    backdrop-filter: none;
+}
+
+/* FIX 2: override text inversion so it actually inverts */
+h1, h2, h3, h4, h5, h6,
+p, li,
+span, strong, em, b, i,
+a, nav a, .toc a, .art-title, .soundcloud-caption,
+button, label, summary {
+    color: inherit !important;          /* remove forced white */
+    mix-blend-mode: difference !important;
+    isolation: isolate;
+}
+
+/* optional: halo cleanup if needed */
+h1, h2, h3, h4, h5, h6 {
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+}
