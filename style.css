@@ -85,7 +85,7 @@ body {
 header {
     text-align: center;
     padding: 2rem 1rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 0px solid;
     background-color: none;
     color: none;
 }
@@ -428,7 +428,7 @@ section {
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
        cursor: pointer;
 }
@@ -455,7 +455,7 @@ section {
     padding-bottom: 56.25%; /* 16:9 ratio */
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
        cursor: pointer;
 }
@@ -490,7 +490,7 @@ section {
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
        cursor: pointer;
 }
@@ -516,7 +516,7 @@ section {
     padding-bottom: 56.25%; /* 16:9 ratio */
     overflow: hidden;
     border-radius: 10px;
-    background: #000;
+    background: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
        cursor: pointer;
 }
@@ -594,7 +594,7 @@ section {
     padding-bottom: 56.25%; /* 16:9 ratio */
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
 }
 
 .video-container.soundcloud-fix iframe {
@@ -613,7 +613,7 @@ section {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
 }
 
 .video-container.soundcloud-fix iframe {
@@ -642,7 +642,7 @@ section {
     aspect-ratio: 1 / 1;      /* square ratio like your other art pieces */
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
 }
 
 .soundcloud-caption {
@@ -686,7 +686,7 @@ section {
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 10px;
-    background: none;
+    background: #000000;
 }
 
 .art-piece .video-container.soundcloud-square iframe {
@@ -722,7 +722,7 @@ footer, footer p, footer a {
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    background: none;
+    background: #000000;
     padding: 2rem 0;
     margin: 0 auto;
     text-align: center;
@@ -842,7 +842,7 @@ nav.toc a:hover {
 }
 
 .social-metrics tbody tr:nth-child(even) {
-  background-color: none;
+  background-color: #000000;
 }
 
 .linkedin-grid {
