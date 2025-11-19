@@ -868,68 +868,44 @@ nav.toc a:hover {
   border: 0px;
 }
 
-/* Invert text only */
-body * {
-    mix-blend-mode: difference;
-    color: white;
-}
-
-/* Prevent containers/images from inverting */
-img, video, canvas, iframe, svg, .no-blend {
-    mix-blend-mode: normal;
-    color: inherit;
-}
-
-/* Text inversion without affecting images */
-h1, h2, h3, h4, h5, h6,
-p, li, a,
-nav, footer, header {
-    color: white;
-    mix-blend-mode: difference;
-}
-
-/* Keep images and media unaffected */
-img, video, iframe, canvas, svg {
-    mix-blend-mode: normal !important;
-    isolation: isolate;
-}
-
-/* Optional wrapper for cases where media still blends */
-.media-wrap {
-    mix-blend-mode: normal;
-    isolation: isolate;
-    background: none;
-}
-
 /* --------------------
-   GLOBAL TEXT INVERSION
-   (safe for all pages)
+   TEXT INVERSION FIX (paste at end of style.css)
+   - removes all previous blend rules
+   - makes text invert reliably against body background
+   - forces listed components to never blend
 -------------------- */
 
-/* Text gets difference inversion */
-h1, h2, h3, h4, h5, h6,
-p, li, a, span, strong, em,
-nav, header, footer,
-button, label, input, textarea, summary {
-    color: white;
-    mix-blend-mode: difference;
+/* 0) clear any stray global blending (safe override) */
+html, body, header, footer, main, section, article, nav {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-/* Media and graphics stay normal */
-img, video, iframe, canvas, svg {
-    mix-blend-mode: normal !important;
-    isolation: isolate !important;
-    z-index: 1;
+/* 1) create a single true background layer for reliable blending */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: inherit; /* uses existing body background-image/color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 2) ensure top-level page content composes above the bg layer */
+body > * {
     position: relative;
+    z-index: 0;
+    isolation: isolate; /* prevents blend leaks between siblings */
 }
 
-/* --------------------
-   OPT OUT FOR SPECIFIC
-   ELEMENTS YOU LISTED
--------------------- */
-
+/* 3) explicit: keep all media and listed components fully normal (no blending) */
+img, video, iframe, canvas, svg,
 .about-images,
-.video-container,
+.video-container, .video-container.square, .video-container.paused,
+.video-container.square.soundcloud-square,
 .audio-item,
 .social-metrics,
 .doc-viewer,
@@ -938,14 +914,51 @@ img, video, iframe, canvas, svg {
 .video-item,
 .work-images-sq,
 .work-images-side,
-details {
+details,
+.no-blend {
     mix-blend-mode: normal !important;
     isolation: isolate !important;
-    color: inherit !important;
+    position: relative;
+    z-index: 1;
 }
 
-/* Fix for variants like .video-container.square */
-.video-container * {
+/* also protect descendants of video-container and other wrappers */
+.video-container * ,
+.about-images * ,
+.work-images-sq * ,
+.work-images-side * ,
+.doc-viewer * ,
+.linkedin-grid * {
     mix-blend-mode: normal !important;
     isolation: isolate !important;
 }
+
+/* 4) apply difference blending only to typographic elements */
+/* keep this selector as specific as possible to avoid affecting layout elements */
+h1, h2, h3, h4, h5, h6,
+p, li,
+span, strong, em, b, i,
+a, nav a, .toc a, .art-title, .soundcloud-caption,
+button, label, summary {
+    color: white !important;
+    mix-blend-mode: difference;
+    isolation: isolate;
+    position: relative;
+    z-index: 2; /* render above media but still blend with body::before */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5) small clarity helpers (optional: tweak values if halo too strong) */
+h1, h2, h3, h4, h5, h6 {
+    -webkit-text-stroke: 0.015rem rgba(255,255,255,0.9);
+    text-shadow: 0 0 0.12rem rgba(255,255,255,0.85);
+}
+
+/* 6) fallback: opt-out class you can add to any element in HTML if needed */
+.no-blend, .no-blend * {
+    mix-blend-mode: normal !important;
+    isolation: isolate !important;
+}
+
+/* End of text inversion fix */
