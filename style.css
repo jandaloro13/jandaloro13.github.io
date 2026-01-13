@@ -1,506 +1,513 @@
-/* --------------------
-   FONT IMPORTS
--------------------- */
+/* -------------------- FONT IMPORTS -------------------- */
 @font-face {
-    font-family: 'Carrol';
-    src: url('fonts/CarrolDEMO.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Carrol';
+  src: url('fonts/CarrolDEMO.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('fonts/RobotoMono-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Roboto';
+  src: url('fonts/RobotoMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 header {
-    display: flex;
-    justify-content: space-between; /* name left, nav right */
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: none;       /* mostly black background */
-    color: none;
-    position: sticky;             /* keeps header visible while scrolling */
-    top: 0;
-    z-index: 100;
-    border-bottom: 0px;
+  display: flex;
+  justify-content: space-between; /* name left, nav right */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: none; /* mostly black background */
+  color: none;
+  position: sticky; /* keeps header visible while scrolling */
+  top: 0;
+  z-index: 100;
+  border-bottom: 0px;
 }
 
 header h1 {
-    font-family: 'Carrol', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    margin: 0;
-    font-weight: normal;
+  font-family: 'Carrol', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin: 0;
+  font-weight: normal;
 }
 
 nav {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 nav a {
-    text-decoration: none;
-    font-family: 'Carrol', monospace;
-    font-size: 2rem;
-    color: none;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  color: none;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #00aced;
+  color: #00aced;
 }
 
-
-
-/* --------------------
-   RESET & BASE
--------------------- */
+/* -------------------- RESET & BASE -------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', monospace;
-    font-size: 1.25rem;
-    line-height: 1;
-    color: #111;
-    background-color: none;
-    background-image: url('images/linkedin header 4.png'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: center;
+  font-family: 'Roboto', monospace;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #111;
+  background-color: none;
+  background-image: url('images/linkedin header 4.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-/* --------------------
-   HEADER
--------------------- */
+/* -------------------- HEADER -------------------- */
 header {
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 0px solid;
-    background-color: none;
-    color: none;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 0px solid;
+  background-color: none;
+  color: none;
 }
 
 header h1 {
-    font-family: 'Carrol', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-    font-weight: normal;
+  font-family: 'Carrol', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  font-weight: normal;
 }
 
 header p.subtitle {
-    font-family: 'Carrol', monospace;
-    font-size: 2rem;
-       gap: 1.5rem;
-    color: #fff;
-    margin-top: 0.5rem;
-    font-weight: normal;
-       margin-top: 1.5rem;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  gap: 1.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  font-weight: normal;
+  margin-top: 1.5rem;
 }
 
 header p.production-title {
-    font-family: 'Roboto', monospace;
-    font-size: 1.25rem;
-    color: #fff;
-    margin-top: 0.2rem;
-    font-weight: normal;
+  font-family: 'Roboto', monospace;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-top: 0.2rem;
+  font-weight: normal;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: .1rem;
-    padding: .1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: .1rem;
+  padding: .1rem 0;
 }
 
 nav a {
-    text-decoration: none;
-    font-family: 'Carrol', monospace;
-    font-size: 2rem;
-    color: #fff;
-    transition: all 0.3s ease;
-    padding: 0.1rem 0.1rem;
+  text-decoration: none;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  padding: 0.1rem 0.1rem;
 }
 
 /* Dropdown container */
 .dropdown {
-    position: relative;
-    display: flex; /* aligns with nav links */
+  position: relative;
+  display: flex; /* aligns with nav links */
 }
 
 /* Dropdown button */
 .dropbtn {
-    display: inline-flex;
-    align-items: left;
-    justify-content: center;
-    height: 100%;
-    padding: 0 0.5rem;
-    font-family: 'Carrol', monospace;
-    font-size: 2rem;
-    color: none;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+  padding: 0 0.5rem;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  color: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Dropdown content */
 .dropdown-content {
-    position: absolute;
-    top: 100%;       /* directly below button */
-    left: 0;
-    background-color: none;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 6px;
-    display: none;   /* hidden by default */
-    z-index: 10;
+  position: absolute;
+  top: 100%; /* directly below button */
+  left: 0;
+  background-color: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  display: none; /* hidden by default */
+  z-index: 10;
 }
 
 /* Dropdown links */
 .dropdown-content a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Carrol', monospace;
-    font-size: 2rem;
-    padding: 0.75rem 1rem;
-   text-align: left;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Keep open briefly after hover out */
 .dropdown:not(:hover) .dropdown-content {
-    transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
 /* ------------------------------------------- */
-
 nav a:hover {
-    color: #00aced;
-    border-bottom: 2px solid #00aced;
+  color: #00aced;
+  border-bottom: 2px solid #00aced;
 }
 
 nav a, .dropbtn {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    padding: 0.75rem 0.5rem;
-    box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.75rem 0.5rem;
+  box-sizing: border-box;
 }
 
-/* --------------------
-   SECTION HEADINGS
--------------------- */
+/* -------------------- MAIN CONTENT BOX -------------------- */
+.content-wrapper, section {
+  background-color: none !important;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------- SECTION HEADINGS -------------------- */
 section h2 {
-    font-family: 'Carrol', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 1.2rem;
-       margin-top: .6rem !important;
-    color: rgba(15, 15, 15, 1;
+  font-family: 'Carrol', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.2rem;
+  margin-top: .6rem !important;
 }
 
 section h3 {
-    font-family: 'Carrol', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 0.12em;
-    margin-top: 1.2rem !important;
-    margin-bottom: 0.6rem;
-       color: rgba(15, 15, 15, 1;
+  font-family: 'Carrol', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.6rem;
 }
 
 section p, section li {
-    font-family: 'Roboto', monospace;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-       color: rgba(15, 15, 15, 1;
+  font-family: 'Roboto', monospace;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
-/* --------------------
-   ABOUT PAGE IMAGES
--------------------- */
+/* -------------------- IMAGES & MEDIA -------------------- */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* -------------------- ABOUT PAGE IMAGES -------------------- */
 .about-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .about-images img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .work-images-sq {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
 
 .work-images-sq img {
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-   }
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
 .work-images-up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
 
 .work-images-up img {
-    width: 450px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-   }
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
 .work-images-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
 
 .work-images-side img {
-    width: 1000px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-   }
+  width: 1000px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-/* --------------------
-   FOOTER
--------------------- */
+/* -------------------- FOOTER -------------------- */
 footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 0px solid;
-    background-color: none;
-    color: none;
+  text-align: center;
+  padding: 2rem;
+  border-top: 0px solid;
+  background-color: none;
+  color: none;
 }
 
 footer a {
-    text-decoration: none;
-    color: none;
-    margin: 0 0.5rem;
-    font-family: 'Roboto', monospace;
-    transition: 0.3s;
+  text-decoration: none;
+  color: none;
+  margin: 0 0.5rem;
+  font-family: 'Roboto', monospace;
+  transition: 0.3s;
 }
 
 footer a:hover {
-    color: none;
-    text-decoration: underline;
+  color: none;
+  text-decoration: underline;
 }
 
-/* --------------------
-   RESPONSIVE
--------------------- */
+/* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 900px) {
-    body {
-        font-size: 1.25rem;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-images {
-        flex-direction: column;
-    }
-    .content-wrapper, section {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-    }
+  body {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images {
+    flex-direction: column;
+  }
+
+  .content-wrapper, section {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
 }
 
 .script-info span.section-body {
-    font-size: 1.25rem;
-    display: block;
-    margin-left: 1em;
-    margin-top: 0.25em;
-    text-align: left;
+  font-size: 1.25rem;
+  display: block;
+  margin-left: 1em;
+  margin-top: 0.25em;
+  text-align: left;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .art-piece {
-    text-align: center;
+  text-align: center;
 }
 
 .art-title {
-    margin-top: 8px;
-    font-size: 1.25rem;
+  margin-top: 8px;
+  font-size: 1.25rem;
 }
 
+@media (max-width: 900px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 600px) {
-    .art-grid {
-        grid-template-columns: 1fr;
-    }
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Remove unwanted top spacing on About page */
 #about h2 {
-    margin-top: 0;
-    padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Standardize spacing for all page sections */
 section {
-    margin-top: 40px !important;
+  margin-top: 40px !important;
 }
 
 /* Remove extra padding from main wrapper if present */
 .content-wrapper {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .section-body {
-    display: block;
+  display: block;
 }
 
-/* --------------------
-   VIDEO CONTAINERS FIXED
--------------------- */
-.video-container,
-.video-container.square {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-       cursor: pointer;
+/* -------------------- VIDEO CONTAINERS FIXED -------------------- */
+.video-container, .video-container.square {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 /* Square videos: 1:1 */
 .video-container.square {
-    aspect-ratio: 1 / 1;
-       cursor: pointer;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
 }
 
 .video-container.square video {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-       cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /* 16:9 videos fixed */
 .video-container:not(.square) {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-       cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 .video-container:not(.square) video,
 .video-container:not(.square) iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -55%);
-    object-fit: cover;
-    min-width: 100%;
-       cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -55%);
+  object-fit: cover;
+  min-width: 100%;
+  cursor: pointer;
 }
 
 /* Grid alignment */
 .art-piece {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-/* --------------------
-   VIDEO CONTAINERS FIXED
--------------------- */
-.video-container,
-.video-container.square {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-       cursor: pointer;
+/* -------------------- VIDEO CONTAINERS FIXED -------------------- */
+.video-container, .video-container.square {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 /* Add this block below */
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-    object-fit: cover;
-       cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /* Confirm this is present and unchanged */
 .video-container:not(.square) {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-       cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: -2px; /* lift the embed slightly */
-    left: 0;
-    width: 100%;
-    height: calc(100% + 4px); /* offset top shift */
-    border: none;
-    display: block;
-    object-fit: cover;
-       cursor: pointer;
+  position: absolute;
+  top: -2px; /* lift the embed slightly */
+  left: 0;
+  width: 100%;
+  height: calc(100% + 4px); /* offset top shift */
+  border: none;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .video-container.soundcloud-fix iframe {
@@ -509,31 +516,28 @@ section {
   height: 100%;
 }
 
-
-/* --------------------
-   ART GRID - 2 PER ROW
--------------------- */
+/* -------------------- ART GRID - 2 PER ROW -------------------- */
 .art-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-    gap: 40px; /* spacing between videos */
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  gap: 40px; /* spacing between videos */
+  margin-top: 20px;
 }
 
 /* Ensure art-piece layout is centered */
 .art-piece {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-    .art-grid {
-        grid-template-columns: 1fr; /* 1 per row on smaller screens */
-        gap: 30px;
-    }
+  .art-grid {
+    grid-template-columns: 1fr; /* 1 per row on smaller screens */
+    gap: 30px;
+  }
 }
 
 .video-container.soundcloud-fix {
@@ -559,160 +563,155 @@ section {
 
 /* Fix single SoundCloud embed to match 16:9 art pieces */
 .video-container.soundcloud-fix {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
 }
 
 .video-container.soundcloud-fix iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Single SoundCloud 16:9 fix */
 .video-container.soundcloud-fix {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
 }
 
 .video-container.soundcloud-fix iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video-container.soundcloud-fix .soundcloud-caption {
-    font-size: 1.25rem;
-    color: none;
-    text-align: center;
-    margin-top: 0.25em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 1.25rem;
+  color: none;
+  text-align: center;
+  margin-top: 0.25em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* SoundCloud square aligned with grid */
- {
-    position: relative;
-    width: 100%;              /* match video-container sizing inside grid */
-    aspect-ratio: 1 / 1;      /* square ratio like your other art pieces */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
+{
+  position: relative;
+  width: 100%; /* match video-container sizing inside grid */
+  aspect-ratio: 1 / 1; /* square ratio like your other art pieces */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
 }
 
 .soundcloud-caption {
-    margin-top: 8px;
-    font-size: 1.25rem;
-    color: #ccc;
-    text-align: left;
+  margin-top: 8px;
+  font-size: 1.25rem;
+  color: #ccc;
+  text-align: left;
 }
-
 
 .video-container.soundcloud-square .soundcloud-caption {
-    font-size: 1.25rem;
-    color: none;
-    text-align: center;
-    margin-top: 0.25em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 1.25rem;
+  color: none;
+  text-align: center;
+  margin-top: 0.25em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-   .video-container,
+.video-container,
 .video-container.square,
 .video-container.square video,
 .video-container iframe {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 /* Ensure pointer cursor on all video containers and children */
-.video-container,
-.video-container * {
-    cursor: pointer !important;
+.video-container, .video-container * {
+  cursor: pointer !important;
 }
 
-.art-piece video,
-.art-piece iframe {
-    cursor: pointer !important;
+.art-piece video, .art-piece iframe {
+  cursor: pointer !important;
 }
 
 /* SoundCloud square inside art grid */
 .art-piece .video-container.soundcloud-square {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #000000;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
 }
 
 .art-piece .video-container.soundcloud-square iframe {
-    border: 0;
-    display: block;
-    object-fit: cover;
+  border: 0;
+  display: block;
+  object-fit: cover;
 }
 
 .art-piece .soundcloud-caption {
-    margin-top: 0.5rem;
-    font-size: 1.25rem;
-    color: none;
-    text-align: left;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: none;
+  text-align: left;
 }
 
 .art-piece {
-    cursor: default; /* keeps arrow over title/year */
+  cursor: default; /* keeps arrow over title/year */
 }
 
 footer, footer p, footer a {
-    font-family: 'Carrol';
-       font-size: 2rem;
-          margin-top: 1.5rem;
+  font-family: 'Carrol';
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 
-/* --------------------
-   CONTACT PAGE FIX
--------------------- */
+/* -------------------- CONTACT PAGE FIX -------------------- */
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background: #000000;
-    padding: 2rem 0;
-    margin: 0 auto;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #000000;
+  padding: 2rem 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #contact-form h2 {
-    font-family: 'Carrol', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 1.5rem;
+  font-family: 'Carrol', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
 }
 
 #contact-form iframe {
-    width: 90%;
-    height: 170vh;
-    border: none;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+  width: 90%;
+  height: 170vh;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 .intro {
@@ -753,41 +752,45 @@ nav.toc a:hover {
 }
 
 .toc {
-    position: fixed;
-       font-size: .925rem;
-    top: 50%; /* center vertically */
-    right: 0px; /* stay on right edge */
-    transform: translateY(-50%); /* keep centered regardless of height */
-    width: 160px; /* optional wider layout */
-    max-height: 100vh; /* prevent overflow beyond viewport */
-    overflow-y: auto; /* enable scrolling inside the box */
-    background-color: none;
-    padding: .75rem;
-    border-radius: 8px;
-    box-shadow: 0px;
-    font-size: 0.5rem;
-    z-index: 1000;
+  position: fixed;
+  font-size: .925rem;
+  top: 50%; /* center vertically */
+  right: 0px; /* stay on right edge */
+  transform: translateY(-50%); /* keep centered regardless of height */
+  width: 160px; /* optional wider layout */
+  max-height: 100vh; /* prevent overflow beyond viewport */
+  overflow-y: auto; /* enable scrolling inside the box */
+  background-color: none;
+  padding: .75rem;
+  border-radius: 8px;
+  box-shadow: 0px;
+  font-size: 0.5rem;
+  z-index: 1000;
 }
 
 .toc h2 {
-    font-size: .925rem;
-    margin-bottom: 0.5rem;
+  font-size: .925rem;
+  margin-bottom: 0.5rem;
 }
+
 .toc ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
+
 .toc li {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
+
 .toc a {
-    text-decoration: none;
-    color: none;
-    transition: color 0.2s;
-   font-size: .925rem;
+  text-decoration: none;
+  color: none;
+  transition: color 0.2s;
+  font-size: .925rem;
 }
+
 .toc a:hover {
-    color: #00aced;
+  color: #00aced;
 }
 
 .social-metrics {
@@ -796,8 +799,7 @@ nav.toc a:hover {
   margin-top: 1rem;
 }
 
-.social-metrics th,
-.social-metrics td {
+.social-metrics th, .social-metrics td {
   border: 1px solid #ccc;
   padding: 0.5rem;
   font-family: 'Roboto', monospace;
@@ -815,16 +817,16 @@ nav.toc a:hover {
 }
 
 .linkedin-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* space between iframes */
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* space between iframes */
+  margin-top: 20px;
 }
 
 .linkedin-grid iframe {
-    width: 100%;
-    min-height: 500px; /* adjust based on content */
-    border: none;
+  width: 100%;
+  min-height: 500px; /* adjust based on content */
+  border: none;
 }
 
 .doc-viewer {
@@ -832,115 +834,130 @@ nav.toc a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
 .doc-viewer iframe {
   width: 100%;
   height: 700px;
   border: 0px;
 }
 
+/* -------------------- TEXT INVERSION FIX (paste at end of style.css) - removes all previous blend rules - makes text invert reliably against body background - forces listed components to never blend -------------------- */
+/* 0) clear any stray global blending (safe override) */
+html, body, header, footer, main, section, article, nav {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* 1) create a single true background layer for reliable blending */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: inherit; /* uses existing body background-image/color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 2) ensure top-level page content composes above the bg layer */
+body > * {
+  position: relative;
+  z-index: 0;
+  isolation: isolate; /* prevents blend leaks between siblings */
+}
+
+/* 3) explicit: keep all media and listed components fully normal (no blending) */
+img, video, iframe, canvas, svg,
+.about-images,
+.video-container,
+.video-container.square,
+.video-container.paused,
+.video-container.square.soundcloud-square,
+.audio-item,
+.social-metrics,
+.doc-viewer,
+.linkedin-grid,
+#contact-form,
+.video-item,
+.work-images-sq,
+.work-images-side,
+details,
+.no-blend {
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* also protect descendants of video-container and other wrappers */
+.video-container *,
+.about-images *,
+.work-images-sq *,
+.work-images-side *,
+.doc-viewer *,
+.linkedin-grid * {
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* 4) apply difference blending only to typographic elements */
+h1, h2, h3, h4, h5, h6,
+p, li, span, strong, em, b, i,
+a, nav a, .toc a,
+.art-title,
+.soundcloud-caption,
+button, label, summary {
+  color: white !important;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  position: relative;
+  z-index: 2; /* render above media but still blend with body::before */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5) small clarity helpers */
+h1, h2, h3, h4, h5, h6 {
+  -webkit-text-stroke: 0.015rem rgba(255,255,255,0.9);
+  text-shadow: 0 0 0.12rem rgba(255,255,255,0.85);
+}
+
+/* 6) fallback: opt-out class */
+.no-blend, .no-blend * {
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* End of text inversion fix */
+
 /* FIX 1: restore header anchoring */
 header {
-    position: sticky !important;
-    top: 0;
-    z-index: 999;
-    background: none;
-    backdrop-filter: none;
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
+  background: none;
+  backdrop-filter: none;
 }
 
 /* Keep header fully white and normal */
 header, header * {
-    mix-blend-mode: normal !important;
-    color: #fff !important;
+  mix-blend-mode: normal !important;
+  color: #fff !important;
 }
 
-/* --------------------
-   FINAL LAYOUT FIX
--------------------- */
-
-/* White content cards */
+/* Apply inversion only to main content */
 .content-wrapper,
-section {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 2rem;
-    max-width: 1100px;
-    margin: 3rem auto;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* Black text inside cards */
-section h2,
-section h3,
-section p,
-section li,
+section,
+h1, h2, h3, h4, h5, h6,
+p, li, span, strong, em, b, i, a,
 .art-title,
 .soundcloud-caption {
-    color: #0f0f0f;
-}
-
-/* Restore original perceived image sizing */
-.work-images-sq img {
-    max-width: 500px;
-}
-
-.work-images-up img {
-    max-width: 450px;
-}
-
-.work-images-side img {
-    max-width: 1000px;
-}
-
-/* Single authoritative art grid */
-.art-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
-}
-
-@media (max-width: 900px) {
-    .art-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --------------------
-   IMAGE SIZE AUTHORITY
--------------------- */
-
-/* Default: images do NOT scale */
-img {
-    max-width: none;
-    width: auto;
-    height: auto;
-    display: block;
-}
-
-/* Center images when needed */
-.work-images-sq img,
-.work-images-up img,
-.work-images-side img,
-.about-images img {
-    margin: 1rem auto;
-}
-
-/* Explicit size control only */
-.work-images-sq img {
-    width: 500px;
-    max-width: 100%;
-}
-
-.work-images-up img {
-    width: 450px;
-    max-width: 100%;
-}
-
-.work-images-side img {
-    width: 1000px;
-    max-width: 100%;
-}
-
-.about-images img {
-    width: 250px;
-    max-width: 100%;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  position: relative;
+  z-index: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
