@@ -209,7 +209,7 @@ nav a, .dropbtn {
    MAIN CONTENT BOX
 -------------------- */
 .content-wrapper, section {
-    background-color: rgba(255, 255, 255, 1;
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
     padding: 2rem;
     max-width: 1200px;
