@@ -19,7 +19,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #fff; /* mostly black background */
-  color: none;
+  color: #000000;
   position: sticky; /* keeps header visible while scrolling */
   top: 0;
   z-index: 100;
@@ -33,6 +33,8 @@ header h1 {
   letter-spacing: 0.18em;
   margin: 0;
   font-weight: normal;
+    background-color: #fff; /* mostly black background */
+  color: #000000;
 }
 
 nav {
@@ -44,7 +46,8 @@ nav a {
   text-decoration: none;
   font-family: 'Carrol', monospace;
   font-size: 2rem;
-  color: none;
+  background-color: #fff; /* mostly black background */
+  color: #000000;
   transition: color 0.3s ease;
 }
 
@@ -142,7 +145,8 @@ nav a {
   padding: 0 0.5rem;
   font-family: 'Carrol', monospace;
   font-size: 2rem;
-  color: none;
+  background-color: #fff; /* mostly black background */
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -165,7 +169,8 @@ nav a {
 /* Dropdown links */
 .dropdown-content a {
   display: block;
-  color: #fff;
+  background-color: #fff; /* mostly black background */
+  color: #000000;
   text-decoration: none;
   font-family: 'Carrol', monospace;
   font-size: 2rem;
