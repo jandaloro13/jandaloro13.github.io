@@ -18,7 +18,7 @@ header {
   justify-content: space-between; /* name left, nav right */
   align-items: center;
   padding: 1rem 2rem;
-  background-color: none; /* mostly black background */
+  background-color: #fff; /* mostly black background */
   color: none;
   position: sticky; /* keeps header visible while scrolling */
   top: 0;
@@ -63,8 +63,8 @@ body {
   font-family: 'Roboto', monospace;
   font-size: 1.25rem;
   line-height: 1;
-  color: #fff;
-  background-color: none;
+  color: #000000;
+  background-color: #fff;
   background-image: url('images/linkedin header 4.png');
   background-size: cover;
   background-position: center;
@@ -78,8 +78,8 @@ header {
   text-align: center;
   padding: 2rem 1rem;
   border-bottom: 0px solid;
-  background-color: none;
-  color: none;
+  color: #000000;
+  background-color: #fff;
 }
 
 header h1 {
@@ -153,7 +153,8 @@ nav a {
   position: absolute;
   top: 100%; /* directly below button */
   left: 0;
-  background-color: none;
+  color: #000000;
+  background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   border-radius: 6px;
@@ -214,7 +215,8 @@ section h2 {
   letter-spacing: 0.15em;
   margin-bottom: 1.2rem;
   margin-top: .6rem !important;
-  color: #fff;
+  color: #000000;
+  background-color: #fff;
 }
 
 section h3 {
@@ -309,8 +311,8 @@ footer {
   text-align: center;
   padding: 2rem;
   border-top: 0px solid;
-  background-color: none;
-  color: #fff;
+  color: #000000;
+  background-color: #fff;
 }
 
 footer a {
@@ -692,7 +694,7 @@ footer, footer p, footer a {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background: #000000;
+  background: #fff;
   padding: 2rem 0;
   margin: 0 auto;
   text-align: center;
@@ -731,7 +733,7 @@ nav.toc {
   flex: 1;
   border: 0px solid;
   padding: 10px;
-  background: none;
+  background: #fff;
 }
 
 nav.toc ul {
@@ -761,7 +763,7 @@ nav.toc a:hover {
   width: 160px; /* optional wider layout */
   max-height: 100vh; /* prevent overflow beyond viewport */
   overflow-y: auto; /* enable scrolling inside the box */
-  background-color: none;
+  background-color: #fff;
   padding: .75rem;
   border-radius: 8px;
   box-shadow: 0px;
@@ -809,12 +811,12 @@ nav.toc a:hover {
 }
 
 .social-metrics th {
-  background-color: #000000;
+  background-color: ##fff;
   font-weight: bold;
 }
 
 .social-metrics tbody tr:nth-child(even) {
-  background-color: #000000;
+  background-color: ##fff;
 }
 
 .linkedin-grid {
@@ -922,7 +924,7 @@ header {
   position: sticky !important;
   top: 0;
   z-index: 999;
-  background: none;
+  background: #fff;
   backdrop-filter: none;
 }
 
