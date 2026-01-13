@@ -902,22 +902,6 @@ details,
   isolation: isolate !important;
 }
 
-/* 4) apply difference blending only to typographic elements */
-h1, h2, h3, h4, h5, h6,
-p, li, span, strong, em, b, i,
-a, nav a, .toc a,
-.art-title,
-.soundcloud-caption,
-button, label, summary {
-  color: white !important;
-  mix-blend-mode: difference;
-  isolation: isolate;
-  position: relative;
-  z-index: 2; /* render above media but still blend with body::before */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* 5) small clarity helpers */
 h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke: 0.015rem rgba(255,255,255,0.9);
@@ -945,19 +929,4 @@ header {
 header, header * {
   mix-blend-mode: normal !important;
   color: #fff !important;
-}
-
-/* Apply inversion only to main content */
-.content-wrapper,
-section,
-h1, h2, h3, h4, h5, h6,
-p, li, span, strong, em, b, i, a,
-.art-title,
-.soundcloud-caption {
-  mix-blend-mode: difference;
-  isolation: isolate;
-  position: relative;
-  z-index: 2;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
