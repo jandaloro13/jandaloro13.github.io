@@ -235,16 +235,6 @@ section p, section li {
 }
 
 /* --------------------
-   IMAGES & MEDIA
--------------------- */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 1rem 0;
-}
-
-/* --------------------
    ABOUT PAGE IMAGES
 -------------------- */
 .about-images {
@@ -888,16 +878,6 @@ section li,
     color: #0f0f0f;
 }
 
-/* Constrain media so it does not fill the entire card */
-section img,
-section video,
-section iframe {
-    max-width: 85%;
-    height: auto;
-    display: block;
-    margin: 1.5rem auto;
-}
-
 /* Restore original perceived image sizing */
 .work-images-sq img {
     max-width: 500px;
@@ -922,4 +902,45 @@ section iframe {
     .art-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --------------------
+   IMAGE SIZE AUTHORITY
+-------------------- */
+
+/* Default: images do NOT scale */
+img {
+    max-width: none;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Center images when needed */
+.work-images-sq img,
+.work-images-up img,
+.work-images-side img,
+.about-images img {
+    margin: 1rem auto;
+}
+
+/* Explicit size control only */
+.work-images-sq img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.work-images-up img {
+    width: 450px;
+    max-width: 100%;
+}
+
+.work-images-side img {
+    width: 1000px;
+    max-width: 100%;
+}
+
+.about-images img {
+    width: 250px;
+    max-width: 100%;
 }
