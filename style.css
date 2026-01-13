@@ -971,3 +971,38 @@ nav, nav a, .dropbtn, .dropdown-content a {
   bottom: 80px; /* optional, keeps from touching footer */
   transform: none; /* remove translateY if using top/bottom spacing */
 }
+
+.toc {
+  position: fixed;
+  top: 80px;              /* adjust to header height */
+  bottom: 80px;           /* adjust to footer height */
+  right: 0;
+  width: 160px;
+  overflow-y: auto;       /* scrollable if content is too long */
+  background-color: rgba(255,255,255,0.95);
+  padding: 0.75rem;
+  border-radius: 8px 0 0 8px; /* round only left side */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 99999;         /* ensure above everything */
+  transform: none;        /* remove previous translateY */
+}
+
+/* Ensure links are visible */
+.toc a {
+  display: block;
+  color: #000;            /* must be valid color */
+  text-decoration: none;
+  font-size: 0.925rem;
+  margin-bottom: 0.25rem;
+}
+
+.toc a:hover {
+  color: #00aced;
+}
+
+/* Prevent global blending from hiding TOC */
+.toc, .toc * {
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+  z-index: 99999 !important;
+}
