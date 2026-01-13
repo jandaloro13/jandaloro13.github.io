@@ -63,7 +63,7 @@ body {
   font-family: 'Roboto', monospace;
   font-size: 1.25rem;
   line-height: 1;
-  color: #111;
+  color: #fff;
   background-color: none;
   background-image: url('images/linkedin header 4.png');
   background-size: cover;
@@ -214,6 +214,7 @@ section h2 {
   letter-spacing: 0.15em;
   margin-bottom: 1.2rem;
   margin-top: .6rem !important;
+  color: #fff;
 }
 
 section h3 {
@@ -309,19 +310,19 @@ footer {
   padding: 2rem;
   border-top: 0px solid;
   background-color: none;
-  color: none;
+  color: #fff;
 }
 
 footer a {
   text-decoration: none;
-  color: none;
+  color: #fff;
   margin: 0 0.5rem;
   font-family: 'Roboto', monospace;
   transition: 0.3s;
 }
 
 footer a:hover {
-  color: none;
+  color: #fff;
   text-decoration: underline;
 }
 
