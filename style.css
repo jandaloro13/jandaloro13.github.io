@@ -739,7 +739,7 @@ footer, footer p, footer a {
 nav.toc {
   flex: 1;
   border: 0px solid;
-  padding: 10px;
+  padding: 5px;
   background: #fff;
 }
 
@@ -768,7 +768,7 @@ nav.toc a:hover {
   right: 0px; /* stay on right edge */
   transform: translateY(-50%); /* keep centered regardless of height */
   width: 160px; /* optional wider layout */
-  max-height: 100vh; /* prevent overflow beyond viewport */
+  max-height: 75vh; /* prevent overflow beyond viewport */
   overflow-y: auto; /* enable scrolling inside the box */
   background-color: #fff;
   padding: .75rem;
