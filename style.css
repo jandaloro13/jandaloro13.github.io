@@ -940,3 +940,31 @@ header, header * {
   mix-blend-mode: normal !important;
   color: #fff !important;
 }
+
+/* -------------------- FORCE BLACK TEXT ON WHITE -------------------- */
+body, body * {
+  color: #000 !important;
+  background-color: #fff !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* Remove text shadows that are light-colored */
+h1, h2, h3, h4, h5, h6, p, li, a, span {
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+header, header *,
+nav, nav a, .dropbtn, .dropdown-content a {
+  color: #000 !important;
+  background-color: #fff !important;
+  text-shadow: none !important;
+}
+
+.video-container .soundcloud-caption,
+.art-piece .art-title,
+.doc-viewer iframe, 
+.social-metrics td, .social-metrics th {
+  color: #000 !important;
+}
