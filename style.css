@@ -71,7 +71,7 @@ body {
     line-height: 1;
     color: #111;
     background-color: none;
-    background-image: url('images/11. Endtimes flipped5 6.28.23.jpg'); 
+    background-image: url('images/linkedin header 4.png'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -209,7 +209,7 @@ nav a, .dropbtn {
    MAIN CONTENT BOX
 -------------------- */
 .content-wrapper, section {
-    background-color: none !important;
+    background-color: rgba(255, 255, 255, 1;
     border-radius: 10px;
     padding: 2rem;
     max-width: 1200px;
@@ -227,6 +227,7 @@ section h2 {
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
        margin-top: .6rem !important;
+    color: rgba(15, 15, 15, 1;
 }
 
 section h3 {
@@ -235,12 +236,14 @@ section h3 {
     letter-spacing: 0.12em;
     margin-top: 1.2rem !important;
     margin-bottom: 0.6rem;
+       color: rgba(15, 15, 15, 1;
 }
 
 section p, section li {
     font-family: 'Roboto', monospace;
     font-size: 1.25rem;
     margin-bottom: 1rem;
+       color: rgba(15, 15, 15, 1;
 }
 
 /* --------------------
@@ -933,22 +936,6 @@ details,
     isolation: isolate !important;
 }
 
-/* 4) apply difference blending only to typographic elements */
-/* keep this selector as specific as possible to avoid affecting layout elements */
-h1, h2, h3, h4, h5, h6,
-p, li,
-span, strong, em, b, i,
-a, nav a, .toc a, .art-title, .soundcloud-caption,
-button, label, summary {
-    color: white !important;
-    mix-blend-mode: difference;
-    isolation: isolate;
-    position: relative;
-    z-index: 2; /* render above media but still blend with body::before */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 /* 5) small clarity helpers (optional: tweak values if halo too strong) */
 h1, h2, h3, h4, h5, h6 {
     -webkit-text-stroke: 0.015rem rgba(255,255,255,0.9);
@@ -976,15 +963,5 @@ header {
 header, header * {
     mix-blend-mode: normal !important;
     color: #fff !important;
-}
-
-/* Apply inversion only to main content */
-.content-wrapper, section, h1, h2, h3, h4, h5, h6, p, li, span, strong, em, b, i, a, .art-title, .soundcloud-caption {
-    mix-blend-mode: difference;
-    isolation: isolate;
-    position: relative;
-    z-index: 2;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
