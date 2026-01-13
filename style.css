@@ -763,19 +763,17 @@ nav.toc a:hover {
 
 .toc {
   position: fixed;
-  font-size: .925rem;
-  top: 50%; /* center vertically */
-  right: 0px; /* stay on right edge */
-  transform: translateY(-50%); /* keep centered regardless of height */
-  width: 160px; /* optional wider layout */
-  max-height: 75vh; /* prevent overflow beyond viewport */
-  overflow-y: auto; /* enable scrolling inside the box */
-  background-color: #fff;
-  padding: .75rem;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 160px;
+  max-height: 75vh;
+  overflow-y: auto;
+  background-color: rgba(255,255,255,0.95); /* semi-opaque white */
+  padding: 0.75rem;
   border-radius: 8px;
-  box-shadow: 0px;
-  font-size: 0.5rem;
-  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 2000; /* above header/footer */
 }
 
 .toc h2 {
@@ -967,4 +965,10 @@ nav, nav a, .dropbtn, .dropdown-content a {
 .doc-viewer iframe, 
 .social-metrics td, .social-metrics th {
   color: #000 !important;
+}
+
+.toc {
+  top: 80px; /* if header is 80px tall */
+  bottom: 80px; /* optional, keeps from touching footer */
+  transform: none; /* remove translateY if using top/bottom spacing */
 }
