@@ -387,8 +387,9 @@ footer a:hover {
 .toc-inner ul {
   margin: 0;
   padding-left: 0;
-  width: 100%;
+  width: 200px;
   list-style: none;
+    background: #fff;
 }
 
 .toc-inner li a {
@@ -396,7 +397,7 @@ footer a:hover {
   width: 100%;
   color: #000;
   text-decoration: none;
-  padding: 0.25rem 0;
+  padding: 0rem 0;
 }
 
 .toc-inner li a:hover {
