@@ -69,6 +69,13 @@ header p.production-title {
   color: #fff;
 }
 
+/* FORCE inversion on nav text in header */
+header nav a,
+header .dropbtn {
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
 /* ==================== NAV ==================== */
 nav {
   display: flex;
@@ -85,7 +92,6 @@ nav a,
 
   background: transparent;
   color: #fff;
-  mix-blend-mode: difference;
 
   cursor: pointer;
 }
@@ -98,6 +104,7 @@ nav a:hover {
 /* ==================== DROPDOWN ==================== */
 .dropdown {
   position: relative;
+  display: inline-flex;
 }
 
 .dropdown-content {
@@ -114,7 +121,9 @@ nav a:hover {
 
   display: none;
   z-index: 2000;
+
   mix-blend-mode: normal;
+  text-align: left;
 }
 
 .dropdown-content,
@@ -128,6 +137,7 @@ nav a:hover {
   font-size: 2rem;
   color: #000;
   background: transparent;
+  text-align: left;
 }
 
 .dropdown:hover .dropdown-content {
@@ -169,7 +179,6 @@ iframe {
   margin: 1rem 0;
 }
 
-/* restore previous visual scale inside content areas */
 .content-wrapper img,
 section img {
   max-width: 800px;
@@ -237,25 +246,35 @@ footer a:hover {
   background: transparent;
   box-shadow: none;
   z-index: 3000;
+
+  mix-blend-mode: normal;
 }
 
 .toc-inner {
   max-height: calc(100vh - 140px);
   overflow-y: auto;
   padding: 0.75rem;
+
   background: #fff;
   border-radius: 8px;
+
+  mix-blend-mode: normal;
+}
+
+.toc,
+.toc * {
+  color: #000 !important;
+  mix-blend-mode: normal !important;
 }
 
 .toc a {
   display: block;
   font-size: 0.925rem;
-  color: #000;
   text-decoration: none;
 }
 
 .toc a:hover {
-  color: #00aced;
+  color: #00aced !important;
 }
 
 /* ==================== CONTACT ==================== */
