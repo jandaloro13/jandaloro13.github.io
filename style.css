@@ -311,3 +311,26 @@ footer a:hover {
   mix-blend-mode: normal !important;
   isolation: isolate !important;
 }
+
+/* Force dropdown menu text to be black on white */
+.dropdown-content {
+  background-color: #fff !important; /* white background */
+  color: #000 !important;            /* text color fallback */
+}
+
+.dropdown-content a {
+  color: #000 !important;           /* text is black */
+  background-color: #fff !important; /* background stays white */
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #00aced !important;        /* optional hover color */
+  background-color: #fff !important; /* prevent blend issues */
+}
+
+/* Ensure dropdown box itself ignores any blend modes */
+.dropdown-content, .dropdown-content * {
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
