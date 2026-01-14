@@ -943,8 +943,8 @@ nav, nav a, .dropbtn, .dropdown-content a {
 
 .toc {
   position: fixed;
-  top: 80px;              /* adjust to header height */
-  bottom: 80px;           /* adjust to footer height */
+  top: 100px;              /* adjust to header height */
+  bottom: 0px;           /* adjust to footer height */
   right: 0;
   width: 160px;
   overflow-y: auto;       /* scrollable if content is too long */
