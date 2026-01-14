@@ -200,15 +200,15 @@ iframe {
 footer {
   text-align: center;
   padding: 2rem;
-  background: #fff;
-  color: #000;
+  background: none;
+  color: #fff;
 }
 
 footer a {
   font-family: 'Carrol';
   font-size: 2rem;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 footer a:hover {
