@@ -44,7 +44,8 @@ header {
 
   padding: 1.5rem 2rem;
   background: transparent;
-  isolation: isolate;
+
+  isolation: isolate; /* ensures mix-blend-mode works */
 }
 
 header h1 {
@@ -55,8 +56,8 @@ header h1 {
   font-weight: normal;
   margin: 0;
 
-  mix-blend-mode: difference;
   color: #fff;
+  mix-blend-mode: difference;
   white-space: nowrap;
 }
 
@@ -65,15 +66,8 @@ header p.production-title {
   margin-top: 0.25rem;
   text-align: left;
 
-  mix-blend-mode: difference;
   color: #fff;
-}
-
-/* FORCE inversion on nav text in header */
-header nav a,
-header .dropbtn {
   mix-blend-mode: difference;
-  color: #fff;
 }
 
 /* ==================== NAV ==================== */
@@ -92,6 +86,7 @@ nav a,
 
   background: transparent;
   color: #fff;
+  mix-blend-mode: difference;
 
   cursor: pointer;
 }
@@ -110,7 +105,7 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 0; /* aligns right edge of dropdown with button */
   left: auto;
 
   min-width: 160px;
@@ -121,14 +116,7 @@ nav a:hover {
 
   display: none;
   z-index: 2000;
-
-  mix-blend-mode: normal;
   text-align: left;
-}
-
-.dropdown-content,
-.dropdown-content * {
-  mix-blend-mode: normal;
 }
 
 .dropdown-content a {
@@ -136,8 +124,8 @@ nav a:hover {
   padding: 0.75rem 1rem;
   font-size: 2rem;
   color: #000;
-  background: transparent;
   text-align: left;
+  background: transparent;
 }
 
 .dropdown:hover .dropdown-content {
@@ -238,43 +226,31 @@ footer a:hover {
 /* ==================== TOC ==================== */
 .toc {
   position: fixed;
-  right: 0;
   top: 100px;
   bottom: 0;
-  width: 160px;
-
-  background: transparent;
-  box-shadow: none;
-  z-index: 3000;
-
-  mix-blend-mode: normal;
-}
-
-.toc-inner {
-  max-height: calc(100vh - 140px);
-  overflow-y: auto;
-  padding: 0.75rem;
+  left: 0;
+  right: 0; /* extend TOC box all the way to right edge */
+  width: auto;
 
   background: #fff;
+  box-shadow: none;
+  z-index: 3000;
   border-radius: 8px;
 
+  padding: 0.75rem;
+  overflow-y: auto;
   mix-blend-mode: normal;
-}
-
-.toc,
-.toc * {
-  color: #000 !important;
-  mix-blend-mode: normal !important;
 }
 
 .toc a {
   display: block;
   font-size: 0.925rem;
+  color: #000;
   text-decoration: none;
 }
 
 .toc a:hover {
-  color: #00aced !important;
+  color: #00aced;
 }
 
 /* ==================== CONTACT ==================== */
