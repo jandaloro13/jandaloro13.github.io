@@ -997,7 +997,7 @@ nav, nav a, .dropbtn, .dropdown-content a {
   padding: 0.75rem;
   width: 160px;
   border-radius: 8px 0 0 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: none;
 
   /* CRITICAL BEHAVIOR */
   max-height: calc(100vh - 140px); /* header + breathing room */
@@ -1028,6 +1028,7 @@ nav, nav a, .dropbtn, .dropdown-content a {
 
 .toc {
   background-color: transparent !important;
+    box-shadow: none;
 }
 
 .toc::before,
