@@ -761,20 +761,6 @@ nav.toc a:hover {
   color: none;
 }
 
-.toc {
-  position: fixed;
-  top: 80px;               /* adjust to your header height */
-  bottom: 80px;            /* adjust to your footer height */
-  right: 0px;
-  width: 160px;
-  overflow-y: auto;        /* allows scrolling if content exceeds height */
-  background-color: rgba(255,255,255,0.95);
-  padding: 0.75rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  z-index: 2000;           /* above header/footer */
-}
-
 .toc h2 {
   font-size: .925rem;
   margin-bottom: 0.5rem;
@@ -787,17 +773,6 @@ nav.toc a:hover {
 
 .toc li {
   margin-bottom: 0.25rem;
-}
-
-.toc a {
-  text-decoration: none;
-  color: none;
-  transition: color 0.2s;
-  font-size: .925rem;
-}
-
-.toc a:hover {
-  color: #00aced;
 }
 
 .social-metrics {
@@ -964,12 +939,6 @@ nav, nav a, .dropbtn, .dropdown-content a {
 .doc-viewer iframe, 
 .social-metrics td, .social-metrics th {
   color: #000 !important;
-}
-
-.toc {
-  top: 80px; /* if header is 80px tall */
-  bottom: 80px; /* optional, keeps from touching footer */
-  transform: none; /* remove translateY if using top/bottom spacing */
 }
 
 .toc {
