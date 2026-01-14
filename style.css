@@ -132,11 +132,11 @@ nav a:hover {
 /* ==================== CONTENT PANELS ==================== */
 .content-wrapper,
 section {
-  background-color: none;
-  border-radius: 10px;
-  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0px;
+  padding: 0rem;
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 0rem auto;
 }
 
 /* ==================== HEADINGS ==================== */
