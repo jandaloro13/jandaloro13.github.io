@@ -1,86 +1,50 @@
-/* -------------------- FONT IMPORTS -------------------- */
+/* ==================== FONT IMPORTS ==================== */
 @font-face {
   font-family: 'Carrol';
   src: url('fonts/CarrolDEMO.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/RobotoMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
 
-header {
-  display: flex;
-  justify-content: space-between; /* name left, nav right */
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: none; /* mostly black background */
-  color: difference;
-  position: sticky; /* keeps header visible while scrolling */
-  top: 0;
-  z-index: 100;
-  border-bottom: 0px;
-}
-
-header h1 {
-  font-family: 'Carrol', sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin: 0;
-  font-weight: normal;
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: 'Carrol', monospace;
-  font-size: 2rem;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #00aced;
-}
-
-/* -------------------- RESET & BASE -------------------- */
+/* ==================== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==================== BODY ==================== */
 body {
   font-family: 'Roboto', monospace;
   font-size: 1.25rem;
-  line-height: 1;
-  color: #000000;
+  line-height: 1.4;
+  color: #000;
+  text-align: center;
+
   background-color: #fff;
   background-image: url('images/linkedin header 4.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  text-align: center;
 }
 
-/* -------------------- HEADER -------------------- */
+/* ==================== HEADER ==================== */
 header {
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 2rem 1rem;
-  border-bottom: 0px solid;
-  color: #000000;
-  background-color: #fff;
+  background: transparent;
+  isolation: isolate;
 }
 
 header h1 {
@@ -88,983 +52,206 @@ header h1 {
   font-size: 2rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: normal;
   margin-bottom: 0.4rem;
-  font-weight: normal;
-}
 
-header p.subtitle {
-  font-family: 'Carrol', monospace;
-  font-size: 2rem;
-  gap: 1.5rem;
+  mix-blend-mode: difference;
   color: #fff;
-  margin-top: 0.5rem;
-  font-weight: normal;
-  margin-top: 1.5rem;
 }
 
+header p.subtitle,
 header p.production-title {
-  font-family: 'Roboto', monospace;
-  font-size: 1.25rem;
+  mix-blend-mode: difference;
   color: #fff;
-  margin-top: 0.2rem;
-  font-weight: normal;
 }
 
+/* ==================== NAV ==================== */
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: .1rem;
-  padding: .1rem 0;
+  margin-top: 0.5rem;
 }
 
-nav a {
-  text-decoration: none;
-  font-family: 'Carrol', monospace;
-  font-size: 2rem;
-  color: #fff;
-  transition: all 0.3s ease;
-  padding: 0.1rem 0.1rem;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: flex; /* aligns with nav links */
-}
-
-/* Dropdown button */
+nav a,
 .dropbtn {
-  display: inline-flex;
-  align-items: left;
-  justify-content: center;
-  height: 100%;
-  padding: 0 0.5rem;
   font-family: 'Carrol', monospace;
   font-size: 2rem;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
   text-decoration: none;
+  padding: 0.75rem 0.5rem;
+
+  background: transparent;
+  color: #fff;
+  mix-blend-mode: difference;
+
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-/* Dropdown content */
-.dropdown-content {
-  position: absolute;
-  top: 100%; /* directly below button */
-  left: 0;
-  color: #000000;
-  background-color: #fff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 6px;
-  display: none; /* hidden by default */
-  z-index: 10;
-}
-
-/* Dropdown links */
-.dropdown-content a {
-  display: block;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
-  text-decoration: none;
-  font-family: 'Carrol', monospace;
-  font-size: 2rem;
-  padding: 0.75rem 1rem;
-  text-align: left;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Keep open briefly after hover out */
-.dropdown:not(:hover) .dropdown-content {
-  transition-delay: 0.25s;
-}
-
-/* ------------------------------------------- */
 nav a:hover {
   color: #00aced;
   border-bottom: 2px solid #00aced;
 }
 
-nav a, .dropbtn {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
-  padding: 0.75rem 0.5rem;
-  box-sizing: border-box;
+/* ==================== DROPDOWN ==================== */
+.dropdown {
+  position: relative;
 }
 
-/* -------------------- MAIN CONTENT BOX -------------------- */
-.content-wrapper, section {
-  background-color: none !important;
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 160px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+  display: none;
+  z-index: 2000;
+  mix-blend-mode: normal;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 2rem;
+  color: #000;
+  background: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ==================== CONTENT PANELS ==================== */
+.content-wrapper,
+section {
+  background-color: rgba(255,255,255,0.95);
   border-radius: 10px;
   padding: 2rem;
   max-width: 1200px;
   margin: 3rem auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* -------------------- SECTION HEADINGS -------------------- */
+/* ==================== HEADINGS ==================== */
 section h2 {
   font-family: 'Carrol', sans-serif;
   font-size: 2rem;
-  text-transform: uppercase;
   letter-spacing: 0.15em;
+  text-transform: uppercase;
   margin-bottom: 1.2rem;
-  margin-top: .6rem !important;
-  color: #000000;
-  background-color: #fff;
 }
 
 section h3 {
   font-family: 'Carrol', sans-serif;
   font-size: 2rem;
-  letter-spacing: 0.12em;
-  margin-top: 1.2rem !important;
-  margin-bottom: 0.6rem;
+  margin: 1.2rem 0 0.6rem;
 }
 
-section p, section li {
-  font-family: 'Roboto', monospace;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-/* -------------------- IMAGES & MEDIA -------------------- */
+/* ==================== MEDIA ==================== */
 img, video, iframe {
   max-width: 100%;
-  height: auto;
   border-radius: 6px;
   margin: 1rem 0;
 }
 
-/* -------------------- ABOUT PAGE IMAGES -------------------- */
-.about-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.about-images img {
-  width: 250px;
-  height: auto;
+/* ==================== VIDEO CONTAINERS ==================== */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.work-images-sq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.work-images-sq img {
-  width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.work-images-up {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.work-images-up img {
-  width: 450px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.work-images-side {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.work-images-side img {
-  width: 1000px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* -------------------- FOOTER -------------------- */
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 0px solid;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
-}
-
-footer a {
-  text-decoration: none;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
-  margin: 0 0.5rem;
-  font-family: 'Roboto', monospace;
-  transition: 0.3s;
-}
-
-footer a:hover {
-  background-color: #fff; /* mostly black background */
-  color: #000000;
-  text-decoration: underline;
-}
-
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 900px) {
-  body {
-    font-size: 1.25rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-images {
-    flex-direction: column;
-  }
-
-  .content-wrapper, section {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
-}
-
-.script-info span.section-body {
-  font-size: 1.25rem;
-  display: block;
-  margin-left: 1em;
-  margin-top: 0.25em;
-  text-align: left;
-}
-
+/* ==================== ART GRID ==================== */
 .art-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.art-piece {
-  text-align: center;
-}
-
-.art-title {
-  margin-top: 8px;
-  font-size: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 @media (max-width: 900px) {
-  .art-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
   .art-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Remove unwanted top spacing on About page */
-#about h2 {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-/* Standardize spacing for all page sections */
-section {
-  margin-top: 40px !important;
-}
-
-/* Remove extra padding from main wrapper if present */
-.content-wrapper {
-  padding-top: 0;
-}
-
-.section-body {
-  display: block;
-}
-
-/* -------------------- VIDEO CONTAINERS FIXED -------------------- */
-.video-container, .video-container.square {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-/* Square videos: 1:1 */
-.video-container.square {
-  aspect-ratio: 1 / 1;
-  cursor: pointer;
-}
-
-.video-container.square video {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-/* 16:9 videos fixed */
-.video-container:not(.square) {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-.video-container:not(.square) video,
-.video-container:not(.square) iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -55%);
-  object-fit: cover;
-  min-width: 100%;
-  cursor: pointer;
-}
-
-/* Grid alignment */
-.art-piece {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* ==================== FOOTER ==================== */
+footer {
   text-align: center;
+  padding: 2rem;
+  background: #fff;
+  color: #000;
 }
 
-/* -------------------- VIDEO CONTAINERS FIXED -------------------- */
-.video-container, .video-container.square {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-/* Add this block below */
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-/* Confirm this is present and unchanged */
-.video-container:not(.square) {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: -2px; /* lift the embed slightly */
-  left: 0;
-  width: 100%;
-  height: calc(100% + 4px); /* offset top shift */
-  border: none;
-  display: block;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.video-container.soundcloud-fix iframe {
-  position: absolute;
-  top: -1%;
-  height: 100%;
-}
-
-/* -------------------- ART GRID - 2 PER ROW -------------------- */
-.art-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-  gap: 40px; /* spacing between videos */
-  margin-top: 20px;
-}
-
-/* Ensure art-piece layout is centered */
-.art-piece {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .art-grid {
-    grid-template-columns: 1fr; /* 1 per row on smaller screens */
-    gap: 30px;
-  }
-}
-
-.video-container.soundcloud-fix {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 */
-  overflow: hidden;
-}
-
-.video-container.soundcloud-fix .soundcloud-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-container.soundcloud-fix iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  transform: translateY(-1%); /* nudge up to align */
-}
-
-/* Fix single SoundCloud embed to match 16:9 art pieces */
-.video-container.soundcloud-fix {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-}
-
-.video-container.soundcloud-fix iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Single SoundCloud 16:9 fix */
-.video-container.soundcloud-fix {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-}
-
-.video-container.soundcloud-fix iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-container.soundcloud-fix .soundcloud-caption {
-  font-size: 1.25rem;
-  color: none;
-  text-align: center;
-  margin-top: 0.25em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* SoundCloud square aligned with grid */
-{
-  position: relative;
-  width: 100%; /* match video-container sizing inside grid */
-  aspect-ratio: 1 / 1; /* square ratio like your other art pieces */
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-}
-
-.soundcloud-caption {
-  margin-top: 8px;
-  font-size: 1.25rem;
-  color: #ccc;
-  text-align: left;
-}
-
-.video-container.soundcloud-square .soundcloud-caption {
-  font-size: 1.25rem;
-  color: none;
-  text-align: center;
-  margin-top: 0.25em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.video-container,
-.video-container.square,
-.video-container.square video,
-.video-container iframe {
-  cursor: pointer !important;
-}
-
-/* Ensure pointer cursor on all video containers and children */
-.video-container, .video-container * {
-  cursor: pointer !important;
-}
-
-.art-piece video, .art-piece iframe {
-  cursor: pointer !important;
-}
-
-/* SoundCloud square inside art grid */
-.art-piece .video-container.soundcloud-square {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #000000;
-}
-
-.art-piece .video-container.soundcloud-square iframe {
-  border: 0;
-  display: block;
-  object-fit: cover;
-}
-
-.art-piece .soundcloud-caption {
-  margin-top: 0.5rem;
-  font-size: 1.25rem;
-  color: none;
-  text-align: left;
-}
-
-.art-piece {
-  cursor: default; /* keeps arrow over title/year */
-}
-
-footer, footer p, footer a {
+footer a {
   font-family: 'Carrol';
   font-size: 2rem;
-  margin-top: 1.5rem;
-}
-
-/* -------------------- CONTACT PAGE FIX -------------------- */
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-  background: none;
-  padding: 2rem 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#contact-form h2 {
-  font-family: 'Carrol', sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 1.5rem;
-}
-
-#contact-form iframe {
-  width: 90%;
-  height: 170vh;
-  border: none;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
-
-.intro {
-  display: flex;
-  gap: 40px;
-  margin: 20px 0;
-}
-
-.summary {
-  flex: 1;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-nav.toc {
-  flex: 1;
-  border: 0px solid;
-  padding: 5px;
-  background: #fff;
-}
-
-nav.toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-nav.toc li {
-  margin-bottom: 5px;
-}
-
-nav.toc a {
   text-decoration: none;
-  color: none;
+  color: #000;
 }
 
-nav.toc a:hover {
-  color: none;
+footer a:hover {
+  text-decoration: underline;
 }
 
-.toc h2 {
-  font-size: .925rem;
-  margin-bottom: 0.5rem;
-}
-
-.toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.toc li {
-  margin-bottom: 0.25rem;
-}
-
-.social-metrics {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.social-metrics th, .social-metrics td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  font-family: 'Roboto', monospace;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.social-metrics th {
-  background-color: ##fff;
-  font-weight: bold;
-}
-
-.social-metrics tbody tr:nth-child(even) {
-  background-color: ##fff;
-}
-
-.linkedin-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* space between iframes */
-  margin-top: 20px;
-}
-
-.linkedin-grid iframe {
-  width: 100%;
-  min-height: 500px; /* adjust based on content */
-  border: none;
-}
-
-.doc-viewer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.doc-viewer iframe {
-  width: 100%;
-  height: 700px;
-  border: 0px;
-}
-
-/* -------------------- TEXT INVERSION FIX (paste at end of style.css) - removes all previous blend rules - makes text invert reliably against body background - forces listed components to never blend -------------------- */
-/* 0) clear any stray global blending (safe override) */
-html, body, header, footer, main, section, article, nav {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-/* 1) create a single true background layer for reliable blending */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: inherit; /* uses existing body background-image/color */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* 2) ensure top-level page content composes above the bg layer */
-body > * {
-  position: relative;
-  z-index: 0;
-  isolation: isolate; /* prevents blend leaks between siblings */
-}
-
-/* 3) explicit: keep all media and listed components fully normal (no blending) */
-img, video, iframe, canvas, svg,
-.about-images,
-.video-container,
-.video-container.square,
-.video-container.paused,
-.video-container.square.soundcloud-square,
-.audio-item,
-.social-metrics,
-.doc-viewer,
-.linkedin-grid,
-#contact-form,
-.video-item,
-.work-images-sq,
-.work-images-side,
-details,
-.no-blend {
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-  position: relative;
-  z-index: 1;
-}
-
-/* also protect descendants of video-container and other wrappers */
-.video-container *,
-.about-images *,
-.work-images-sq *,
-.work-images-side *,
-.doc-viewer *,
-.linkedin-grid * {
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-}
-
-/* 5) small clarity helpers */
-h1, h2, h3, h4, h5, h6 {
-  -webkit-text-stroke: 0.015rem rgba(255,255,255,0.9);
-  text-shadow: 0 0 0.12rem rgba(255,255,255,0.85);
-}
-
-/* 6) fallback: opt-out class */
-.no-blend, .no-blend * {
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-}
-
-/* End of text inversion fix */
-
-/* FIX 1: restore header anchoring */
-header {
-  position: sticky !important;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: none;
-}
-
-/* Keep header fully white and normal */
-
-/* -------------------- FORCE BLACK TEXT ON WHITE -------------------- */
-
-/* Remove text shadows that are light-colored */
-h1, h2, h3, h4, h5, h6, p, li, a, span {
-  text-shadow: none !important;
-  -webkit-text-stroke: 0 !important;
-}
-
-header, header *,
-nav, nav a, .dropbtn, .dropdown-content a {
-  color: #000 !important;
-  background-color: #fff !important;
-  text-shadow: none !important;
-}
-
-.video-container .soundcloud-caption,
-.art-piece .art-title,
-.doc-viewer iframe, 
-.social-metrics td, .social-metrics th {
-  color: #000 !important;
-}
-
+/* ==================== TOC ==================== */
 .toc {
   position: fixed;
-  top: 100px;              /* adjust to header height */
-  bottom: 0px;           /* adjust to footer height */
   right: 0;
+  top: 100px;
+  bottom: 0;
   width: 160px;
-  overflow-y: auto;       /* scrollable if content is too long */
-  background-color: rgba(255,255,255,0.95);
-  padding: 0.75rem;
-  border-radius: 8px 0 0 8px; /* round only left side */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  z-index: 99999;         /* ensure above everything */
-  transform: none;        /* remove previous translateY */
+
+  background: transparent;
+  box-shadow: none;
+  z-index: 3000;
 }
 
-/* Ensure links are visible */
+.toc-inner {
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
 .toc a {
   display: block;
-  color: #000;            /* must be valid color */
-  text-decoration: none;
   font-size: 0.925rem;
-  margin-bottom: 0.25rem;
+  color: #000;
+  text-decoration: none;
 }
 
 .toc a:hover {
   color: #00aced;
 }
 
-/* Prevent global blending from hiding TOC */
-.toc, .toc * {
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-  z-index: 99999 !important;
-}
-
-/* ==================== TOC CORE ==================== */
-
-/* 1. Fixed positioning shell */
-.toc {
-  position: fixed;
-  right: 0;
-  top: 100px;                 /* just under header */
-  bottom: 0;
-  display: flex;
-  align-items: center;        /* vertical centering */
-  pointer-events: none;       /* prevent shell from blocking clicks */
-  z-index: 99999;
-}
-
-/* 2. The actual visible panel */
-.toc-inner {
-  pointer-events: auto;
-  background: none;
-  padding: 0.75rem;
-  width: 160px;
-  border-radius: 8px 0 0 8px;
-  box-shadow: none;
-
-  /* CRITICAL BEHAVIOR */
-  max-height: calc(100vh - 140px); /* header + breathing room */
-  overflow-y: auto;
-
-  /* natural height when short */
-  height: auto;
-}
-
-/* Links */
-.toc-inner a {
-  display: block;
-  font-size: 0.925rem;
-  color: #000;
-  text-decoration: none;
-  margin-bottom: 0.25rem;
-}
-
-.toc-inner a:hover {
-  color: #00aced;
-}
-
-/* Isolation safety */
-.toc, .toc * {
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-}
-
-.toc {
-  background-color: transparent !important;
-    box-shadow: none;
-}
-
-.toc::before,
-.toc::after {
-  content: none !important;
-}
-
-/* ================= HEADER INVERSION FIX ================= */
-
-/* Header shell */
-header {
-  position: sticky;
-  top: 0;
-  background: transparent;
-  isolation: isolate;
-  z-index: 1000;
-}
-
-/* Inverted header text ONLY */
-header h1,
-header nav > a,
-header .dropbtn {
-  mix-blend-mode: difference;
-  color: white;
-}
-
-/* Ensure header text has no background */
-header h1,
-header nav a,
-header .dropbtn {
+/* ==================== CONTACT ==================== */
+#contact-form {
+  min-height: 100vh;
   background: transparent;
 }
 
-/* ================= DROPDOWN SAFETY ================= */
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+  }
 
-/* Dropdown panel stays normal */
-.dropdown-content {
-  background: #fff;
-  color: #000;
-  mix-blend-mode: normal;
-  isolation: isolate;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  body {
+    font-size: 1.1rem;
+  }
 }
-
-/* Dropdown links stay readable */
-.dropdown-content a {
-  color: #000;
-  mix-blend-mode: normal;
-  background: transparent;
-}
-
-/* ================= END FIX ================= */
