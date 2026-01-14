@@ -3,7 +3,6 @@
   font-family: 'Carrol';
   src: url('fonts/CarrolDEMO.woff2') format('woff2');
 }
-
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/RobotoMono-Regular.woff2') format('woff2');
@@ -21,8 +20,8 @@ body {
   font-family: 'Roboto', monospace;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: #000;
   text-align: center;
+  color: #000;
 
   background-color: #fff;
   background-image: url('images/linkedin header 4.png');
@@ -30,6 +29,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
+  isolation: isolate;
 }
 
 /* ==================== HEADER ==================== */
@@ -39,13 +40,11 @@ header {
   z-index: 1000;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* name left, nav right */
   align-items: center;
-
   padding: 1.5rem 2rem;
   background: transparent;
-
-  isolation: isolate; /* ensures mix-blend-mode works */
+  isolation: isolate;
 }
 
 header h1 {
@@ -83,11 +82,9 @@ nav a,
   font-size: 2rem;
   text-decoration: none;
   padding: 0.75rem 0.5rem;
-
   background: transparent;
   color: #fff;
   mix-blend-mode: difference;
-
   cursor: pointer;
 }
 
@@ -105,7 +102,7 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: 0; /* aligns right edge of dropdown with button */
+  right: 0; /* aligns dropdown box with right edge of button */
   left: auto;
 
   min-width: 160px;
@@ -167,11 +164,6 @@ iframe {
   margin: 1rem 0;
 }
 
-.content-wrapper img,
-section img {
-  max-width: 800px;
-}
-
 /* ==================== VIDEO CONTAINERS ==================== */
 .video-container {
   position: relative;
@@ -228,18 +220,14 @@ footer a:hover {
   position: fixed;
   top: 100px;
   bottom: 0;
-  left: 0;
-  right: 0; /* extend TOC box all the way to right edge */
-  width: auto;
-
-  background: #fff;
-  box-shadow: none;
-  z-index: 3000;
-  border-radius: 8px;
-
+  right: 0;
+  width: 160px;
+  background-color: rgba(255,255,255,0.95);
   padding: 0.75rem;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   overflow-y: auto;
-  mix-blend-mode: normal;
+  z-index: 9999;
 }
 
 .toc a {
@@ -247,6 +235,7 @@ footer a:hover {
   font-size: 0.925rem;
   color: #000;
   text-decoration: none;
+  margin-bottom: 0.25rem;
 }
 
 .toc a:hover {
