@@ -132,7 +132,7 @@ nav a:hover {
 /* ==================== CONTENT PANELS ==================== */
 .content-wrapper,
 section {
-  background-color: rgba(255,255,255,0.95);
+  background-color: none;
   border-radius: 10px;
   padding: 2rem;
   max-width: 1200px;
