@@ -336,20 +336,6 @@ footer a:hover {
 }
 
 /* -------------------- TOC FULL WIDTH -------------------- */
-.toc {
-  left: 2rem;         /* aligns with the left side of your main content */
-  right: 0;           /* stretches to right edge of screen */
-  width: auto;        /* remove fixed width */
-  max-width: none;    /* remove previous 160px constraint */
-}
-
-.toc-inner {
-  width: 100%;        /* fill the entire TOC container */
-  background-color: rgba(255,255,255,0.95);
-  padding: 0.75rem;
-  border-radius: 8px 0 0 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
 
 /* Make the <ul> fill the container and remove default padding */
 .toc-inner ul {
@@ -360,6 +346,51 @@ footer a:hover {
 }
 
 /* Ensure links fill the width and stay black */
+.toc-inner li a {
+  display: block;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.toc-inner li a:hover {
+  color: #00aced;
+}
+
+/* -------------------- TOC ALIGN TO CONTENT -------------------- */
+.toc {
+  position: fixed;
+  top: 100px;
+  bottom: 0;
+  right: 0;
+  width: calc(50% + 600px + 1rem); /* 50% of viewport + half content width (1200px/2) + optional gap */
+  max-width: 320px;                /* optional max width for readability */
+  background-color: rgba(255,255,255,0.95);
+  padding: 0.75rem;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+/* Make the inner panel fill the TOC container */
+.toc-inner {
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Ensure the <ul> fills container */
+.toc-inner ul {
+  margin: 0;
+  padding-left: 0;
+  width: 100%;
+  list-style: none;
+}
+
 .toc-inner li a {
   display: block;
   width: 100%;
