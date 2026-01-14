@@ -133,7 +133,7 @@ nav a:hover {
 .content-wrapper,
 section {
   background-color: #fff;
-  border-radius: 0px;
+  border-radius: 1rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 1rem auto;
