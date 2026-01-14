@@ -39,28 +39,33 @@ header {
   z-index: 1000;
 
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
-  padding: 2rem 1rem;
+  padding: 1.5rem 2rem;
   background: transparent;
   isolation: isolate;
 }
 
+/* Left side: name + subtitle */
 header h1 {
   font-family: 'Carrol', sans-serif;
   font-size: 2rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: normal;
-  margin-bottom: 0.4rem;
+  margin: 0;
 
   mix-blend-mode: difference;
   color: #fff;
+  white-space: nowrap;
 }
 
 header p.subtitle,
 header p.production-title {
+  margin-top: 0.25rem;
+  text-align: left;
+
   mix-blend-mode: difference;
   color: #fff;
 }
@@ -68,10 +73,8 @@ header p.production-title {
 /* ==================== NAV ==================== */
 nav {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 2rem;
-  margin-top: 0.5rem;
 }
 
 nav a,
@@ -101,7 +104,8 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
+  left: auto;
 
   min-width: 160px;
   background: #fff;
@@ -152,7 +156,9 @@ section h3 {
 }
 
 /* ==================== MEDIA ==================== */
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100%;
   border-radius: 6px;
   margin: 1rem 0;
@@ -249,6 +255,7 @@ footer a:hover {
 @media (max-width: 900px) {
   nav {
     flex-direction: column;
+    align-items: flex-end;
   }
 
   body {
