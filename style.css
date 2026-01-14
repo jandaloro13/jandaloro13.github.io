@@ -1035,3 +1035,49 @@ nav, nav a, .dropbtn, .dropdown-content a {
 .toc::after {
   content: none !important;
 }
+
+/* ================= HEADER INVERSION FIX ================= */
+
+/* Header shell */
+header {
+  position: sticky;
+  top: 0;
+  background: transparent;
+  isolation: isolate;
+  z-index: 1000;
+}
+
+/* Inverted header text ONLY */
+header h1,
+header nav > a,
+header .dropbtn {
+  mix-blend-mode: difference;
+  color: white;
+}
+
+/* Ensure header text has no background */
+header h1,
+header nav a,
+header .dropbtn {
+  background: transparent;
+}
+
+/* ================= DROPDOWN SAFETY ================= */
+
+/* Dropdown panel stays normal */
+.dropdown-content {
+  background: #fff;
+  color: #000;
+  mix-blend-mode: normal;
+  isolation: isolate;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Dropdown links stay readable */
+.dropdown-content a {
+  color: #000;
+  mix-blend-mode: normal;
+  background: transparent;
+}
+
+/* ================= END FIX ================= */
