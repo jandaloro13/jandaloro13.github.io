@@ -18,8 +18,8 @@ header {
   justify-content: space-between; /* name left, nav right */
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff; /* mostly black background */
-  color: #000000;
+  background-color: none; /* mostly black background */
+  color: difference;
   position: sticky; /* keeps header visible while scrolling */
   top: 0;
   z-index: 100;
