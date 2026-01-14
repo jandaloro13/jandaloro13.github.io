@@ -134,8 +134,8 @@ nav a:hover {
 section {
   background-color: #fff;
   border-radius: 0px;
-  padding: 0rem;
-  max-width: 1200px;
+  padding: 2rem;
+  max-width: 750px;
   margin: 0rem auto;
 }
 
