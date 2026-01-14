@@ -33,8 +33,6 @@ header h1 {
   letter-spacing: 0.18em;
   margin: 0;
   font-weight: normal;
-    background-color: #fff; /* mostly black background */
-  color: #000000;
 }
 
 nav {
@@ -903,23 +901,12 @@ header {
   position: sticky !important;
   top: 0;
   z-index: 999;
-  background: #fff;
   backdrop-filter: none;
 }
 
 /* Keep header fully white and normal */
-header, header * {
-  mix-blend-mode: normal !important;
-  color: #fff !important;
-}
 
 /* -------------------- FORCE BLACK TEXT ON WHITE -------------------- */
-body, body * {
-  color: #000 !important;
-  background-color: #fff !important;
-  mix-blend-mode: normal !important;
-  isolation: isolate !important;
-}
 
 /* Remove text shadows that are light-colored */
 h1, h2, h3, h4, h5, h6, p, li, a, span {
