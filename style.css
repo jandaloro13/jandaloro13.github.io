@@ -335,69 +335,41 @@ footer a:hover {
   isolation: isolate !important;
 }
 
-/* -------------------- TOC FULL WIDTH -------------------- */
-
-/* Make the <ul> fill the container and remove default padding */
-.toc-inner ul {
-  margin: 0;
-  padding-left: 0;
-  width: 100%;
-  list-style: none;
-}
-
-/* Ensure links fill the width and stay black */
-.toc-inner li a {
-  display: block;
-  width: 100%;
-  color: #000;
-  text-decoration: none;
-  padding: 0.25rem 0;
-}
-
-.toc-inner li a:hover {
-  color: #00aced;
-}
-
-/* -------------------- TOC ALIGN TO CONTENT -------------------- */
+/* ==================== TOC ==================== */
 .toc {
   position: fixed;
-  top: 100px;
+  top: 100px;           /* just under header */
   bottom: 0;
-  right: 0;
-  width: calc(50% + 600px + 1rem); /* 50% of viewport + half content width (1200px/2) + optional gap */
-  max-width: 320px;                /* optional max width for readability */
-  background-color: rgba(255,255,255,0.95);
-  padding: 0.75rem;
-  border-radius: 8px 0 0 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  overflow-y: auto;
+  right: 0;             /* hug right side of screen */
   z-index: 9999;
+  display: flex;
+  justify-content: flex-end; /* align inner panel to right */
+  pointer-events: auto;
 }
 
-/* Make the inner panel fill the TOC container */
 .toc-inner {
-  width: 100%;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 8px 0 0 8px;
+  padding: 1rem;
+  width: 220px;          /* width of the TOC panel */
+  max-height: calc(100vh - 140px); /* account for header */
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-/* Ensure the <ul> fills container */
 .toc-inner ul {
   margin: 0;
-  padding-left: 0;
-  width: 200px;
+  padding: 0;
   list-style: none;
-    background: #fff;
+  width: 100%;           /* fill the inner panel */
 }
 
 .toc-inner li a {
   display: block;
   width: 100%;
+  padding: 0.5rem 0;
   color: #000;
   text-decoration: none;
-  padding: 0rem 0;
 }
 
 .toc-inner li a:hover {
