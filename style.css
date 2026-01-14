@@ -1025,3 +1025,12 @@ nav, nav a, .dropbtn, .dropdown-content a {
   mix-blend-mode: normal !important;
   isolation: isolate !important;
 }
+
+.toc {
+  background-color: transparent !important;
+}
+
+.toc::before,
+.toc::after {
+  content: none !important;
+}
