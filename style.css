@@ -387,3 +387,20 @@ nav a,
   color: #fff !important;
   mix-blend-mode: normal !important;
 }
+
+/* ==================== HEADER LAYER FIX ==================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5000;
+  background: transparent;
+}
+
+/* Ensure content never paints over header */
+main,
+.content-wrapper,
+section {
+  position: relative;
+  z-index: 1;
+}
