@@ -63,6 +63,7 @@ nav .dropbtn {
   background: transparent;
   cursor: pointer;
     z-index: 75;
+    font-weight: normal;
 }
 
 /* ==================== NAV ==================== */
