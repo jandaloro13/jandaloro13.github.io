@@ -381,3 +381,17 @@ section,
   position: relative;
   z-index: 1;
 }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5000;          /* above body content but below TOC if needed */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+
+  background: transparent; /* no separate background image */
+  isolation: isolate;
+}
