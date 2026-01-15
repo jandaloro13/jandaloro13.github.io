@@ -198,7 +198,7 @@ footer {
   padding: 2rem;
   background: none;
   color: #fff;
-      z-index: 9999;
+      z-index: 100000;
 }
 
 footer a {
@@ -206,7 +206,7 @@ footer a {
   font-size: 2rem;
   text-decoration: none;
   color: #fff;
-      z-index: 9999;
+      z-index: 100000;
 }
 
 footer a:hover {
@@ -336,4 +336,17 @@ body::before {
   background-position: center top;
   background-attachment: fixed;
   z-index: 0;            /* behind everything */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;  /* top:0; right:0; bottom:0; left:0 */
+  background: url('images/linkedin header 4.png') center top / cover no-repeat fixed;
+  z-index: -1;
 }
