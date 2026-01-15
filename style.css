@@ -375,32 +375,3 @@ footer a:hover {
 .toc-inner li a:hover {
   color: #00aced;
 }
-
-/* ==================== HEADER TEXT FIX ==================== */
-/* Force header and nav text to remain white and ignore blending */
-
-header h1,
-header p.subtitle,
-header p.production-title,
-nav a,
-.dropbtn {
-  color: #fff !important;
-  mix-blend-mode: normal !important;
-}
-
-/* ==================== HEADER LAYER FIX ==================== */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 5000;
-  background: transparent;
-}
-
-/* Ensure content never paints over header */
-main,
-.content-wrapper,
-section {
-  position: relative;
-  z-index: 1;
-}
