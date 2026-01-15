@@ -318,3 +318,18 @@ footer a:hover {
   mix-blend-mode: normal !important;
   isolation: isolate !important;
 }
+
+/* ==================== FIXED BACKGROUND ==================== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/linkedin header 4.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  z-index: -1;            /* behind everything */
+}
