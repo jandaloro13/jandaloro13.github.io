@@ -1,8 +1,9 @@
+/* ==================== HTML BACKGROUND ==================== */
 html {
   background-image: url('images/linkedin header 4.png');
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
+  background-size: cover;          /* cover the viewport */
+  background-position: center top; /* top of image aligned with top of page */
+  background-attachment: fixed;    /* stays in place when scrolling */
   background-repeat: no-repeat;
 }
 
@@ -30,6 +31,7 @@ body {
   line-height: 1.4;
   text-align: center;
   color: #000;
+  background: transparent;       /* important for header to show same slice */
   isolation: isolate;
 }
 
@@ -37,36 +39,24 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-background-image: url('images/linkedin header 4.png');
+  z-index: 5000;                 /* above body content but below TOC if needed */
   display: flex;
-  justify-content: space-between; /* name left, nav right */
+  justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background: transparent;
+
+  background: transparent;       /* fully see-through */
   isolation: isolate;
 }
 
-header h1 {
-  font-family: 'Carrol', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin: 0;
-
-  color: #fff;
-  mix-blend-mode: difference;
-  white-space: nowrap;
-}
-
+/* ==================== HEADER TEXT ==================== */
+header h1,
 header p.subtitle,
-header p.production-title {
-  margin-top: 0.25rem;
-  text-align: left;
-
+header p.production-title,
+nav a,
+nav .dropbtn {
   color: #fff;
-  mix-blend-mode: difference;
+  mix-blend-mode: difference;    /* improves contrast over background */
 }
 
 /* ==================== NAV ==================== */
@@ -83,8 +73,6 @@ nav a,
   text-decoration: none;
   padding: 0.75rem 0.5rem;
   background: transparent;
-  color: #fff;
-  mix-blend-mode: difference;
   cursor: pointer;
 }
 
@@ -102,7 +90,7 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: 0; /* aligns dropdown box with right edge of button */
+  right: 0;
   left: auto;
 
   min-width: 160px;
@@ -137,6 +125,8 @@ section {
   padding: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* ==================== HEADINGS ==================== */
@@ -261,22 +251,19 @@ footer a:hover {
 }
 
 /* ==================== TOC CORE ==================== */
-
-/* 1. Fixed positioning shell */
 .toc {
   position: fixed;
   right: 0;
-  top: 100px;                 /* just under header */
+  top: 100px;                 
   bottom: 0;
   display: flex;
-  align-items: center;        /* vertical centering */
-  pointer-events: none;       /* prevent shell from blocking clicks */
+  align-items: center;        
+  pointer-events: none;       
   z-index: 99999;
-    background-color: transparent !important;
-    box-shadow: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
-/* 2. The actual visible panel */
 .toc-inner {
   pointer-events: auto;
   background: rgba(255,255,255,0.95);
@@ -284,16 +271,11 @@ footer a:hover {
   width: 220px;
   border-radius: 8px 0 0 8px;
   box-shadow: none !important;
-
-  /* CRITICAL BEHAVIOR */
-  max-height: calc(100vh - 140px); /* header + breathing room */
+  max-height: calc(100vh - 140px);
   overflow-y: auto;
-
-  /* natural height when short */
   height: auto;
 }
 
-/* Links */
 .toc-inner a {
   display: block;
   font-size: 0.925rem;
@@ -306,7 +288,6 @@ footer a:hover {
   color: #00aced;
 }
 
-/* Isolation safety */
 .toc, .toc * {
   mix-blend-mode: normal !important;
   isolation: isolate !important;
@@ -314,84 +295,22 @@ footer a:hover {
 
 /* Force dropdown menu text to be black on white */
 .dropdown-content {
-  background-color: #fff !important; /* white background */
-  color: #000 !important;            /* text color fallback */
+  background-color: #fff !important;
+  color: #000 !important;
 }
 
 .dropdown-content a {
-  color: #000 !important;           /* text is black */
-  background-color: #fff !important; /* background stays white */
+  color: #000 !important;
+  background-color: #fff !important;
   text-align: left;
 }
 
 .dropdown-content a:hover {
-  color: #00aced !important;        /* optional hover color */
-  background-color: #fff !important; /* prevent blend issues */
+  color: #00aced !important;
+  background-color: #fff !important;
 }
 
-/* Ensure dropdown box itself ignores any blend modes */
 .dropdown-content, .dropdown-content * {
   mix-blend-mode: normal !important;
   isolation: isolate !important;
-}
-
-/* ==================== TOC ==================== */
-.toc {
-  position: fixed;
-  top: 100px;           /* just under header */
-  bottom: 0;
-  right: 0;             /* hug right side of screen */
-  z-index: 9999;
-  display: flex;
-  justify-content: flex-end; /* align inner panel to right */
-  pointer-events: auto;
-}
-
-.toc-inner {
-  background-color: rgba(255,255,255,0.95);
-  border-radius: 8px 0 0 8px;
-  padding: 1rem;
-  width: 220px;          /* width of the TOC panel */
-  max-height: calc(100vh - 140px); /* account for header */
-  overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.toc-inner ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;           /* fill the inner panel */
-}
-
-.toc-inner li a {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0;
-  color: #000;
-  text-decoration: none;
-}
-
-.toc-inner li a:hover {
-  color: #00aced;
-}
-
-section,
-.content-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 5000;          /* above body content but below TOC if needed */
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-
-  background: transparent; /* no separate background image */
-  isolation: isolate;
 }
