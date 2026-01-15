@@ -62,7 +62,6 @@ nav .dropbtn {
   text-decoration: none;
   padding: 0.75rem 0.5rem;
   background: transparent;
-  cursor: pointer;
     z-index: 75;
     font-weight: normal;
 }
@@ -72,6 +71,7 @@ nav {
   display: flex;
   align-items: right;
   gap: 2rem;
+    cursor: pointer;
 }
 
 nav a,
