@@ -404,3 +404,10 @@ header nav .dropbtn:hover {
 body {
   padding-top: 80px; /* equal to or slightly larger than header height */
 }
+
+img {
+  max-height: 300px;      /* set your desired max height */
+  width: auto;            /* maintain aspect ratio */
+  height: auto;           /* prevent distortion */
+  object-fit: cover;      /* optional: fills the space without stretching */
+}
