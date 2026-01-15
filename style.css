@@ -47,7 +47,7 @@ header {
   padding: 0.75rem 0.5rem;
   background: transparent;       /* fully see-through */
   isolation: isolate;
-   background: linear-gradient(to right, #123456, #abcdef);
+   background: linear-gradient(to right, #17498a, #9e4136);
 }
 
 /* ==================== HEADER TEXT ==================== */
