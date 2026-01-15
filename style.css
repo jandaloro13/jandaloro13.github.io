@@ -352,3 +352,54 @@ body::before {
   background: url('images/linkedin header 4.png') center top / cover no-repeat fixed;
   z-index: -1;
 }
+
+/* ==================== HEADER ==================== */
+header {
+  position: fixed;       /* stick to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* name left, nav right */
+  align-items: center;
+  padding: 1rem 2rem;    /* adds space inside header */
+  background: linear-gradient(to right, #123456, #abcdef); /* left/right colors */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow for separation */
+  z-index: 5000;
+}
+
+/* ==================== HEADER TEXT ==================== */
+header h1 {
+  color: #fff;
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;  /* vertical center */
+}
+
+header nav a,
+header nav .dropbtn {
+  font-family: 'Carrol', monospace;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+header nav a:hover,
+header nav .dropbtn:hover {
+  color: #00aced;
+  border-bottom: 2px solid #00aced;
+}
+
+/* optional space between header and body */
+body {
+  padding-top: 80px; /* equal to or slightly larger than header height */
+}
