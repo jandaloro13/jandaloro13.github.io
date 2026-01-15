@@ -38,7 +38,7 @@ body {
 
 /* ==================== HEADER ==================== */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 5000;                 /* above body content but below TOC if needed */
   display: flex;
