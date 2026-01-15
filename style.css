@@ -198,6 +198,7 @@ footer {
   padding: 2rem;
   background: none;
   color: #fff;
+      z-index: 9999;
 }
 
 footer a {
@@ -205,6 +206,7 @@ footer a {
   font-size: 2rem;
   text-decoration: none;
   color: #fff;
+      z-index: 9999;
 }
 
 footer a:hover {
