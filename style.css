@@ -38,7 +38,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-
+background-image: url('images/linkedin header 4.png');
   display: flex;
   justify-content: space-between; /* name left, nav right */
   align-items: center;
