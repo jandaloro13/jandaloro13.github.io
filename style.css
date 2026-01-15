@@ -1,3 +1,11 @@
+html {
+  background-image: url('images/linkedin header 4.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* ==================== FONT IMPORTS ==================== */
 @font-face {
   font-family: 'Carrol';
@@ -22,14 +30,6 @@ body {
   line-height: 1.4;
   text-align: center;
   color: #000;
-
-  background-color: #fff;
-  background-image: url('images/linkedin header 4.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-
   isolation: isolate;
 }
 
@@ -374,4 +374,10 @@ footer a:hover {
 
 .toc-inner li a:hover {
   color: #00aced;
+}
+
+section,
+.content-wrapper {
+  position: relative;
+  z-index: 1;
 }
