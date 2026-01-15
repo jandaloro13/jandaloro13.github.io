@@ -98,8 +98,9 @@ nav a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: 0;
-  left: auto;
+  right: auto;
+  left: 0;
+  text-align: left;  /* keep text left-aligned */
 
   min-width: 160px;
   background: #fff;
