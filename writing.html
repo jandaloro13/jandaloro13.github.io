@@ -188,9 +188,10 @@ let index = 0;
 function updateCarousel() {
     const item = items[0];
     const itemStyle = getComputedStyle(item);
+    const gap = parseInt(itemStyle.marginRight) || 32; // fallback gap
     const itemWidth = item.offsetWidth;
-    const gap = parseInt(itemStyle.marginRight) || 32;
-    const offset = -index * carousel.offsetWidth;
+    
+    const offset = -index * (itemWidth + gap); // include gap
     carousel.style.transform = `translateX(${offset}px)`;
 
     // hide/show buttons
