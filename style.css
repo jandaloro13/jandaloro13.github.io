@@ -416,6 +416,7 @@ img {
 h2[id],
 h3[id],
 section[id],
-div[id] {
+div[id] 
+strong[id]{
   scroll-margin-top: 140px;
 }
