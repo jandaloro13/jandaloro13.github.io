@@ -417,6 +417,7 @@ h2[id],
 h3[id],
 section[id],
 div[id] 
-strong[id]{
+strong[id]
+p[id]{
   scroll-margin-top: 140px;
 }
