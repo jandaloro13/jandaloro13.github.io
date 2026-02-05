@@ -245,9 +245,15 @@ footer a:hover {
 
 /* ==================== CONTACT ==================== */
 #contact-form {
-  min-height: 1000vh;
+  min-height: 5600px;
   background: #fff;
 }
+#contact-form iframe {
+  width: 100%;
+  height: 5600px;
+  border: none;
+}
+
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
