@@ -417,36 +417,15 @@ p[id] {
 }
 
 /* ==================== CONTACT PAGE ==================== */
-
-.contact-main {
-  background: #fff;
-  display: flex;
-  justify-content: center;
-}
-
-#contact-form {
-  width: 100%;
-  max-width: 1200px;
-  background: #fff;
-  padding: 2rem;
-}
-
-/* Title spacing control */
-#contact-form h2 {
-  margin-bottom: 1.5rem;
-}
-
-/* Google Form iframe */
-#contact-form iframe {
-  display: block;
-  width: 100%;
-  height: calc(100vh - 180px); /* header + padding allowance */
-  border: none;
-}
-
-/* Optional: allow full-page scrolling if form exceeds viewport */
-@media (max-height: 800px) {
-  #contact-form iframe {
-    height: 100vh;
-  }
+#contact-form { 
+  background: #fff; 
+} 
+#contact-form iframe { 
+  width: 150%; 
+  height: 5600px; 
+  border: none; 
+} 
+#contact-main { 
+  min-height: 5600px; 
+  background: #fff; 
 }
