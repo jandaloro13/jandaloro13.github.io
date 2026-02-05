@@ -11,41 +11,42 @@
 <body>
     <style>
 .writing-section {
-    margin: 40px auto;
-    max-width: 1200px;
+  margin: 40px auto;
+  max-width: 1200px;
+  overflow: hidden;
 }
 
 .writing-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin-top: 20px;
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.writing-grid::-webkit-scrollbar {
+  height: 10px;
+}
+
+.writing-grid::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
 
 .writing-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.writing-item h4 {
-    margin-bottom: 8px;
-}
-
-.writing-meta {
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.writing-meta strong {
-    display: inline-block;
-    width: 80px;
+  flex: 0 0 48%;
+  scroll-snap-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
 }
 
 @media (max-width: 768px) {
-    .writing-grid {
-        grid-template-columns: 1fr;
-    }
+  .writing-item {
+    flex: 0 0 90%;
+  }
 }
         </style>
     <!-- HEADER -->
