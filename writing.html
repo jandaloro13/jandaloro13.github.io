@@ -65,7 +65,8 @@
 .carousel-btn.prev { left: -60px; }
 .carousel-btn.next { right: -60px; }
 
-        .carousel-btn.hidden { display: none; }
+.carousel-btn.hidden { display: none; }
+
 
 @media (max-width: 768px) {
   .carousel {
@@ -178,37 +179,28 @@
 
 <script>
 const carousel = document.getElementById('writingCarousel');
+const items = carousel.querySelectorAll('.writing-item'); // only items
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 
 let index = 0;
-const totalItems = carousel.children.length;
 
 function updateCarousel() {
     const offset = -index * carousel.offsetWidth;
     carousel.style.transform = `translateX(${offset}px)`;
 
-    // hide buttons if at edges
+    // hide/show buttons
     prevBtn.classList.toggle('hidden', index === 0);
-    nextBtn.classList.toggle('hidden', index === totalItems - 1);
+    nextBtn.classList.toggle('hidden', index === items.length - 1);
 }
 
 // button clicks
-prevBtn.addEventListener('click', () => {
-    if (index > 0) index--;
-    updateCarousel();
-});
+prevBtn.addEventListener('click', () => { if(index>0) index--; updateCarousel(); });
+nextBtn.addEventListener('click', () => { if(index<items.length-1) index++; updateCarousel(); });
 
-nextBtn.addEventListener('click', () => {
-    if (index < totalItems - 1) index++;
-    updateCarousel();
-});
-
-// handle resize
 window.addEventListener('resize', updateCarousel);
-
-// initialize
 updateCarousel();
+
 </script>
 
 </body>
