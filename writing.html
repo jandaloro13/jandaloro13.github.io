@@ -77,13 +77,13 @@
   border: 1px solid #ccc;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 999;
   width: 40px;
   height: 60px;
 }
 
-.carousel-btn.prev { left: -50px; }
-.carousel-btn.next { right: -50px; }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
 @media (max-width: 768px) {
   .carousel {
@@ -181,10 +181,10 @@
                 <p><em>Micro Short</em></p>
             </div>
         </div>
+                                  <button class="carousel-btn next">&#10095;</button>
     </div>
 </div>
         </section>
-                          <button class="carousel-btn next">&#10095;</button>
     </main>
             
 <footer>
