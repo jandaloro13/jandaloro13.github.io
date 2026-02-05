@@ -48,6 +48,51 @@
     flex: 0 0 90%;
   }
 }
+
+        .carousel {
+  position: relative;
+  max-width: 600px; /* width of one item */
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.writing-grid {
+  display: flex;
+  gap: 32px;
+  transition: transform 0.4s ease;
+}
+
+.writing-item {
+  flex: 0 0 100%; /* one item per view */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+  scroll-snap-align: center;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 60px;
+}
+
+.carousel-btn.prev { left: -50px; }
+.carousel-btn.next { right: -50px; }
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 90%;
+  }
+}
+
         </style>
     <!-- HEADER -->
  <header>
@@ -95,8 +140,9 @@
         
             <div class="writing-section">
     <h3 id="screenplays">Screenplays</h3>
-
-    <div class="writing-grid">
+<div class="carousel">
+     <button class="carousel-btn prev">&#10094;</button>
+    <div class="writing-grid" id="writingCarousel">
         
         <div class="writing-item">
             <p><strong>Chicken Coup</strong></p>
@@ -137,7 +183,7 @@
                 <p>Micro Short</p>
             </div>
         </div>
-        
+          <button class="carousel-btn next">&#10095;</button>
     </div>
 </div>
         </section>
@@ -150,5 +196,32 @@
         <a href="mailto:JAndaloro1313@gmail.com">Email</a>
     </p>
 </footer>
+
+    <script>
+const carousel = document.getElementById('writingCarousel');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+let index = 0;
+const totalItems = carousel.children.length;
+
+function updateCarousel() {
+  const offset = -index * carousel.offsetWidth;
+  carousel.style.transform = `translateX(${offset}px)`;
+}
+
+prevBtn.addEventListener('click', () => {
+  if (index > 0) index--;
+  updateCarousel();
+});
+
+nextBtn.addEventListener('click', () => {
+  if (index < totalItems - 1) index++;
+  updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel);
+</script>
+
 </body>
 </html>
