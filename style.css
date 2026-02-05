@@ -422,7 +422,7 @@ p[id] {
 } 
 #contact-form iframe { 
   width: 100%; 
-  height: 100%; 
+  height: 1000px; 
   border: none; 
 } 
 #contact-main { 
