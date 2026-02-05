@@ -21,24 +21,7 @@
   gap: 32px;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
-}
-
-.writing-grid::-webkit-scrollbar {
-  height: 10px;
-}
-
-.writing-grid::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-.writing-item {
-  flex: 0 0 48%;
-  scroll-snap-align: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background: #fff;
+      transition: transform 0.4s ease;
 }
 
 @media (max-width: 768px) {
@@ -52,12 +35,6 @@
   max-width: 600px; /* width of one item */
   margin: 40px auto;
   overflow: hidden;
-}
-
-.writing-grid {
-  display: flex;
-  gap: 32px;
-  transition: transform 0.4s ease;
 }
 
 .writing-item {
@@ -77,13 +54,18 @@
   border: 1px solid #ccc;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 999;
   width: 40px;
   height: 60px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel-btn.prev { left: -10px; }
-.carousel-btn.next { right: -10px; }
+.carousel-btn.prev { left: -60px; }
+.carousel-btn.next { right: -60px; }
+
+        .carousel-btn.hidden { display: none; }
 
 @media (max-width: 768px) {
   .carousel {
@@ -137,17 +119,15 @@
 </section>
 
     <div class="carousel">
-         <button class="carousel-btn prev">&#10094;</button>
+         <button class="carousel-btn prev hidden">&#10094;</button>
+        
             <div class="writing-section">
     <h3 id="screenplays">Screenplays</h3>
-
-
     <div class="writing-grid" id="writingCarousel">
         
         <div class="writing-item">
             <p><strong>Chicken Coup</strong></p>
             <p>A determined chicken rallies his flock to rebel against humans and save their stolen eggs, confronting the futility of resistance in a system rigged against them.</p>
-
             <div class="writing-meta">
                 <p><em>Animal, Absurdist Thriller, Dark Comedy</em></p>
                 <p><em>Short</em></p>
@@ -157,7 +137,6 @@
         <div class="writing-item">
              <p><strong>The Rocket</strong></p>
             <p>A celebrated racehorse’s fall from glory becomes a brutal fight for survival. Broken and abandoned, she must face both the wilderness and herself to discover a truth that winning could never offer.</p>
-
             <div class="writing-meta">
                 <p><em>Animal, Drama, Family</em></p>
                 <p><em>Short</em></p>
@@ -167,7 +146,6 @@
  <div class="writing-item">
             <p><strong>No Smoking</strong></p>
             <p>A desperate man’s attempt at a new beginning spirals into violence and delirium. Haunted by guilt and addiction, he faces an escalating cycle of consequence, judgment, and fire.</p>
-
             <div class="writing-meta">
                 <p><em>Thriller, Drama, Surreal</em></p>
                 <p><em>Feature</em></p>
@@ -177,16 +155,17 @@
         <div class="writing-item">
             <p><strong>Cycological</strong></p>
             <p>A student escapes a violent assault only to enter a surreal environment where they confront their double, triggering an endless cycle of fear and pursuit.</p>
-
             <div class="writing-meta">
                 <p><em>Thriller, Drama, Surreal</em></p>
                 <p><em>Micro Short</em></p>
             </div>
         </div>
     </div>
-        </section>
+</div>
+
 <button class="carousel-btn next">&#10095;</button>
                 </div>
+            </section>
     </main>
             
 <footer>
@@ -197,7 +176,7 @@
     </p>
 </footer>
 
-    <script>
+<script>
 const carousel = document.getElementById('writingCarousel');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
@@ -206,21 +185,30 @@ let index = 0;
 const totalItems = carousel.children.length;
 
 function updateCarousel() {
-  const offset = -index * carousel.offsetWidth;
-  carousel.style.transform = `translateX(${offset}px)`;
+    const offset = -index * carousel.offsetWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
+
+    // hide buttons if at edges
+    prevBtn.classList.toggle('hidden', index === 0);
+    nextBtn.classList.toggle('hidden', index === totalItems - 1);
 }
 
+// button clicks
 prevBtn.addEventListener('click', () => {
-  if (index > 0) index--;
-  updateCarousel();
+    if (index > 0) index--;
+    updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
-  if (index < totalItems - 1) index++;
-  updateCarousel();
+    if (index < totalItems - 1) index++;
+    updateCarousel();
 });
 
+// handle resize
 window.addEventListener('resize', updateCarousel);
+
+// initialize
+updateCarousel();
 </script>
 
 </body>
