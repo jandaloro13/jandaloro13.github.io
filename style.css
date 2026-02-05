@@ -249,11 +249,14 @@ footer a:hover {
   background: #fff;
 }
 #contact-form iframe {
-  width: 100%;
+  width: 150%;
   height: 5600px;
   border: none;
 }
-
+#contact-main {
+    min-height: 5600px;
+  background: #fff;
+}
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
