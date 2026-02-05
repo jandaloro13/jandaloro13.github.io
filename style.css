@@ -219,7 +219,7 @@ footer a:hover {
 footer p {
   display: flex;
   justify-content: center;
-  gap: 1rem; /* horizontal spacing */
+  gap: 2rem; /* horizontal spacing */
 }
 
 
