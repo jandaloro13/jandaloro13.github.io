@@ -216,6 +216,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer p {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* horizontal spacing */
+}
+
+
 /* ==================== TOC ==================== */
 .toc {
   position: fixed;
