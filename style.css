@@ -421,11 +421,10 @@ p[id] {
   background: #fff; 
 } 
 #contact-form iframe { 
-  width: 150%; 
+  width: 100%; 
   height: 5600px; 
   border: none; 
 } 
 #contact-main { 
-  min-height: 5600px; 
   background: #fff; 
 }
