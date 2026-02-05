@@ -411,3 +411,11 @@ img {
   height: auto;           /* prevent distortion */
   object-fit: cover;      /* optional: fills the space without stretching */
 }
+
+/* Anchor offset for fixed header */
+h2[id],
+h3[id],
+section[id],
+div[id] {
+  scroll-margin-top: 140px;
+}
