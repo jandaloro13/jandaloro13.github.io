@@ -7,6 +7,63 @@
         <link rel="icon" type="image/png" href="images/JAndaloro headshot 3.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
+    <style>
+       .doc-viewer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.doc-viewer iframe {
+  width: 100%;
+  height: 90vh;
+  border: none;
+}
+ .linkedin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.linkedin-grid iframe {
+  width: 100%;
+  min-height: 1200px;
+  border: none;
+}
+.social-metrics {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.social-metrics thead {
+  display: none;
+}
+
+.social-metrics tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.social-metrics tr {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+}
+
+.social-metrics td {
+  padding: 0;
+}
+
+    </style>
+    
 <body>
 
     <!-- HEADER -->
