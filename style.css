@@ -451,10 +451,12 @@ p[id] {
     font-size: 1.5rem;
   }
 
-  header nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+header nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
   header nav a,
   header nav .dropbtn {
