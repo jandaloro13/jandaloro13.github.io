@@ -5,12 +5,8 @@
 ## Overview
 This portfolio showcases my projects in communications and complete academic and professional experiences. It serves as an interactive supplement to my resume and provides a structured view of my accomplishments.
 
-The site was built using **HTML** and **CSS**, with a focus on clean design, accessibility, and easy navigation. 
-
 ## Website
 **Live Site:** [https://jandaloro13.github.io/](https://jandaloro13.github.io/)
-
-The website is hosted via **GitHub Pages** and optimized for desktop and mobile viewing. No installation or local setup is required.
 
 ## Structure
 Each HTML page corresponds to a distinct area of focus within the portfolio:
