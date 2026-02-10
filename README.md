@@ -3,7 +3,7 @@
 # Joseph Andaloro | Personal Portfolio
 
 ## Overview
-This portfolio showcases my body of work, focusing on professional projects in communications. It serves as an interactive supplement to my resume and provides a structured view of my accomplishments.
+This portfolio showcases my projects in communications and complete academic and professional experiences. It serves as an interactive supplement to my resume and provides a structured view of my accomplishments.
 
 The site was built using **HTML** and **CSS**, with a focus on clean design, accessibility, and easy navigation. It functions as a public-facing digital portfolio to present completed projects and my work experience.
 
