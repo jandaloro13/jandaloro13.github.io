@@ -14,11 +14,11 @@ The website is hosted via **GitHub Pages** and optimized for desktop and mobile 
 
 ## Structure
 Each HTML page corresponds to a distinct area of focus within the portfolio:
-- **About:** Background and skills summary.
-- **Work:** Details extensive professional experience.  
-- **Communications:** Public relations, marketing, and internal communication work.
-- **Education:** Complete academic history, degrees, coursework, and honors. 
-- **Contact:** Offers ways to connect professionally.
+- **About:** Background and skills summary
+- **Work:** Details extensive professional experience
+- **Communications:** Public relations, marketing, and internal communication work
+- **Education:** Complete academic history, degrees, coursework, and honors
+- **Contact:** Offers ways to connect professionally
 
 ## Technologies
 - **Languages:** HTML5, CSS3  
