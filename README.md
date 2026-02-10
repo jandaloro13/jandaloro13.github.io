@@ -18,7 +18,7 @@ Each HTML page corresponds to a distinct area of focus within the portfolio:
 - **Work:** Details extensive professional experience
 - **Communications:** Public relations, marketing, and internal communication work
 - **Education:** Complete academic history, degrees, coursework, and honors
-- **Capstone:** My Naster's Thesis applying communications and media theories to an analytical project
+- **Capstone:** My Master's Thesis applying communications and media theories to an analytical project
 - **Contact:** Offers ways to connect professionally
 
 ## Technologies
