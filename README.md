@@ -1,5 +1,3 @@
-# jandaloro13.github.io
-
 # Joseph Andaloro | Personal Portfolio
 
 ## Overview
