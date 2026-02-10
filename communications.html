@@ -9,7 +9,15 @@
 </head>
 
     <style>
-/* ---------- PDF VIEWERS ---------- */
+/* ---------- LARGE FEATURE PDFS ---------- */
+.large-pdf {
+  width: 100%;
+  height: 180vh; /* 3x your current 60vh */
+  border: 1px solid #ccc;
+  margin: 2rem 0 0.5rem 0;
+}
+
+        /* ---------- PDF VIEWERS ---------- */
 .doc-viewer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
@@ -55,6 +63,24 @@
 .social-metrics thead th {
   background-color: #f5f5f5;
 }
+        /* ---------- INTERNAL COMMUNICATIONS STACK ---------- */
+.internal-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.internal-item iframe {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid #ccc;
+}
+
+.internal-item p {
+  margin-top: 0.5rem;
+}
+
 </style>
     
 <body>
@@ -109,11 +135,11 @@
 <p>Thought Leadership: <em>Out to Space Studios</em></p>
 <br>
     
-<iframe src="documents/MSC3217 Final v2 BUCK Analysis.pdf#page=1&view=FitH" title="Case Study: BUCK"></iframe>
+<iframe class="large-pdf" src="documents/MSC3217 Final v2 BUCK Analysis.pdf#page=1&view=FitH" title="Case Study: BUCK"></iframe>
     <p>Case Study: <em>BUCK</em></p>
 <br>
     
-    <iframe src="documents/MSC3110 Final v2 AI Interview.pdf#page=1&view=FitH" title="Industry Insights: Striking a Balance – An Interview with an AI Expert"></iframe>
+    <iframe class="large-pdf" src="documents/MSC3110 Final v2 AI Interview.pdf#page=1&view=FitH" title="Industry Insights: Striking a Balance – An Interview with an AI Expert"></iframe>
 <p>Industry Insights: <em>Striking a Balance – An Interview with an AI Expert</em></p>
 <br>
         
@@ -154,25 +180,29 @@
     </tbody>
   </table>
 
-<iframe src="documents/MSC3212 Cloud.10 IMC Campaign Final.pdf#page=1&view=FitH" title="Integrated Marketing Campaign: Cloud.10"></iframe>
+<iframe class="large-pdf" src="documents/MSC3212 Cloud.10 IMC Campaign Final.pdf#page=1&view=FitH" title="Integrated Marketing Campaign: Cloud.10"></iframe>
 <p>Integrated Marketing Campaign: <em>Cloud.10</em></p>
 <br>
     
-<iframe src="documents/MSC3220 Meeting the Challenges of Cinema Worcester .pdf#page=1&view=FitH" title="Case Study: Cinema Worcester"></iframe>
+<iframe class="large-pdf" src="documents/MSC3220 Meeting the Challenges of Cinema Worcester .pdf#page=1&view=FitH" title="Case Study: Cinema Worcester"></iframe>
 <p>Case Study: <em>Cinema Worcester</em></p>
     <br>
     
   <h3 id="internal communications">Internal Communications</h3>
 <div class="doc-viewer">
-    
+    <div class="internal-stack">
+        
+          <div class="internal-item">
   <iframe src="documents/Chasing Rabbits Demo Design Document.pdf#page=1&view=FitH" title="Game Design Document: Chasing Rabbits"></iframe>
     <p>Game Design Document: <em>Chasing Rabbits</em></p>
     <br>
-    
+
+                <div class="internal-item">
   <iframe src="documents/Out to Space Business Breakdown Final.pdf#page=1&view=FitH" title="Multi-Channel Communication Plan: Out to Space Studios"></iframe>
    <p>Multi-Channel Communication Plan: <em>Out to Space Studios</em></p>
-    
+    </div>
 </div>
+          </div>
         </section>
     </main>
             
