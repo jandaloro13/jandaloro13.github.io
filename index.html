@@ -8,22 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-    <style>
-/* Centered block with left-aligned text for bio lists */
-.summary {
-  max-width: 800px;   /* limits width so text lines don’t stretch too far */
-  margin: 0 auto;     /* centers the container horizontally */
-  text-align: left;   /* keeps bullet points and paragraphs left-aligned */
-  line-height: 1.6;   /* improves readability */
+<style>
+/* Center all text by default */
+body, .content-wrapper, .summary {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.summary p {
-  margin-bottom: 1.5rem;  /* space between paragraphs */
+/* Keep bio paragraphs centered */
+.summary p:not(.left-list) {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.summary ul, 
-.summary ol {
-  padding-left: 1.5rem;   /* indents bullet points for clarity */
+/* Specific class for left-aligned lists */
+.left-list {
+    text-align: left;
+    display: inline-block; /* so container can be centered */
+    max-width: 700px;      /* prevents lines from stretching too far */
+    margin: 1rem auto;     /* centers block horizontally */
+    line-height: 1.6;
+    padding-left: 1.5rem;  /* indent bullet points */
+}
+
+/* Remove default <br> inside <li> for clean spacing */
+.left-list li {
+    margin-bottom: 0.5rem;
 }
 </style>
 
@@ -66,17 +77,17 @@
             <p>
                 I am a creative communications professional with cross-disciplinary experience in public relations, digital content, and social media management. I have been trained in high-pressure media production environments and am applying that rigor to communication opportunities. 
             </p><p><br>
-My work in communications spans the areas of: <br>
-                <ul>
-<li>• Public Relations & External Communications – Message development, brand storytelling, and copywriting<br>
-<li>• Media & Digital Content – Multi-platform distribution, audience targeting, and content alignment<br>
-<li>• Project Management & Operations Coordination – Workflow management with deadline-driven processes<br></ul>
+My work in communications spans the areas of: 
+                <ul class="left-list">
+<li>Public Relations & External Communications – Message development, brand storytelling, and copywriting<br>
+<li>Media & Digital Content – Multi-platform distribution, audience targeting, and content alignment<br>
+<li>Project Management & Operations Coordination – Workflow management with deadline-driven processes<br></ul>
 </p><p><br>
-Additionally, my experience in media production involves:<br>
-    <ul>
-<li>• Video, Audio, & Screenwriting – Development, production, direction, recording, mixing, and sound design<br>
-<li>• Technical Systems & Equipment Operation – On-set production, AV installation, signal flow, and troubleshooting<br>
-<li>• Production Workflow & Creative Execution – Translating messaging and concepts into coordinated deliverables<br></ul>
+Additionally, my experience in media production involves:
+    <ul class="left-list">
+<li>Video, Audio, & Screenwriting – Development, production, direction, recording, mixing, and sound design<br>
+<li>Technical Systems & Equipment Operation – On-set production, AV installation, signal flow, and troubleshooting<br>
+<li>Production Workflow & Creative Execution – Translating messaging and concepts into coordinated deliverables<br></ul>
 </p><p><br>
 I am committed to advancing my career in communications to grow into creative leadership roles that bridge strategy, production, and execution.
             </p>
