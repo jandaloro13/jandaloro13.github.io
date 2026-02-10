@@ -436,3 +436,92 @@ p[id] {
   background: #fff;
   margin: 2rem auto;
 }
+
+/* ==================== MOBILE OVERRIDES ONLY ==================== */
+@media (max-width: 768px) {
+
+  /* ----- HEADER ----- */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header nav a,
+  header nav .dropbtn {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  body {
+    padding-top: 140px; /* extra room for stacked header */
+    font-size: 1rem;
+  }
+
+  /* ----- CONTENT ----- */
+  .content-wrapper,
+  section {
+    padding: 1.25rem;
+    margin: 1rem;
+  }
+
+  section h2,
+  section h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* ----- TOC ----- */
+  .toc {
+    display: none;
+  }
+
+  /* ----- DROPDOWNS ----- */
+  .dropdown-content a {
+    font-size: 1.25rem;
+  }
+
+  /* ----- IMAGES ----- */
+  img {
+    max-height: none;
+  }
+
+  /* ----- GRIDS ----- */
+  .art-grid,
+  .linkedin-grid,
+  .doc-viewer {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ----- IFRAMES ----- */
+  iframe {
+    height: 60vh;
+  }
+
+  #contact-form iframe {
+    height: 90vh;
+  }
+
+  /* ----- TABLES ----- */
+  .social-metrics {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* ----- BACKGROUND FIX ----- */
+  html,
+  body::before {
+    background-attachment: scroll;
+  }
+}
+
