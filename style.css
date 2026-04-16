@@ -527,3 +527,21 @@ header nav {
   }
 }
 
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-column {
+  flex: 1;
+}
+
+.skills-column h3 {
+  margin-bottom: 10px;
+}
+
+.skills-column ul {
+  padding-left: 18px;
+}
