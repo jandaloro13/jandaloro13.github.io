@@ -365,7 +365,7 @@ header {
   justify-content: space-between; /* name left, nav right */
   align-items: center;
   padding: 1rem 2rem;    /* adds space inside header */
-   background: linear-gradient(to right, #17498a, #9e4136); /* left/right colors */
+   background: linear-gradient(to right, #1F2E66, #1F2E66); /* left/right colors */
   box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow for separation */
   z-index: 5000;
 }
