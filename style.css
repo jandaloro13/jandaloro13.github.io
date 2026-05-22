@@ -199,8 +199,8 @@ iframe {
 footer {
   text-align: center;
   padding: 2rem;
-  background: none;
   color: #fff;
+     background: linear-gradient(to right, #000000, #000000);
       z-index: 100000;
 }
 
