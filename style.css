@@ -47,7 +47,7 @@ header {
   padding: 0.75rem 0.5rem;
   background: transparent;       /* fully see-through */
   isolation: isolate;
-   background: linear-gradient(to right, #17498a, #9e4136);
+   background: linear-gradient(to right, #000000, #000000);
 }
 
 /* ==================== HEADER TEXT ==================== */
@@ -365,7 +365,7 @@ header {
   justify-content: space-between; /* name left, nav right */
   align-items: center;
   padding: 1rem 2rem;    /* adds space inside header */
-   background: linear-gradient(to right, #0002F2, #0002F2); /* left/right colors */
+   background: linear-gradient(to right, #000000, #000000); /* left/right colors */
   box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow for separation */
   z-index: 5000;
 }
