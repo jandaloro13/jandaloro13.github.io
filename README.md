@@ -1,4 +1,4 @@
-# Joseph Andaloro | Personal Portfolio
+# Joseph Andaloro, MSC | Personal Portfolio
 
 ## Overview
 This portfolio showcases my projects in communications and complete academic and professional experiences. It serves as an interactive supplement to my resume and provides a structured view of my accomplishments.
