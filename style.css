@@ -545,3 +545,7 @@ header nav {
 .skills-column ul {
   padding-left: 18px;
 }
+
+.dropdown > .dropbtn {
+    cursor: default !important;
+}
