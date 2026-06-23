@@ -40,7 +40,7 @@ Each HTML page corresponds to a distinct area of focus within the portfolio:
 - **Tools:** Local code editor and browser testing  
 
 ## License
-© 2026 Josphe Andaloro, MSC. All rights reserved.  
+© 2026 Joseph Andaloro, MSC. All rights reserved.  
 This website and its contents are provided for professional and educational viewing purposes only. Redistribution or commercial use without permission is prohibited.
 
 ## Contact
