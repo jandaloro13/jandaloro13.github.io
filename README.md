@@ -15,13 +15,13 @@ Each HTML page corresponds to a distinct area of focus within the portfolio:
   - **Certifications:** Outlines all relevant professional certifications
 - **Portfolio**
   - **Marketing**
-    - Social Media Analytics: Pure Tech Productions
+    - Social Media Analytics: Pure Tech
     - The Successes & Failures of Meme Marketing: Investigating Cultural Literacy & Authentic Participation
     - Integrated Marketing Campaign: Cloud.10
     - From Hollywood to Worcester: Reviving the Theater Experience – A Business Plan for Worcester’s Only Theater
   - **Communications**
     - Out to Space Studios: Multi-Channel Communications Plan
-    - Thought Leadership Campaign: Pure Tech Productions
+    - Thought Leadership Campaign: Pure Tech
     - Thought Leadership Campaign: Out to Space Studios
   - **Public Relations**
     - The Necessity of Accuracy: Investigating the Failures of the Flint Water Crisis
