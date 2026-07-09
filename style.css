@@ -595,3 +595,12 @@ html {
     scroll-behavior: smooth;
   scroll-margin-top: 200px;
 }
+
+h2[id],
+h3[id],
+section[id],
+div[id],
+strong[id],
+p[id] {
+    scroll-margin-top: 140px;
+}
