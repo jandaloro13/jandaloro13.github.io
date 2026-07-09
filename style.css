@@ -588,3 +588,9 @@ footer * {
     transform: none !important;
     transition: none !important;
 }
+
+/* ==================== SMOOTH SCROLL ==================== */
+
+html {
+    scroll-behavior: smooth;
+}
