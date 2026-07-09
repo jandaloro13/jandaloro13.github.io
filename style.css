@@ -592,7 +592,7 @@ footer * {
 /* ==================== SMOOTH SCROLL ==================== */
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 h2[id],
