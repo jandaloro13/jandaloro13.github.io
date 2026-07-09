@@ -593,4 +593,5 @@ footer * {
 
 html {
     scroll-behavior: smooth;
+  scroll-margin-top: 170px;
 }
