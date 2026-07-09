@@ -580,3 +580,11 @@ header nav {
     transform: none !important;
     transition: none !important;
 }
+
+/* Never animate the footer */
+footer,
+footer * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
