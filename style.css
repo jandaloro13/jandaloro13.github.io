@@ -570,3 +570,13 @@ header nav {
     opacity: 1 !important;
     transform: none !important;
 }
+
+/* Never animate the table of contents */
+.toc,
+.toc *,
+.toc-inner,
+.toc-inner * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
