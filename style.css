@@ -564,3 +564,9 @@ header nav {
     opacity: 1;
     transform: translateY(0);
 }
+
+.toc,
+.toc-inner {
+    opacity: 1 !important;
+    transform: none !important;
+}
