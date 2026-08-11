@@ -1,21 +1,22 @@
 const elements = document.querySelectorAll(
-    "section, h2, h3, p, img, iframe, table, .linkedin-grid, .doc-viewer, .internal-stack, .internal-item"
+    "h2, h3, .summary, .internal-item, .linkedin-grid, .doc-viewer, .social-metrics"
 );
 
 elements.forEach(el => {
-
-    // Ignore the table of contents and anything inside it
     if (el.closest(".toc")) return;
-
     el.classList.add("reveal");
 });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        entry.target.classList.toggle("visible", entry.isIntersecting);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
     });
 }, {
-    threshold: 0.15
+    threshold: 0.01,
+    rootMargin: "20% 0px 20% 0px"
 });
 
 document.querySelectorAll(".reveal").forEach(el => {
