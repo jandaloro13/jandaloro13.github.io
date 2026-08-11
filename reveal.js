@@ -1,69 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Elements to animate
     const elements = document.querySelectorAll(
         "h2, h3, .summary, .internal-item, .linkedin-grid, .doc-viewer, .social-metrics"
     );
 
-    // Set up each element
-    elements.forEach(el => {
+    // Add reveal class to everything we want to animate
+    elements.forEach(function (el) {
 
-        // Never animate anything inside the table of contents
-        if (el.closest(".toc")) return;
-
-        // Check whether the element is already visible when the page loads
-        const rect = el.getBoundingClientRect();
-
-        const isVisibleOnLoad =
-            rect.top < window.innerHeight &&
-            rect.bottom > 0;
-
-        if (isVisibleOnLoad) {
-
-            // Already visible: show it immediately
-            el.classList.add("visible");
-
-        } else {
-
-            // Below the viewport: prepare it for reveal
-            el.classList.add("reveal");
-
+        // Ignore table of contents
+        if (el.closest(".toc")) {
+            return;
         }
 
-    });
-
-
-    // Observe elements that are below the initial viewport
-    const observer = new IntersectionObserver((entries, observer) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                // Reveal the element
-                entry.target.classList.add("visible");
-
-                // Stop observing it permanently
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    }, {
-
-        // Only a tiny portion needs to enter the observation area
-        threshold: 0.01,
-
-        // Start revealing before the element actually reaches the viewport
-        // and continue observing after it passes the viewport.
-        rootMargin: "20% 0px 20% 0px"
+        el.classList.add("reveal");
 
     });
 
+    // Create observer
+    const observer = new IntersectionObserver(
+        function (entries) {
 
-    // Begin observing unrevealed elements
-    document.querySelectorAll(".reveal").forEach(el => {
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    // Show element
+                    entry.target.classList.add("visible");
+
+                    // Never hide it again
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.01,
+
+            // Start revealing 25% before the element reaches
+            // the visible viewport
+            rootMargin: "25% 0px 25% 0px"
+        }
+    );
+
+    // Observe every reveal element
+    document.querySelectorAll(".reveal").forEach(function (el) {
         observer.observe(el);
     });
 
