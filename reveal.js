@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const elements = document.querySelectorAll(
-        
+     'h2, h3, .summary, .cert-card, .internal-item, .doc-viewer, .linkedin-grid iframe, .social-metrics, .skills-column, .work-images-sq, .work-images-side'   
     );
 
     // Add reveal class to everything we want to animate
