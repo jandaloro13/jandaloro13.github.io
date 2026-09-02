@@ -35,7 +35,7 @@ Each HTML page corresponds to a distinct area of focus within the portfolio:
 - **Contact:** Offers ways to connect professionally
 
 ## Technologies
-- **Languages:** HTML5, CSS3  
+- **Languages:** HTML5, CSS3, & JavaScript  
 - **Platform:** GitHub Pages  
 - **Tools:** Local code editor and browser testing  
 
@@ -48,4 +48,4 @@ For inquiries or collaboration opportunities, visit the [Contact](https://jandal
 
 ---
 
-_Last updated June 2026_
+_Last updated September 2026_
