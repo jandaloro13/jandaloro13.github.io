@@ -603,3 +603,9 @@ strong[id],
 p[id] {
     scroll-margin-top: 170px;
 }
+
+h3 {
+  font-family: 'Roboto', monospace !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
